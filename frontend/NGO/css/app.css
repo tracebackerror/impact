@@ -1,6 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,300;0,400;0,500;0,600;1,100;1,300&display=swap");
+
 * {
-  font-family: 'Poppins', sans-serif;
+  font-family: 'Oxygen', sans-serif;
   margin: 0;
   padding: 0;
   -webkit-box-sizing: border-box;
@@ -40,17 +41,44 @@ section {
 .btn {
   margin-top: 1rem;
   display: inline-block;
-  /* border: 0.2rem solid #10221b; */
+  border: 0.1rem solid #10221b;
   color: #f5a60a;
   cursor: pointer;
   background: none;
   font-size: 2.3rem;
   font-weight: 600;
-  padding: 1rem 3rem;
+  padding: .7rem 5rem;
 }
 
+.button{
+  display: inline-block;
+  border: 0.1rem solid #4dc0b5;
+  cursor: pointer;
+  font-size: 2rem;
+  font-weight: 400;
+  padding: .5rem 2rem;
+  border-top-left-radius: 20px;
+  border-bottom-left-radius: 20px;
+
+}
+.button-2{
+  display: inline-block;
+  border: 0.1rem solid #4dc0b5;
+  cursor: pointer;
+  color: #fff;
+  font-size: 2rem;
+  font-weight: 500;
+  padding: .5rem 2rem;
+  border-top-right-radius: 20px;
+  border-bottom-right-radius: 20px;
+  background-color: #4dc0b5;
+}
+
+
 .btn:hover {
-    background: linear-gradient(to right top, #ee1506, #3003f5);
+    /* background: linear-gradient(to right top, #ee1506, #3003f5); */
+    background: rgb(238,213,174);
+background: radial-gradient(circle, rgba(238,213,174,1) 0%, rgba(187,233,148,1) 100%);
   color: #fff;
   font-size: 2.5;
 }
@@ -67,7 +95,7 @@ section {
   top: 0;
   left: 0;
   right: 0;
-  padding: 2rem 9%;
+  padding: 1.5rem 9%;
   z-index: 1000;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -81,10 +109,9 @@ section {
     /* background: linear-gradient(to right top, rgb(238, 100, 58), rgb(5, 82, 197)); */
     /* background-image: linear-gradient( to right, #f1b42f, #b2b6f3); */
     /* background-image: linear-gradient( to bottom right, #f1b42f, #b2b6f3); */
-    background-image: radial-gradient(circle, rgba(247, 247, 66,0.65), #8df7e5);
-
-    -webkit-box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
-          box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
+    /* background-image: radial-gradient(circle, rgba(247, 247, 66,0.65), #8df7e5); */
+    background: rgb(238,213,174);
+background: radial-gradient(circle, rgba(238,213,174,1) 0%, rgba(187,233,148,1) 100%);
 }
 
 .header .logo {
@@ -128,6 +155,7 @@ section {
 .header .icons div {
   font-size: 2.5rem;
   margin-left: 2rem;
+  margin-right: 8rem;
   cursor: pointer;
   color: #10221b;
 }
@@ -246,7 +274,7 @@ section {
     -webkit-box-pack: end;
         -ms-flex-pack: end;
             justify-content: flex-end;
-    padding: 2rem 9%;
+    padding: 2rem 9%; 
   }
   
   .home .box.second {
@@ -297,6 +325,8 @@ section {
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
     gap: 2rem;
+    background-image: url(/images/sec-background.jpg);
+
   }
   
   .about .image {
@@ -426,9 +456,18 @@ section {
     html {
       font-size: 50%;
     }
+
+    .button{
+      display: none;
+      
+    }
+    .button-2{
+     display: none;
+    }
     .heading {
       font-size: 3rem;
     }
+
     .header .logo {
         margin: auto;
         /* margin-left: 10px; */
