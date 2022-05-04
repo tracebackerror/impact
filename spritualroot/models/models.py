@@ -6,4 +6,5 @@ class ContactForm(models.Model):
     email =models.EmailField(max_length=70)
     phone = models.CharField(max_length=10)
     comments = models.CharField(max_length=200)
-    date = models.DateTimeField(auto_now=True,blank=True,)
+    created_date = models.DateTimeField(auto_now_add=True,blank=True)
+    modified_date = models.DateTimeField(auto_now=True,blank=True)
