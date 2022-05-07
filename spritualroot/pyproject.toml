@@ -9,6 +9,9 @@ python = "^3.10"
 Django = "^4.0.4"
 django-thumbnails = "^0.7.0"
 django-ckeditor = "^6.4.0"
+djangorestframework = "^3.13.1"
+Markdown = "^3.3.7"
+django-filter = "^21.1"
 
 [tool.poetry.dev-dependencies]
 
