@@ -1,0 +1,10 @@
+asgiref==3.5.1; python_version >= "3.8"
+da-vinci==0.3.0
+django-ckeditor==6.4.0; python_version >= "3.8"
+django-js-asset==2.0.0; python_version >= "3.8"
+django-thumbnails==0.7.0
+django==4.0.4; python_version >= "3.8"
+pillow==9.1.0; python_version >= "3.7"
+shortuuid==1.0.8; python_version >= "3.5"
+sqlparse==0.4.2; python_version >= "3.8"
+tzdata==2022.1; sys_platform == "win32" and python_version >= "3.8"
