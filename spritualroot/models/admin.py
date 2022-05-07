@@ -4,6 +4,10 @@ from .models import *
 # Register your models here.
 @admin.register(ContactForm)
 class ContactAdmin(admin.ModelAdmin):
+    date_hierarchy = 'created_date'
+    empty_value_display = '-empty-'
+    search_fields = ['first_name', 'last_name', 'email', 'phone']
+    
     list_display = ('id',
     'first_name', 'last_name', 'email','phone','comments','created_date','modified_date')
 
@@ -36,6 +40,45 @@ class StoriesModelAdmin(admin.ModelAdmin):
     search_fields = ['title', 'description', 'meta_keywords', ]
 
 
-admin.site.register(GetHelpModel)
-admin.site.register(VolunteerMoodel)
-admin.site.register(SiteInfoModel)
+@admin.register(GetHelpModel)
+class GetHelpModelAdmin(admin.ModelAdmin):
+    list_display = (
+        'id',
+        'first_name',
+        'last_name',
+        'email',
+        'phone'
+        )
+    
+    date_hierarchy = 'created_date'
+    empty_value_display = '-empty-'
+    search_fields = ['first_name', 'last_name', 'email', 'phone']
+
+
+@admin.register(VolunteerMoodel)
+class VolunteerMoodelAdmin(admin.ModelAdmin):
+    list_display = (
+        'id',
+        'first_name',
+        'last_name',
+        'email',
+        'phone'
+        )
+    
+    date_hierarchy = 'created_date'
+    empty_value_display = '-empty-'
+    search_fields = ['first_name', 'last_name', 'email', 'phone']
+
+
+@admin.register(SiteInfoModel)
+class SiteInfoModelAdmin(admin.ModelAdmin):
+    list_display = (
+        'id',
+        'site_name',
+        'site_address',
+        )
+    
+    date_hierarchy = 'created_date'
+    empty_value_display = '-empty-'
+    search_fields = ['site_name', 'email', 'address', ]
+
