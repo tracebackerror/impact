@@ -8,7 +8,33 @@ class ContactAdmin(admin.ModelAdmin):
     'first_name', 'last_name', 'email','phone','comments','created_date','modified_date')
 
 
-admin.site.register(ProjectsModel)
-admin.site.register(StoriesModel)
+@admin.register(ProjectsModel)
+class ProjectsAdmin(admin.ModelAdmin):
+    list_display = (
+        'id',
+        'title',
+        'created_date',
+        'modified_date'
+        )
+    prepopulated_fields = {'short_url': ('title',), }
+    date_hierarchy = 'publish'
+    empty_value_display = '-empty-'
+    search_fields = ['title', 'description', 'meta_keywords', ]
+
+
+@admin.register(StoriesModel)
+class StoriesModelAdmin(admin.ModelAdmin):
+    list_display = (
+        'id',
+        'title',
+        'created_date',
+        'modified_date'
+        )
+    prepopulated_fields = {'short_url': ('title',), }
+    date_hierarchy = 'publish'
+    empty_value_display = '-empty-'
+    search_fields = ['title', 'description', 'meta_keywords', ]
+
+
 admin.site.register(GetHelpModel)
 admin.site.register(VolunteerMoodel)
