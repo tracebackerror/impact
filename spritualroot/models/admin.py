@@ -38,3 +38,4 @@ class StoriesModelAdmin(admin.ModelAdmin):
 
 admin.site.register(GetHelpModel)
 admin.site.register(VolunteerMoodel)
+admin.site.register(SiteInfoModel)

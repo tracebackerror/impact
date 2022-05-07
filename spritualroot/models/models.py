@@ -90,7 +90,7 @@ class StoriesModel(MetaInformation):
     linked_project = models.ForeignKey(ProjectsModel, on_delete=models.CASCADE)
     title = models.CharField(max_length=250, help_text="Project Title", null=False, blank=False)
     description = RichTextField()
-    image = models.ImageField(upload_to ='uploads/% Y/% m/% d/', null=True, blank=True)
+    image = models.ImageField(upload_to ='uploads/%Y/%m/%d/', null=True, blank=True)
     short_url = models.SlugField(max_length=250, unique_for_date='publish')
     yt_url = models.CharField(max_length=300, help_text="Youtube Video Link", null=True, blank=True)
     fb_url = models.CharField(max_length=300, help_text="Facebook Link Page", null=True, blank=True)
@@ -98,3 +98,23 @@ class StoriesModel(MetaInformation):
     publish = models.DateTimeField(default=timezone.now)
     meta_keywords = models.CharField(max_length=250, help_text="Meta Keywords", null=True, blank=True)	
     
+
+class SiteInfoModel(MetaInformation):
+    site_name = models.CharField(max_length=250, help_text="Site Name", null=False, blank=False)
+    tag_line = models.CharField(max_length=250, help_text="Tag Line", null=True, blank=True)
+    
+    email = models.EmailField(max_length=70, help_text="Email", null=True, blank=True)
+    phone = models.CharField(max_length=10, help_text="Phone Number", null=True, blank=True)
+
+    alternate_phone_1 = models.CharField(max_length=10, help_text="Alternate Phone Numbe 1", null=True, blank=True)
+    alternate_phone_2 = models.CharField(max_length=10, help_text="Alternate Phone Numbe 2", null=True, blank=True)
+    alternate_phone_3 = models.CharField(max_length=10, help_text="Alternate Phone Numbe 3", null=True, blank=True)
+    
+    site_address = models.TextField(help_text="Site Address", null=True, blank=True)
+    site_logo = models.ImageField(help_text="Site Logo", upload_to ='uploads/%Y/%m/%d/', null=True, blank=True)
+    site_longitude_lattitude = models.CharField(max_length=250, help_text="Maps Location", null=True, blank=True)
+
+    facebook_page =  models.CharField(max_length=300, help_text="Facebook Page", null=True, blank=True)
+    instagram_page =  models.CharField(max_length=300, help_text="Instagram Page", null=True, blank=True)
+    twitter_page =  models.CharField(max_length=300, help_text="Twitter Page", null=True, blank=True)
+    linkedin_page =  models.CharField(max_length=300, help_text="LinkedIn Page", null=True, blank=True)
