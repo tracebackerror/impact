@@ -1,14 +1,19 @@
-asgiref==3.5.1; python_version >= "3.8"
+asgiref==3.5.1
+backports.zoneinfo==0.2.1
 da-vinci==0.3.0
-django-ckeditor==6.4.0; python_version >= "3.8"
-django-filter==21.1; python_version >= "3.6"
-django-js-asset==2.0.0; python_version >= "3.8"
+Django==4.0.4
+django-ckeditor==6.4.0
+django-filter==21.1
+django-js-asset==2.0.0
 django-thumbnails==0.7.0
-django==4.0.4; python_version >= "3.8"
-djangorestframework==3.13.1; python_version >= "3.6"
-markdown==3.3.7; python_version >= "3.6"
-pillow==9.1.0; python_version >= "3.7"
-pytz==2022.1; python_version >= "3.6"
-shortuuid==1.0.8; python_version >= "3.5"
-sqlparse==0.4.2; python_version >= "3.8"
-tzdata==2022.1; sys_platform == "win32" and python_version >= "3.8"
+djangorestframework==3.13.1
+importlib-metadata==4.11.3
+Markdown==3.3.7
+Pillow==9.1.0
+pytz==2022.1
+shortuuid==1.0.8
+sqlparse==0.4.2
+tzdata==2022.1
+waitress==2.1.1
+whitenoise==6.0.0
+zipp==3.8.0
