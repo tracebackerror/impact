@@ -1,0 +1,1196 @@
+{% extends 'models/base.html' %}
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+
+<head>
+  {% block title %}Education Trust {% endblock title %}
+</head>
+
+<body>
+  
+  {% block body %}
+  <br><br><br><br><br>
+  <!-- Main -->
+  <main class="main">
+    
+    <!-- Page Breadcumb -->
+    <section class="pageBreadcumb pageBreadcumb--style1 position-relative" data-bg-image="image/bg/pageBreadcumbBg1.jpg">
+      <div class="pageBreadcumbTopDown">
+        <a class="btn btn--styleOne btn--icon btn--icon2 it-btn" href="donation-listing.html">
+          <svg class="btn__icon" width="10" height="14" viewBox="0 0 10 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M0.869141 8.70508L1.45508 8.11914C1.60156 8.00195 1.80664 8.00195 1.95312 8.14844L4.23828 10.4922V0.414062C4.23828 0.208984 4.38477 0.0625 4.58984 0.0625H5.41016C5.58594 0.0625 5.76172 0.208984 5.76172 0.414062V10.4922L8.01758 8.14844C8.16406 8.00195 8.36914 8.00195 8.51562 8.11914L9.10156 8.70508C9.21875 8.85156 9.21875 9.05664 9.10156 9.20312L5.23438 13.0703C5.08789 13.1875 4.88281 13.1875 4.73633 13.0703L0.869141 9.20312C0.751953 9.05664 0.751953 8.85156 0.869141 8.70508Z" fill="#60646B" />
+          </svg>
+          <span class="it-btn__inner">
+          <span class="it-btn__blobs">
+            <span class="it-btn__blob"></span>
+          <span class="it-btn__blob"></span>
+          <span class="it-btn__blob"></span>
+          <span class="it-btn__blob"></span>
+          </span>
+          </span>
+          <svg class="it-btn__animation" xmlns="http://www.w3.org/2000/svg" version="1.1">
+            <defs>
+              <filter>
+                <feGaussianBlur in="SourceGraphic" result="blur" stdDeviation="10"></feGaussianBlur>
+                <feColorMatrix in="blur" mode="matrix" values="1 0 0 0 0 0 1 0 0 0 0 0 1 0 0 0 0 0 21 -7" result="goo">
+                </feColorMatrix>
+                <feBlend in2="goo" in="SourceGraphic" result="mix"></feBlend>
+              </filter>
+            </defs>
+          </svg>
+        </a>
+      </div>
+      <div class="sectionShape sectionShape--top">
+        <img src="image/shapes/pagebreadcumbShapeTop.svg" alt="Gainioz">
+      </div>
+      <div class="sectionShape sectionShape--bottom">
+        <img src="image/shapes/pagebreadcumbShapeBottom.svg" alt="Gainioz">
+      </div>
+      <div class="container">
+        <div class="row">
+          <div class="col-12">
+            <div class="pageTitle text-center">
+              <h2 class="pageTitle__heading text-white text-uppercase mb-25">Online Shop</h2>
+              <nav aria-label="breadcrumb">
+                <ol class="breadcrumb">
+                  <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+                  <li class="breadcrumb-item active" aria-current="page">Shop</li>
+                </ol>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Page Breadcumb End -->
+    <!-- Product List -->
+    <div class="productTop pt-130 pb-90">
+      <div class="container">
+        <div class="row">
+          <div class="col-12">
+            <div class="shopFilter__tab mb-20">
+              <div class="row align-items-center">
+                <div class="col">
+                  <div class="product-result">
+                    <span>Showing <span>1–12</span> of <span>54</span> Results</span>
+                  </div>
+                </div>
+                <div class="col">
+                  <div class="shopFilter__tab__right">
+                    <div class="navbar-tab-filter">
+                      <ul class="nav nav-tabs" id="myTab" role="tablist">
+                        <li class="nav-item" role="presentation">
+                          <button class="nav-link active" id="home-tab" data-bs-toggle="tab" data-bs-target="#home" type="button" role="tab" aria-controls="home" aria-selected="true">
+                            <svg width="20" height="19" viewBox="0 0 20 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+                              <path d="M5.82031 1.6875C5.82031 1.17969 5.39062 0.75 4.88281 0.75H0.9375C0.390625 0.75 0 1.17969 0 1.6875V4.8125C0 5.35938 0.390625 5.75 0.9375 5.75H4.88281C5.39062 5.75 5.82031 5.35938 5.82031 4.8125V1.6875ZM12.8906 11.0625V7.9375C12.8906 7.42969 12.4609 7 11.9531 7H8.00781C7.5 7 7.07031 7.42969 7.07031 7.9375V11.0625C7.07031 11.6094 7.5 12 8.00781 12H11.9531C12.4609 12 12.8906 11.6094 12.8906 11.0625ZM14.1406 1.6875V4.8125C14.1406 5.35938 14.5703 5.75 15.0781 5.75H19.0625C19.5703 5.75 20 5.35938 20 4.8125V1.6875C20 1.17969 19.5703 0.75 19.0625 0.75H15.0781C14.5703 0.75 14.1406 1.17969 14.1406 1.6875ZM12.8906 4.8125V1.6875C12.8906 1.17969 12.4609 0.75 11.9531 0.75H8.00781C7.5 0.75 7.07031 1.17969 7.07031 1.6875V4.8125C7.07031 5.35938 7.5 5.75 8.00781 5.75H11.9531C12.4609 5.75 12.8906 5.35938 12.8906 4.8125ZM4.88281 7H0.9375C0.390625 7 0 7.42969 0 7.9375V11.0625C0 11.6094 0.390625 12 0.9375 12H4.88281C5.39062 12 5.82031 11.6094 5.82031 11.0625V7.9375C5.82031 7.42969 5.39062 7 4.88281 7ZM0 14.1875V17.3125C0 17.8594 0.390625 18.25 0.9375 18.25H4.88281C5.39062 18.25 5.82031 17.8594 5.82031 17.3125V14.1875C5.82031 13.6797 5.39062 13.25 4.88281 13.25H0.9375C0.390625 13.25 0 13.6797 0 14.1875ZM15.0781 12H19.0625C19.5703 12 20 11.6094 20 11.0625V7.9375C20 7.42969 19.5703 7 19.0625 7H15.0781C14.5703 7 14.1406 7.42969 14.1406 7.9375V11.0625C14.1406 11.6094 14.5703 12 15.0781 12ZM15.0781 18.25H19.0625C19.5703 18.25 20 17.8594 20 17.3125V14.1875C20 13.6797 19.5703 13.25 19.0625 13.25H15.0781C14.5703 13.25 14.1406 13.6797 14.1406 14.1875V17.3125C14.1406 17.8594 14.5703 18.25 15.0781 18.25ZM7.07031 14.1875V17.3125C7.07031 17.8594 7.5 18.25 8.00781 18.25H11.9531C12.4609 18.25 12.8906 17.8594 12.8906 17.3125V14.1875C12.8906 13.6797 12.4609 13.25 11.9531 13.25H8.00781C7.5 13.25 7.07031 13.6797 7.07031 14.1875Z" fill="#777777"></path>
+                            </svg>
+                          </button>
+                        </li>
+                        <li class="nav-item" role="presentation">
+                          <button class="nav-link" id="profile-tab" data-bs-toggle="tab" data-bs-target="#profile" type="button" role="tab" aria-controls="profile" aria-selected="false">
+                            <svg width="20" height="19" viewBox="0 0 20 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+                              <path d="M5.82031 7.9375C5.82031 7.42969 5.39062 7 4.88281 7H0.9375C0.390625 7 0 7.42969 0 7.9375V11.0625C0 11.6094 0.390625 12 0.9375 12H4.88281C5.39062 12 5.82031 11.6094 5.82031 11.0625V7.9375ZM0 14.1875V17.3125C0 17.8594 0.390625 18.25 0.9375 18.25H4.88281C5.39062 18.25 5.82031 17.8594 5.82031 17.3125V14.1875C5.82031 13.6797 5.39062 13.25 4.88281 13.25H0.9375C0.390625 13.25 0 13.6797 0 14.1875ZM4.88281 0.75H0.9375C0.390625 0.75 0 1.17969 0 1.6875V4.8125C0 5.35938 0.390625 5.75 0.9375 5.75H4.88281C5.39062 5.75 5.82031 5.35938 5.82031 4.8125V1.6875C5.82031 1.17969 5.39062 0.75 4.88281 0.75ZM8.00781 18.25H19.0625C19.5703 18.25 20 17.8594 20 17.3125V14.1875C20 13.6797 19.5703 13.25 19.0625 13.25H8.00781C7.5 13.25 7.07031 13.6797 7.07031 14.1875V17.3125C7.07031 17.8594 7.5 18.25 8.00781 18.25ZM7.07031 1.6875V4.8125C7.07031 5.35938 7.5 5.75 8.00781 5.75H19.0625C19.5703 5.75 20 5.35938 20 4.8125V1.6875C20 1.17969 19.5703 0.75 19.0625 0.75H8.00781C7.5 0.75 7.07031 1.17969 7.07031 1.6875ZM8.00781 12H19.0625C19.5703 12 20 11.6094 20 11.0625V7.9375C20 7.42969 19.5703 7 19.0625 7H8.00781C7.5 7 7.07031 7.42969 7.07031 7.9375V11.0625C7.07031 11.6094 7.5 12 8.00781 12Z" fill="#777777"></path>
+                            </svg>
+                          </button>
+                        </li>
+                      </ul>
+                    </div>
+                    <div class="userProfileFilter">
+                      <select class="userProfileFilter__sort" name="sort" id="sort">
+                        <option value="date">Short by New</option>
+                        <option value="date">Short by Old</option>
+                        <option value="date">Low To High</option>
+                        <option value="date">High To Low</option>
+                      </select>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="shopFilter__body">
+              <div class="tab-content" id="myTabContent">
+                <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
+                  <div class="row">
+                    <div class="col-lg-3 mb-24">
+                      <div class="productBlock">
+                        <span class="productBlock__tags">HOT</span>
+                        <figure class="productBlock__thumb">
+                          <div class="productBlock__thumb__main">
+                            <a href="product-details.html">
+                              <img src="image/products/product-thumb1.png" alt="Gainioz Product">
+                            </a>
+                          </div>
+                          <div class="productBlock__thumb__hover">
+                            <a href="product-details.html">
+                              <img src="image/products/product-thumb1-1.png" alt="Gainioz Product">
+                            </a>
+                          </div>
+                        </figure>
+                        <div class="productBlock__content">
+                          <div class="productBlock__content__main">
+                            <h3 class="productBlock__name"><a href="product-details.html">Yellow Rocks Umbrealla</a></h3>
+                            <span class="productBlock__price">$46.00</span>
+                            <span class="productBlock__ratings">
+                            <i class="fa-solid fa-star active"></i>
+                            <i class="fa-solid fa-star active"></i>
+                            <i class="fa-solid fa-star active"></i>
+                            <i class="fa-solid fa-star active"></i>
+                            <i class="fa-solid fa-star"></i>
+                          </span>
+                          </div>
+                          <div class="productBlock__content__hover">
+                            <div class="productBlock__actions">
+                              <button type="button" class="btn btn-secondary" data-bs-toggle="tooltip" data-bs-placement="top" title data-bs-original-title="Add to cart">
+                                <svg width="14" height="11" viewBox="0 0 14 11" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                  <path d="M13.2363 4H11.5254L8.50195 0.460938C8.29102 0.226562 7.93945 0.203125 7.70508 0.390625C7.4707 0.601562 7.44727 0.953125 7.63477 1.1875L10.0488 4H3.46289L5.87695 1.1875C6.06445 0.953125 6.04102 0.601562 5.80664 0.390625C5.57227 0.203125 5.2207 0.226562 5.00977 0.460938L1.98633 4H0.298828C0.134766 4 0.0175781 4.14062 0.0175781 4.28125V4.84375C0.0175781 5.00781 0.134766 5.125 0.298828 5.125H0.720703L1.37695 9.78906C1.44727 10.3516 1.91602 10.75 2.47852 10.75H11.0332C11.5957 10.75 12.0645 10.3516 12.1348 9.78906L12.791 5.125H13.2363C13.377 5.125 13.5176 5.00781 13.5176 4.84375V4.28125C13.5176 4.14062 13.377 4 13.2363 4ZM11.0332 9.625H2.47852L1.86914 5.125H11.6426L11.0332 9.625ZM7.33008 6.4375C7.33008 6.13281 7.07227 5.875 6.76758 5.875C6.43945 5.875 6.20508 6.13281 6.20508 6.4375V8.3125C6.20508 8.64062 6.43945 8.875 6.76758 8.875C7.07227 8.875 7.33008 8.64062 7.33008 8.3125V6.4375ZM9.95508 6.4375C9.95508 6.13281 9.69727 5.875 9.39258 5.875C9.06445 5.875 8.83008 6.13281 8.83008 6.4375V8.3125C8.83008 8.64062 9.06445 8.875 9.39258 8.875C9.69727 8.875 9.95508 8.64062 9.95508 8.3125V6.4375ZM4.70508 6.4375C4.70508 6.13281 4.44727 5.875 4.14258 5.875C3.81445 5.875 3.58008 6.13281 3.58008 6.4375V8.3125C3.58008 8.64062 3.81445 8.875 4.14258 8.875C4.44727 8.875 4.70508 8.64062 4.70508 8.3125V6.4375Z" fill="#8B8F9E" />
+                                </svg>
+                              </button>
+                              <button type="button" class="btn btn-secondary" data-bs-toggle="tooltip" data-bs-placement="top" title data-bs-original-title="Compare">
+                                <svg width="14" height="13" viewBox="0 0 14 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                  <path d="M6.8916 6.09375C6.8916 6.47656 7.16504 6.75 7.54785 6.75H10.1455C10.7197 6.75 11.0205 6.06641 10.583 5.65625L9.84473 4.89062L12.9072 1.82812C13.0439 1.69141 13.0439 1.47266 12.9072 1.36328L12.2783 0.734375C12.1689 0.597656 11.9502 0.597656 11.8135 0.734375L8.75098 3.79688L7.98535 3.05859C7.5752 2.62109 6.8916 2.92188 6.8916 3.49609V6.09375ZM1.94238 12.793L5.00488 9.73047L5.77051 10.4688C6.18066 10.9062 6.8916 10.6055 6.8916 10.0312V7.40625C6.8916 7.05078 6.59082 6.75 6.23535 6.75H3.61035C3.03613 6.75 2.73535 7.46094 3.17285 7.87109L3.91113 8.63672L0.848633 11.6992C0.711914 11.8359 0.711914 12.0547 0.848633 12.1641L1.47754 12.793C1.58691 12.9297 1.80566 12.9297 1.94238 12.793Z" fill="#8B8F9E" />
+                                </svg>
+                              </button>
+                              <button type="button" class="btn btn-secondary" data-bs-toggle="tooltip" data-bs-placement="top" title data-bs-original-title="Favourite">
+                                <svg width="15" height="13" viewBox="0 0 15 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                  <path d="M12.9907 1.52737C11.4048 0.187524 8.97121 0.378931 7.46731 1.93752C5.93606 0.378931 3.50246 0.187524 1.91652 1.52737C-0.134257 3.25002 0.166524 6.06643 1.64309 7.57034L6.42824 12.4649C6.70168 12.7383 7.05715 12.9024 7.46731 12.9024C7.85012 12.9024 8.20559 12.7383 8.47902 12.4649L13.2915 7.57034C14.7407 6.06643 15.0415 3.25002 12.9907 1.52737ZM12.3345 6.64065L7.54934 11.5352C7.49465 11.5899 7.43996 11.5899 7.35793 11.5352L2.57277 6.64065C1.56105 5.62893 1.36965 3.71487 2.76418 2.53909C3.83059 1.63674 5.47121 1.77346 6.51027 2.81252L7.46731 3.7969L8.42434 2.81252C9.43606 1.77346 11.0767 1.63674 12.1431 2.51174C13.5376 3.71487 13.3462 5.62893 12.3345 6.64065Z" fill="#8B8F9E" />
+                                </svg>
+                              </button>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-lg-3 mb-24">
+                      <div class="productBlock">
+                        <span class="productBlock__tags">HOT</span>
+                        <figure class="productBlock__thumb">
+                          <div class="productBlock__thumb__main">
+                            <a href="product-details.html">
+                              <img src="image/products/product-thumb2.png" alt="Gainioz Product">
+                            </a>
+                          </div>
+                          <div class="productBlock__thumb__hover">
+                            <a href="product-details.html">
+                              <img src="image/products/product-thumb2-2.png" alt="Gainioz Product">
+                            </a>
+                          </div>
+                        </figure>
+                        <div class="productBlock__content">
+                          <div class="productBlock__content__main">
+                            <h3 class="productBlock__name"><a href="product-details.html">malatina 2x Fish</a></h3>
+                            <span class="productBlock__price">$46.00</span>
+                            <span class="productBlock__ratings">
+                            <i class="fa-solid fa-star active"></i>
+                            <i class="fa-solid fa-star active"></i>
+                            <i class="fa-solid fa-star active"></i>
+                            <i class="fa-solid fa-star active"></i>
+                            <i class="fa-solid fa-star"></i>
+                          </span>
+                          </div>
+                          <div class="productBlock__content__hover">
+                            <div class="productBlock__actions">
+                              <button type="button" class="btn btn-secondary" data-bs-toggle="tooltip" data-bs-placement="top" title data-bs-original-title="Add to cart">
+                                <svg width="14" height="11" viewBox="0 0 14 11" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                  <path d="M13.2363 4H11.5254L8.50195 0.460938C8.29102 0.226562 7.93945 0.203125 7.70508 0.390625C7.4707 0.601562 7.44727 0.953125 7.63477 1.1875L10.0488 4H3.46289L5.87695 1.1875C6.06445 0.953125 6.04102 0.601562 5.80664 0.390625C5.57227 0.203125 5.2207 0.226562 5.00977 0.460938L1.98633 4H0.298828C0.134766 4 0.0175781 4.14062 0.0175781 4.28125V4.84375C0.0175781 5.00781 0.134766 5.125 0.298828 5.125H0.720703L1.37695 9.78906C1.44727 10.3516 1.91602 10.75 2.47852 10.75H11.0332C11.5957 10.75 12.0645 10.3516 12.1348 9.78906L12.791 5.125H13.2363C13.377 5.125 13.5176 5.00781 13.5176 4.84375V4.28125C13.5176 4.14062 13.377 4 13.2363 4ZM11.0332 9.625H2.47852L1.86914 5.125H11.6426L11.0332 9.625ZM7.33008 6.4375C7.33008 6.13281 7.07227 5.875 6.76758 5.875C6.43945 5.875 6.20508 6.13281 6.20508 6.4375V8.3125C6.20508 8.64062 6.43945 8.875 6.76758 8.875C7.07227 8.875 7.33008 8.64062 7.33008 8.3125V6.4375ZM9.95508 6.4375C9.95508 6.13281 9.69727 5.875 9.39258 5.875C9.06445 5.875 8.83008 6.13281 8.83008 6.4375V8.3125C8.83008 8.64062 9.06445 8.875 9.39258 8.875C9.69727 8.875 9.95508 8.64062 9.95508 8.3125V6.4375ZM4.70508 6.4375C4.70508 6.13281 4.44727 5.875 4.14258 5.875C3.81445 5.875 3.58008 6.13281 3.58008 6.4375V8.3125C3.58008 8.64062 3.81445 8.875 4.14258 8.875C4.44727 8.875 4.70508 8.64062 4.70508 8.3125V6.4375Z" fill="#8B8F9E" />
+                                </svg>
+                              </button>
+                              <button type="button" class="btn btn-secondary" data-bs-toggle="tooltip" data-bs-placement="top" title data-bs-original-title="Compare">
+                                <svg width="14" height="13" viewBox="0 0 14 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                  <path d="M6.8916 6.09375C6.8916 6.47656 7.16504 6.75 7.54785 6.75H10.1455C10.7197 6.75 11.0205 6.06641 10.583 5.65625L9.84473 4.89062L12.9072 1.82812C13.0439 1.69141 13.0439 1.47266 12.9072 1.36328L12.2783 0.734375C12.1689 0.597656 11.9502 0.597656 11.8135 0.734375L8.75098 3.79688L7.98535 3.05859C7.5752 2.62109 6.8916 2.92188 6.8916 3.49609V6.09375ZM1.94238 12.793L5.00488 9.73047L5.77051 10.4688C6.18066 10.9062 6.8916 10.6055 6.8916 10.0312V7.40625C6.8916 7.05078 6.59082 6.75 6.23535 6.75H3.61035C3.03613 6.75 2.73535 7.46094 3.17285 7.87109L3.91113 8.63672L0.848633 11.6992C0.711914 11.8359 0.711914 12.0547 0.848633 12.1641L1.47754 12.793C1.58691 12.9297 1.80566 12.9297 1.94238 12.793Z" fill="#8B8F9E" />
+                                </svg>
+                              </button>
+                              <button type="button" class="btn btn-secondary" data-bs-toggle="tooltip" data-bs-placement="top" title data-bs-original-title="Favourite">
+                                <svg width="15" height="13" viewBox="0 0 15 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                  <path d="M12.9907 1.52737C11.4048 0.187524 8.97121 0.378931 7.46731 1.93752C5.93606 0.378931 3.50246 0.187524 1.91652 1.52737C-0.134257 3.25002 0.166524 6.06643 1.64309 7.57034L6.42824 12.4649C6.70168 12.7383 7.05715 12.9024 7.46731 12.9024C7.85012 12.9024 8.20559 12.7383 8.47902 12.4649L13.2915 7.57034C14.7407 6.06643 15.0415 3.25002 12.9907 1.52737ZM12.3345 6.64065L7.54934 11.5352C7.49465 11.5899 7.43996 11.5899 7.35793 11.5352L2.57277 6.64065C1.56105 5.62893 1.36965 3.71487 2.76418 2.53909C3.83059 1.63674 5.47121 1.77346 6.51027 2.81252L7.46731 3.7969L8.42434 2.81252C9.43606 1.77346 11.0767 1.63674 12.1431 2.51174C13.5376 3.71487 13.3462 5.62893 12.3345 6.64065Z" fill="#8B8F9E" />
+                                </svg>
+                              </button>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-lg-3 mb-24">
+                      <div class="productBlock">
+                        <span class="productBlock__tags">HOT</span>
+                        <figure class="productBlock__thumb">
+                          <div class="productBlock__thumb__main">
+                            <a href="product-details.html">
+                              <img src="image/products/product-thumb3.png" alt="Gainioz Product">
+                            </a>
+                          </div>
+                          <div class="productBlock__thumb__hover">
+                            <a href="product-details.html">
+                              <img src="image/products/product-thumb3-3.png" alt="Gainioz Product">
+                            </a>
+                          </div>
+                        </figure>
+                        <div class="productBlock__content">
+                          <div class="productBlock__content__main">
+                            <h3 class="productBlock__name"><a href="product-details.html">Bangla Jal Moric</a></h3>
+                            <span class="productBlock__price">$46.00</span>
+                            <span class="productBlock__ratings">
+                            <i class="fa-solid fa-star active"></i>
+                            <i class="fa-solid fa-star active"></i>
+                            <i class="fa-solid fa-star active"></i>
+                            <i class="fa-solid fa-star active"></i>
+                            <i class="fa-solid fa-star"></i>
+                          </span>
+                          </div>
+                          <div class="productBlock__content__hover">
+                            <div class="productBlock__actions">
+                              <button type="button" class="btn btn-secondary" data-bs-toggle="tooltip" data-bs-placement="top" title data-bs-original-title="Add to cart">
+                                <svg width="14" height="11" viewBox="0 0 14 11" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                  <path d="M13.2363 4H11.5254L8.50195 0.460938C8.29102 0.226562 7.93945 0.203125 7.70508 0.390625C7.4707 0.601562 7.44727 0.953125 7.63477 1.1875L10.0488 4H3.46289L5.87695 1.1875C6.06445 0.953125 6.04102 0.601562 5.80664 0.390625C5.57227 0.203125 5.2207 0.226562 5.00977 0.460938L1.98633 4H0.298828C0.134766 4 0.0175781 4.14062 0.0175781 4.28125V4.84375C0.0175781 5.00781 0.134766 5.125 0.298828 5.125H0.720703L1.37695 9.78906C1.44727 10.3516 1.91602 10.75 2.47852 10.75H11.0332C11.5957 10.75 12.0645 10.3516 12.1348 9.78906L12.791 5.125H13.2363C13.377 5.125 13.5176 5.00781 13.5176 4.84375V4.28125C13.5176 4.14062 13.377 4 13.2363 4ZM11.0332 9.625H2.47852L1.86914 5.125H11.6426L11.0332 9.625ZM7.33008 6.4375C7.33008 6.13281 7.07227 5.875 6.76758 5.875C6.43945 5.875 6.20508 6.13281 6.20508 6.4375V8.3125C6.20508 8.64062 6.43945 8.875 6.76758 8.875C7.07227 8.875 7.33008 8.64062 7.33008 8.3125V6.4375ZM9.95508 6.4375C9.95508 6.13281 9.69727 5.875 9.39258 5.875C9.06445 5.875 8.83008 6.13281 8.83008 6.4375V8.3125C8.83008 8.64062 9.06445 8.875 9.39258 8.875C9.69727 8.875 9.95508 8.64062 9.95508 8.3125V6.4375ZM4.70508 6.4375C4.70508 6.13281 4.44727 5.875 4.14258 5.875C3.81445 5.875 3.58008 6.13281 3.58008 6.4375V8.3125C3.58008 8.64062 3.81445 8.875 4.14258 8.875C4.44727 8.875 4.70508 8.64062 4.70508 8.3125V6.4375Z" fill="#8B8F9E" />
+                                </svg>
+                              </button>
+                              <button type="button" class="btn btn-secondary" data-bs-toggle="tooltip" data-bs-placement="top" title data-bs-original-title="Compare">
+                                <svg width="14" height="13" viewBox="0 0 14 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                  <path d="M6.8916 6.09375C6.8916 6.47656 7.16504 6.75 7.54785 6.75H10.1455C10.7197 6.75 11.0205 6.06641 10.583 5.65625L9.84473 4.89062L12.9072 1.82812C13.0439 1.69141 13.0439 1.47266 12.9072 1.36328L12.2783 0.734375C12.1689 0.597656 11.9502 0.597656 11.8135 0.734375L8.75098 3.79688L7.98535 3.05859C7.5752 2.62109 6.8916 2.92188 6.8916 3.49609V6.09375ZM1.94238 12.793L5.00488 9.73047L5.77051 10.4688C6.18066 10.9062 6.8916 10.6055 6.8916 10.0312V7.40625C6.8916 7.05078 6.59082 6.75 6.23535 6.75H3.61035C3.03613 6.75 2.73535 7.46094 3.17285 7.87109L3.91113 8.63672L0.848633 11.6992C0.711914 11.8359 0.711914 12.0547 0.848633 12.1641L1.47754 12.793C1.58691 12.9297 1.80566 12.9297 1.94238 12.793Z" fill="#8B8F9E" />
+                                </svg>
+                              </button>
+                              <button type="button" class="btn btn-secondary" data-bs-toggle="tooltip" data-bs-placement="top" title data-bs-original-title="Favourite">
+                                <svg width="15" height="13" viewBox="0 0 15 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                  <path d="M12.9907 1.52737C11.4048 0.187524 8.97121 0.378931 7.46731 1.93752C5.93606 0.378931 3.50246 0.187524 1.91652 1.52737C-0.134257 3.25002 0.166524 6.06643 1.64309 7.57034L6.42824 12.4649C6.70168 12.7383 7.05715 12.9024 7.46731 12.9024C7.85012 12.9024 8.20559 12.7383 8.47902 12.4649L13.2915 7.57034C14.7407 6.06643 15.0415 3.25002 12.9907 1.52737ZM12.3345 6.64065L7.54934 11.5352C7.49465 11.5899 7.43996 11.5899 7.35793 11.5352L2.57277 6.64065C1.56105 5.62893 1.36965 3.71487 2.76418 2.53909C3.83059 1.63674 5.47121 1.77346 6.51027 2.81252L7.46731 3.7969L8.42434 2.81252C9.43606 1.77346 11.0767 1.63674 12.1431 2.51174C13.5376 3.71487 13.3462 5.62893 12.3345 6.64065Z" fill="#8B8F9E" />
+                                </svg>
+                              </button>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-lg-3 mb-24">
+                      <div class="productBlock">
+                        <span class="productBlock__tags">New</span>
+                        <figure class="productBlock__thumb">
+                          <div class="productBlock__thumb__main">
+                            <a href="product-details.html">
+                              <img src="image/products/product-thumb5.png" alt="Gainioz Product">
+                            </a>
+                          </div>
+                          <div class="productBlock__thumb__hover">
+                            <a href="product-details.html">
+                              <img src="image/products/product-thumb5-5.png" alt="Gainioz Product">
+                            </a>
+                          </div>
+                        </figure>
+                        <div class="productBlock__content">
+                          <div class="productBlock__content__main">
+                            <h3 class="productBlock__name"><a href="product-details.html">Eta abr Ki pol</a></h3>
+                            <span class="productBlock__price">$46.00</span>
+                            <span class="productBlock__ratings">
+                            <i class="fa-solid fa-star active"></i>
+                            <i class="fa-solid fa-star active"></i>
+                            <i class="fa-solid fa-star active"></i>
+                            <i class="fa-solid fa-star active"></i>
+                            <i class="fa-solid fa-star"></i>
+                          </span>
+                          </div>
+                          <div class="productBlock__content__hover">
+                            <div class="productBlock__actions">
+                              <button type="button" class="btn btn-secondary" data-bs-toggle="tooltip" data-bs-placement="top" title data-bs-original-title="Add to cart">
+                                <svg width="14" height="11" viewBox="0 0 14 11" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                  <path d="M13.2363 4H11.5254L8.50195 0.460938C8.29102 0.226562 7.93945 0.203125 7.70508 0.390625C7.4707 0.601562 7.44727 0.953125 7.63477 1.1875L10.0488 4H3.46289L5.87695 1.1875C6.06445 0.953125 6.04102 0.601562 5.80664 0.390625C5.57227 0.203125 5.2207 0.226562 5.00977 0.460938L1.98633 4H0.298828C0.134766 4 0.0175781 4.14062 0.0175781 4.28125V4.84375C0.0175781 5.00781 0.134766 5.125 0.298828 5.125H0.720703L1.37695 9.78906C1.44727 10.3516 1.91602 10.75 2.47852 10.75H11.0332C11.5957 10.75 12.0645 10.3516 12.1348 9.78906L12.791 5.125H13.2363C13.377 5.125 13.5176 5.00781 13.5176 4.84375V4.28125C13.5176 4.14062 13.377 4 13.2363 4ZM11.0332 9.625H2.47852L1.86914 5.125H11.6426L11.0332 9.625ZM7.33008 6.4375C7.33008 6.13281 7.07227 5.875 6.76758 5.875C6.43945 5.875 6.20508 6.13281 6.20508 6.4375V8.3125C6.20508 8.64062 6.43945 8.875 6.76758 8.875C7.07227 8.875 7.33008 8.64062 7.33008 8.3125V6.4375ZM9.95508 6.4375C9.95508 6.13281 9.69727 5.875 9.39258 5.875C9.06445 5.875 8.83008 6.13281 8.83008 6.4375V8.3125C8.83008 8.64062 9.06445 8.875 9.39258 8.875C9.69727 8.875 9.95508 8.64062 9.95508 8.3125V6.4375ZM4.70508 6.4375C4.70508 6.13281 4.44727 5.875 4.14258 5.875C3.81445 5.875 3.58008 6.13281 3.58008 6.4375V8.3125C3.58008 8.64062 3.81445 8.875 4.14258 8.875C4.44727 8.875 4.70508 8.64062 4.70508 8.3125V6.4375Z" fill="#8B8F9E" />
+                                </svg>
+                              </button>
+                              <button type="button" class="btn btn-secondary" data-bs-toggle="tooltip" data-bs-placement="top" title data-bs-original-title="Compare">
+                                <svg width="14" height="13" viewBox="0 0 14 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                  <path d="M6.8916 6.09375C6.8916 6.47656 7.16504 6.75 7.54785 6.75H10.1455C10.7197 6.75 11.0205 6.06641 10.583 5.65625L9.84473 4.89062L12.9072 1.82812C13.0439 1.69141 13.0439 1.47266 12.9072 1.36328L12.2783 0.734375C12.1689 0.597656 11.9502 0.597656 11.8135 0.734375L8.75098 3.79688L7.98535 3.05859C7.5752 2.62109 6.8916 2.92188 6.8916 3.49609V6.09375ZM1.94238 12.793L5.00488 9.73047L5.77051 10.4688C6.18066 10.9062 6.8916 10.6055 6.8916 10.0312V7.40625C6.8916 7.05078 6.59082 6.75 6.23535 6.75H3.61035C3.03613 6.75 2.73535 7.46094 3.17285 7.87109L3.91113 8.63672L0.848633 11.6992C0.711914 11.8359 0.711914 12.0547 0.848633 12.1641L1.47754 12.793C1.58691 12.9297 1.80566 12.9297 1.94238 12.793Z" fill="#8B8F9E" />
+                                </svg>
+                              </button>
+                              <button type="button" class="btn btn-secondary" data-bs-toggle="tooltip" data-bs-placement="top" title data-bs-original-title="Favourite">
+                                <svg width="15" height="13" viewBox="0 0 15 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                  <path d="M12.9907 1.52737C11.4048 0.187524 8.97121 0.378931 7.46731 1.93752C5.93606 0.378931 3.50246 0.187524 1.91652 1.52737C-0.134257 3.25002 0.166524 6.06643 1.64309 7.57034L6.42824 12.4649C6.70168 12.7383 7.05715 12.9024 7.46731 12.9024C7.85012 12.9024 8.20559 12.7383 8.47902 12.4649L13.2915 7.57034C14.7407 6.06643 15.0415 3.25002 12.9907 1.52737ZM12.3345 6.64065L7.54934 11.5352C7.49465 11.5899 7.43996 11.5899 7.35793 11.5352L2.57277 6.64065C1.56105 5.62893 1.36965 3.71487 2.76418 2.53909C3.83059 1.63674 5.47121 1.77346 6.51027 2.81252L7.46731 3.7969L8.42434 2.81252C9.43606 1.77346 11.0767 1.63674 12.1431 2.51174C13.5376 3.71487 13.3462 5.62893 12.3345 6.64065Z" fill="#8B8F9E" />
+                                </svg>
+                              </button>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-lg-3 mb-24">
+                      <div class="productBlock">
+                        <span class="productBlock__tags">New</span>
+                        <figure class="productBlock__thumb">
+                          <div class="productBlock__thumb__main">
+                            <a href="product-details.html">
+                              <img src="image/products/product-thumb6.png" alt="Gainioz Product">
+                            </a>
+                          </div>
+                          <div class="productBlock__thumb__hover">
+                            <a href="product-details.html">
+                              <img src="image/products/product-thumb6-6.png" alt="Gainioz Product">
+                            </a>
+                          </div>
+                        </figure>
+                        <div class="productBlock__content">
+                          <div class="productBlock__content__main">
+                            <h3 class="productBlock__name"><a href="product-details.html">Eta abr Ki pol</a></h3>
+                            <span class="productBlock__price">$46.00</span>
+                            <span class="productBlock__ratings">
+                            <i class="fa-solid fa-star active"></i>
+                            <i class="fa-solid fa-star active"></i>
+                            <i class="fa-solid fa-star active"></i>
+                            <i class="fa-solid fa-star active"></i>
+                            <i class="fa-solid fa-star"></i>
+                          </span>
+                          </div>
+                          <div class="productBlock__content__hover">
+                            <div class="productBlock__actions">
+                              <button type="button" class="btn btn-secondary" data-bs-toggle="tooltip" data-bs-placement="top" title data-bs-original-title="Add to cart">
+                                <svg width="14" height="11" viewBox="0 0 14 11" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                  <path d="M13.2363 4H11.5254L8.50195 0.460938C8.29102 0.226562 7.93945 0.203125 7.70508 0.390625C7.4707 0.601562 7.44727 0.953125 7.63477 1.1875L10.0488 4H3.46289L5.87695 1.1875C6.06445 0.953125 6.04102 0.601562 5.80664 0.390625C5.57227 0.203125 5.2207 0.226562 5.00977 0.460938L1.98633 4H0.298828C0.134766 4 0.0175781 4.14062 0.0175781 4.28125V4.84375C0.0175781 5.00781 0.134766 5.125 0.298828 5.125H0.720703L1.37695 9.78906C1.44727 10.3516 1.91602 10.75 2.47852 10.75H11.0332C11.5957 10.75 12.0645 10.3516 12.1348 9.78906L12.791 5.125H13.2363C13.377 5.125 13.5176 5.00781 13.5176 4.84375V4.28125C13.5176 4.14062 13.377 4 13.2363 4ZM11.0332 9.625H2.47852L1.86914 5.125H11.6426L11.0332 9.625ZM7.33008 6.4375C7.33008 6.13281 7.07227 5.875 6.76758 5.875C6.43945 5.875 6.20508 6.13281 6.20508 6.4375V8.3125C6.20508 8.64062 6.43945 8.875 6.76758 8.875C7.07227 8.875 7.33008 8.64062 7.33008 8.3125V6.4375ZM9.95508 6.4375C9.95508 6.13281 9.69727 5.875 9.39258 5.875C9.06445 5.875 8.83008 6.13281 8.83008 6.4375V8.3125C8.83008 8.64062 9.06445 8.875 9.39258 8.875C9.69727 8.875 9.95508 8.64062 9.95508 8.3125V6.4375ZM4.70508 6.4375C4.70508 6.13281 4.44727 5.875 4.14258 5.875C3.81445 5.875 3.58008 6.13281 3.58008 6.4375V8.3125C3.58008 8.64062 3.81445 8.875 4.14258 8.875C4.44727 8.875 4.70508 8.64062 4.70508 8.3125V6.4375Z" fill="#8B8F9E" />
+                                </svg>
+                              </button>
+                              <button type="button" class="btn btn-secondary" data-bs-toggle="tooltip" data-bs-placement="top" title data-bs-original-title="Compare">
+                                <svg width="14" height="13" viewBox="0 0 14 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                  <path d="M6.8916 6.09375C6.8916 6.47656 7.16504 6.75 7.54785 6.75H10.1455C10.7197 6.75 11.0205 6.06641 10.583 5.65625L9.84473 4.89062L12.9072 1.82812C13.0439 1.69141 13.0439 1.47266 12.9072 1.36328L12.2783 0.734375C12.1689 0.597656 11.9502 0.597656 11.8135 0.734375L8.75098 3.79688L7.98535 3.05859C7.5752 2.62109 6.8916 2.92188 6.8916 3.49609V6.09375ZM1.94238 12.793L5.00488 9.73047L5.77051 10.4688C6.18066 10.9062 6.8916 10.6055 6.8916 10.0312V7.40625C6.8916 7.05078 6.59082 6.75 6.23535 6.75H3.61035C3.03613 6.75 2.73535 7.46094 3.17285 7.87109L3.91113 8.63672L0.848633 11.6992C0.711914 11.8359 0.711914 12.0547 0.848633 12.1641L1.47754 12.793C1.58691 12.9297 1.80566 12.9297 1.94238 12.793Z" fill="#8B8F9E" />
+                                </svg>
+                              </button>
+                              <button type="button" class="btn btn-secondary" data-bs-toggle="tooltip" data-bs-placement="top" title data-bs-original-title="Favourite">
+                                <svg width="15" height="13" viewBox="0 0 15 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                  <path d="M12.9907 1.52737C11.4048 0.187524 8.97121 0.378931 7.46731 1.93752C5.93606 0.378931 3.50246 0.187524 1.91652 1.52737C-0.134257 3.25002 0.166524 6.06643 1.64309 7.57034L6.42824 12.4649C6.70168 12.7383 7.05715 12.9024 7.46731 12.9024C7.85012 12.9024 8.20559 12.7383 8.47902 12.4649L13.2915 7.57034C14.7407 6.06643 15.0415 3.25002 12.9907 1.52737ZM12.3345 6.64065L7.54934 11.5352C7.49465 11.5899 7.43996 11.5899 7.35793 11.5352L2.57277 6.64065C1.56105 5.62893 1.36965 3.71487 2.76418 2.53909C3.83059 1.63674 5.47121 1.77346 6.51027 2.81252L7.46731 3.7969L8.42434 2.81252C9.43606 1.77346 11.0767 1.63674 12.1431 2.51174C13.5376 3.71487 13.3462 5.62893 12.3345 6.64065Z" fill="#8B8F9E" />
+                                </svg>
+                              </button>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-lg-3 mb-24">
+                      <div class="productBlock">
+                        <span class="productBlock__tags">New</span>
+                        <figure class="productBlock__thumb">
+                          <div class="productBlock__thumb__main">
+                            <a href="product-details.html">
+                              <img src="image/products/product-thumb7.png" alt="Gainioz Product">
+                            </a>
+                          </div>
+                          <div class="productBlock__thumb__hover">
+                            <a href="product-details.html">
+                              <img src="image/products/product-thumb7-7.png" alt="Gainioz Product">
+                            </a>
+                          </div>
+                        </figure>
+                        <div class="productBlock__content">
+                          <div class="productBlock__content__main">
+                            <h3 class="productBlock__name"><a href="product-details.html">Eta abr Ki pol</a></h3>
+                            <span class="productBlock__price">$46.00</span>
+                            <span class="productBlock__ratings">
+                            <i class="fa-solid fa-star active"></i>
+                            <i class="fa-solid fa-star active"></i>
+                            <i class="fa-solid fa-star active"></i>
+                            <i class="fa-solid fa-star active"></i>
+                            <i class="fa-solid fa-star"></i>
+                          </span>
+                          </div>
+                          <div class="productBlock__content__hover">
+                            <div class="productBlock__actions">
+                              <button type="button" class="btn btn-secondary" data-bs-toggle="tooltip" data-bs-placement="top" title data-bs-original-title="Add to cart">
+                                <svg width="14" height="11" viewBox="0 0 14 11" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                  <path d="M13.2363 4H11.5254L8.50195 0.460938C8.29102 0.226562 7.93945 0.203125 7.70508 0.390625C7.4707 0.601562 7.44727 0.953125 7.63477 1.1875L10.0488 4H3.46289L5.87695 1.1875C6.06445 0.953125 6.04102 0.601562 5.80664 0.390625C5.57227 0.203125 5.2207 0.226562 5.00977 0.460938L1.98633 4H0.298828C0.134766 4 0.0175781 4.14062 0.0175781 4.28125V4.84375C0.0175781 5.00781 0.134766 5.125 0.298828 5.125H0.720703L1.37695 9.78906C1.44727 10.3516 1.91602 10.75 2.47852 10.75H11.0332C11.5957 10.75 12.0645 10.3516 12.1348 9.78906L12.791 5.125H13.2363C13.377 5.125 13.5176 5.00781 13.5176 4.84375V4.28125C13.5176 4.14062 13.377 4 13.2363 4ZM11.0332 9.625H2.47852L1.86914 5.125H11.6426L11.0332 9.625ZM7.33008 6.4375C7.33008 6.13281 7.07227 5.875 6.76758 5.875C6.43945 5.875 6.20508 6.13281 6.20508 6.4375V8.3125C6.20508 8.64062 6.43945 8.875 6.76758 8.875C7.07227 8.875 7.33008 8.64062 7.33008 8.3125V6.4375ZM9.95508 6.4375C9.95508 6.13281 9.69727 5.875 9.39258 5.875C9.06445 5.875 8.83008 6.13281 8.83008 6.4375V8.3125C8.83008 8.64062 9.06445 8.875 9.39258 8.875C9.69727 8.875 9.95508 8.64062 9.95508 8.3125V6.4375ZM4.70508 6.4375C4.70508 6.13281 4.44727 5.875 4.14258 5.875C3.81445 5.875 3.58008 6.13281 3.58008 6.4375V8.3125C3.58008 8.64062 3.81445 8.875 4.14258 8.875C4.44727 8.875 4.70508 8.64062 4.70508 8.3125V6.4375Z" fill="#8B8F9E" />
+                                </svg>
+                              </button>
+                              <button type="button" class="btn btn-secondary" data-bs-toggle="tooltip" data-bs-placement="top" title data-bs-original-title="Compare">
+                                <svg width="14" height="13" viewBox="0 0 14 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                  <path d="M6.8916 6.09375C6.8916 6.47656 7.16504 6.75 7.54785 6.75H10.1455C10.7197 6.75 11.0205 6.06641 10.583 5.65625L9.84473 4.89062L12.9072 1.82812C13.0439 1.69141 13.0439 1.47266 12.9072 1.36328L12.2783 0.734375C12.1689 0.597656 11.9502 0.597656 11.8135 0.734375L8.75098 3.79688L7.98535 3.05859C7.5752 2.62109 6.8916 2.92188 6.8916 3.49609V6.09375ZM1.94238 12.793L5.00488 9.73047L5.77051 10.4688C6.18066 10.9062 6.8916 10.6055 6.8916 10.0312V7.40625C6.8916 7.05078 6.59082 6.75 6.23535 6.75H3.61035C3.03613 6.75 2.73535 7.46094 3.17285 7.87109L3.91113 8.63672L0.848633 11.6992C0.711914 11.8359 0.711914 12.0547 0.848633 12.1641L1.47754 12.793C1.58691 12.9297 1.80566 12.9297 1.94238 12.793Z" fill="#8B8F9E" />
+                                </svg>
+                              </button>
+                              <button type="button" class="btn btn-secondary" data-bs-toggle="tooltip" data-bs-placement="top" title data-bs-original-title="Favourite">
+                                <svg width="15" height="13" viewBox="0 0 15 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                  <path d="M12.9907 1.52737C11.4048 0.187524 8.97121 0.378931 7.46731 1.93752C5.93606 0.378931 3.50246 0.187524 1.91652 1.52737C-0.134257 3.25002 0.166524 6.06643 1.64309 7.57034L6.42824 12.4649C6.70168 12.7383 7.05715 12.9024 7.46731 12.9024C7.85012 12.9024 8.20559 12.7383 8.47902 12.4649L13.2915 7.57034C14.7407 6.06643 15.0415 3.25002 12.9907 1.52737ZM12.3345 6.64065L7.54934 11.5352C7.49465 11.5899 7.43996 11.5899 7.35793 11.5352L2.57277 6.64065C1.56105 5.62893 1.36965 3.71487 2.76418 2.53909C3.83059 1.63674 5.47121 1.77346 6.51027 2.81252L7.46731 3.7969L8.42434 2.81252C9.43606 1.77346 11.0767 1.63674 12.1431 2.51174C13.5376 3.71487 13.3462 5.62893 12.3345 6.64065Z" fill="#8B8F9E" />
+                                </svg>
+                              </button>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-lg-3 mb-24">
+                      <div class="productBlock">
+                        <figure class="productBlock__thumb">
+                          <div class="productBlock__thumb__main">
+                            <a href="product-details.html">
+                              <img src="image/products/product-thumb8.png" alt="Gainioz Product">
+                            </a>
+                          </div>
+                          <div class="productBlock__thumb__hover">
+                            <a href="product-details.html">
+                              <img src="image/products/product-thumb8-8.png" alt="Gainioz Product">
+                            </a>
+                          </div>
+                        </figure>
+                        <div class="productBlock__content">
+                          <div class="productBlock__content__main">
+                            <h3 class="productBlock__name"><a href="product-details.html">Eta abr Ki pol</a></h3>
+                            <span class="productBlock__price">$46.00</span>
+                            <span class="productBlock__ratings">
+                            <i class="fa-solid fa-star active"></i>
+                            <i class="fa-solid fa-star active"></i>
+                            <i class="fa-solid fa-star active"></i>
+                            <i class="fa-solid fa-star active"></i>
+                            <i class="fa-solid fa-star"></i>
+                          </span>
+                          </div>
+                          <div class="productBlock__content__hover">
+                            <div class="productBlock__actions">
+                              <button type="button" class="btn btn-secondary" data-bs-toggle="tooltip" data-bs-placement="top" title data-bs-original-title="Add to cart">
+                                <svg width="14" height="11" viewBox="0 0 14 11" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                  <path d="M13.2363 4H11.5254L8.50195 0.460938C8.29102 0.226562 7.93945 0.203125 7.70508 0.390625C7.4707 0.601562 7.44727 0.953125 7.63477 1.1875L10.0488 4H3.46289L5.87695 1.1875C6.06445 0.953125 6.04102 0.601562 5.80664 0.390625C5.57227 0.203125 5.2207 0.226562 5.00977 0.460938L1.98633 4H0.298828C0.134766 4 0.0175781 4.14062 0.0175781 4.28125V4.84375C0.0175781 5.00781 0.134766 5.125 0.298828 5.125H0.720703L1.37695 9.78906C1.44727 10.3516 1.91602 10.75 2.47852 10.75H11.0332C11.5957 10.75 12.0645 10.3516 12.1348 9.78906L12.791 5.125H13.2363C13.377 5.125 13.5176 5.00781 13.5176 4.84375V4.28125C13.5176 4.14062 13.377 4 13.2363 4ZM11.0332 9.625H2.47852L1.86914 5.125H11.6426L11.0332 9.625ZM7.33008 6.4375C7.33008 6.13281 7.07227 5.875 6.76758 5.875C6.43945 5.875 6.20508 6.13281 6.20508 6.4375V8.3125C6.20508 8.64062 6.43945 8.875 6.76758 8.875C7.07227 8.875 7.33008 8.64062 7.33008 8.3125V6.4375ZM9.95508 6.4375C9.95508 6.13281 9.69727 5.875 9.39258 5.875C9.06445 5.875 8.83008 6.13281 8.83008 6.4375V8.3125C8.83008 8.64062 9.06445 8.875 9.39258 8.875C9.69727 8.875 9.95508 8.64062 9.95508 8.3125V6.4375ZM4.70508 6.4375C4.70508 6.13281 4.44727 5.875 4.14258 5.875C3.81445 5.875 3.58008 6.13281 3.58008 6.4375V8.3125C3.58008 8.64062 3.81445 8.875 4.14258 8.875C4.44727 8.875 4.70508 8.64062 4.70508 8.3125V6.4375Z" fill="#8B8F9E" />
+                                </svg>
+                              </button>
+                              <button type="button" class="btn btn-secondary" data-bs-toggle="tooltip" data-bs-placement="top" title data-bs-original-title="Compare">
+                                <svg width="14" height="13" viewBox="0 0 14 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                  <path d="M6.8916 6.09375C6.8916 6.47656 7.16504 6.75 7.54785 6.75H10.1455C10.7197 6.75 11.0205 6.06641 10.583 5.65625L9.84473 4.89062L12.9072 1.82812C13.0439 1.69141 13.0439 1.47266 12.9072 1.36328L12.2783 0.734375C12.1689 0.597656 11.9502 0.597656 11.8135 0.734375L8.75098 3.79688L7.98535 3.05859C7.5752 2.62109 6.8916 2.92188 6.8916 3.49609V6.09375ZM1.94238 12.793L5.00488 9.73047L5.77051 10.4688C6.18066 10.9062 6.8916 10.6055 6.8916 10.0312V7.40625C6.8916 7.05078 6.59082 6.75 6.23535 6.75H3.61035C3.03613 6.75 2.73535 7.46094 3.17285 7.87109L3.91113 8.63672L0.848633 11.6992C0.711914 11.8359 0.711914 12.0547 0.848633 12.1641L1.47754 12.793C1.58691 12.9297 1.80566 12.9297 1.94238 12.793Z" fill="#8B8F9E" />
+                                </svg>
+                              </button>
+                              <button type="button" class="btn btn-secondary" data-bs-toggle="tooltip" data-bs-placement="top" title data-bs-original-title="Favourite">
+                                <svg width="15" height="13" viewBox="0 0 15 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                  <path d="M12.9907 1.52737C11.4048 0.187524 8.97121 0.378931 7.46731 1.93752C5.93606 0.378931 3.50246 0.187524 1.91652 1.52737C-0.134257 3.25002 0.166524 6.06643 1.64309 7.57034L6.42824 12.4649C6.70168 12.7383 7.05715 12.9024 7.46731 12.9024C7.85012 12.9024 8.20559 12.7383 8.47902 12.4649L13.2915 7.57034C14.7407 6.06643 15.0415 3.25002 12.9907 1.52737ZM12.3345 6.64065L7.54934 11.5352C7.49465 11.5899 7.43996 11.5899 7.35793 11.5352L2.57277 6.64065C1.56105 5.62893 1.36965 3.71487 2.76418 2.53909C3.83059 1.63674 5.47121 1.77346 6.51027 2.81252L7.46731 3.7969L8.42434 2.81252C9.43606 1.77346 11.0767 1.63674 12.1431 2.51174C13.5376 3.71487 13.3462 5.62893 12.3345 6.64065Z" fill="#8B8F9E" />
+                                </svg>
+                              </button>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-lg-3 mb-24">
+                      <div class="productBlock">
+                        <figure class="productBlock__thumb">
+                          <div class="productBlock__thumb__main">
+                            <a href="product-details.html">
+                              <img src="image/products/product-thumb9.png" alt="Gainioz Product">
+                            </a>
+                          </div>
+                          <div class="productBlock__thumb__hover">
+                            <a href="product-details.html">
+                              <img src="image/products/product-thumb9-9.png" alt="Gainioz Product">
+                            </a>
+                          </div>
+                        </figure>
+                        <div class="productBlock__content">
+                          <div class="productBlock__content__main">
+                            <h3 class="productBlock__name"><a href="product-details.html">Eta abr Ki pol</a></h3>
+                            <span class="productBlock__price">$46.00</span>
+                            <span class="productBlock__ratings">
+                            <i class="fa-solid fa-star active"></i>
+                            <i class="fa-solid fa-star active"></i>
+                            <i class="fa-solid fa-star active"></i>
+                            <i class="fa-solid fa-star active"></i>
+                            <i class="fa-solid fa-star"></i>
+                          </span>
+                          </div>
+                          <div class="productBlock__content__hover">
+                            <div class="productBlock__actions">
+                              <button type="button" class="btn btn-secondary" data-bs-toggle="tooltip" data-bs-placement="top" title data-bs-original-title="Add to cart">
+                                <svg width="14" height="11" viewBox="0 0 14 11" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                  <path d="M13.2363 4H11.5254L8.50195 0.460938C8.29102 0.226562 7.93945 0.203125 7.70508 0.390625C7.4707 0.601562 7.44727 0.953125 7.63477 1.1875L10.0488 4H3.46289L5.87695 1.1875C6.06445 0.953125 6.04102 0.601562 5.80664 0.390625C5.57227 0.203125 5.2207 0.226562 5.00977 0.460938L1.98633 4H0.298828C0.134766 4 0.0175781 4.14062 0.0175781 4.28125V4.84375C0.0175781 5.00781 0.134766 5.125 0.298828 5.125H0.720703L1.37695 9.78906C1.44727 10.3516 1.91602 10.75 2.47852 10.75H11.0332C11.5957 10.75 12.0645 10.3516 12.1348 9.78906L12.791 5.125H13.2363C13.377 5.125 13.5176 5.00781 13.5176 4.84375V4.28125C13.5176 4.14062 13.377 4 13.2363 4ZM11.0332 9.625H2.47852L1.86914 5.125H11.6426L11.0332 9.625ZM7.33008 6.4375C7.33008 6.13281 7.07227 5.875 6.76758 5.875C6.43945 5.875 6.20508 6.13281 6.20508 6.4375V8.3125C6.20508 8.64062 6.43945 8.875 6.76758 8.875C7.07227 8.875 7.33008 8.64062 7.33008 8.3125V6.4375ZM9.95508 6.4375C9.95508 6.13281 9.69727 5.875 9.39258 5.875C9.06445 5.875 8.83008 6.13281 8.83008 6.4375V8.3125C8.83008 8.64062 9.06445 8.875 9.39258 8.875C9.69727 8.875 9.95508 8.64062 9.95508 8.3125V6.4375ZM4.70508 6.4375C4.70508 6.13281 4.44727 5.875 4.14258 5.875C3.81445 5.875 3.58008 6.13281 3.58008 6.4375V8.3125C3.58008 8.64062 3.81445 8.875 4.14258 8.875C4.44727 8.875 4.70508 8.64062 4.70508 8.3125V6.4375Z" fill="#8B8F9E" />
+                                </svg>
+                              </button>
+                              <button type="button" class="btn btn-secondary" data-bs-toggle="tooltip" data-bs-placement="top" title data-bs-original-title="Compare">
+                                <svg width="14" height="13" viewBox="0 0 14 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                  <path d="M6.8916 6.09375C6.8916 6.47656 7.16504 6.75 7.54785 6.75H10.1455C10.7197 6.75 11.0205 6.06641 10.583 5.65625L9.84473 4.89062L12.9072 1.82812C13.0439 1.69141 13.0439 1.47266 12.9072 1.36328L12.2783 0.734375C12.1689 0.597656 11.9502 0.597656 11.8135 0.734375L8.75098 3.79688L7.98535 3.05859C7.5752 2.62109 6.8916 2.92188 6.8916 3.49609V6.09375ZM1.94238 12.793L5.00488 9.73047L5.77051 10.4688C6.18066 10.9062 6.8916 10.6055 6.8916 10.0312V7.40625C6.8916 7.05078 6.59082 6.75 6.23535 6.75H3.61035C3.03613 6.75 2.73535 7.46094 3.17285 7.87109L3.91113 8.63672L0.848633 11.6992C0.711914 11.8359 0.711914 12.0547 0.848633 12.1641L1.47754 12.793C1.58691 12.9297 1.80566 12.9297 1.94238 12.793Z" fill="#8B8F9E" />
+                                </svg>
+                              </button>
+                              <button type="button" class="btn btn-secondary" data-bs-toggle="tooltip" data-bs-placement="top" title data-bs-original-title="Favourite">
+                                <svg width="15" height="13" viewBox="0 0 15 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                  <path d="M12.9907 1.52737C11.4048 0.187524 8.97121 0.378931 7.46731 1.93752C5.93606 0.378931 3.50246 0.187524 1.91652 1.52737C-0.134257 3.25002 0.166524 6.06643 1.64309 7.57034L6.42824 12.4649C6.70168 12.7383 7.05715 12.9024 7.46731 12.9024C7.85012 12.9024 8.20559 12.7383 8.47902 12.4649L13.2915 7.57034C14.7407 6.06643 15.0415 3.25002 12.9907 1.52737ZM12.3345 6.64065L7.54934 11.5352C7.49465 11.5899 7.43996 11.5899 7.35793 11.5352L2.57277 6.64065C1.56105 5.62893 1.36965 3.71487 2.76418 2.53909C3.83059 1.63674 5.47121 1.77346 6.51027 2.81252L7.46731 3.7969L8.42434 2.81252C9.43606 1.77346 11.0767 1.63674 12.1431 2.51174C13.5376 3.71487 13.3462 5.62893 12.3345 6.64065Z" fill="#8B8F9E" />
+                                </svg>
+                              </button>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-lg-3 mb-24">
+                      <div class="productBlock">
+                        <span class="productBlock__tags">HOT</span>
+                        <figure class="productBlock__thumb">
+                          <div class="productBlock__thumb__main">
+                            <a href="product-details.html">
+                              <img src="image/products/product-thumb4.png" alt="Gainioz Product">
+                            </a>
+                          </div>
+                          <div class="productBlock__thumb__hover">
+                            <a href="product-details.html">
+                              <img src="image/products/product-thumb4-4.png" alt="Gainioz Product">
+                            </a>
+                          </div>
+                        </figure>
+                        <div class="productBlock__content">
+                          <div class="productBlock__content__main">
+                            <h3 class="productBlock__name"><a href="product-details.html">Eta abr Ki pol</a></h3>
+                            <span class="productBlock__price">$46.00</span>
+                            <span class="productBlock__ratings">
+                            <i class="fa-solid fa-star active"></i>
+                            <i class="fa-solid fa-star active"></i>
+                            <i class="fa-solid fa-star active"></i>
+                            <i class="fa-solid fa-star active"></i>
+                            <i class="fa-solid fa-star"></i>
+                          </span>
+                          </div>
+                          <div class="productBlock__content__hover">
+                            <div class="productBlock__actions">
+                              <button type="button" class="btn btn-secondary" data-bs-toggle="tooltip" data-bs-placement="top" title data-bs-original-title="Add to cart">
+                                <svg width="14" height="11" viewBox="0 0 14 11" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                  <path d="M13.2363 4H11.5254L8.50195 0.460938C8.29102 0.226562 7.93945 0.203125 7.70508 0.390625C7.4707 0.601562 7.44727 0.953125 7.63477 1.1875L10.0488 4H3.46289L5.87695 1.1875C6.06445 0.953125 6.04102 0.601562 5.80664 0.390625C5.57227 0.203125 5.2207 0.226562 5.00977 0.460938L1.98633 4H0.298828C0.134766 4 0.0175781 4.14062 0.0175781 4.28125V4.84375C0.0175781 5.00781 0.134766 5.125 0.298828 5.125H0.720703L1.37695 9.78906C1.44727 10.3516 1.91602 10.75 2.47852 10.75H11.0332C11.5957 10.75 12.0645 10.3516 12.1348 9.78906L12.791 5.125H13.2363C13.377 5.125 13.5176 5.00781 13.5176 4.84375V4.28125C13.5176 4.14062 13.377 4 13.2363 4ZM11.0332 9.625H2.47852L1.86914 5.125H11.6426L11.0332 9.625ZM7.33008 6.4375C7.33008 6.13281 7.07227 5.875 6.76758 5.875C6.43945 5.875 6.20508 6.13281 6.20508 6.4375V8.3125C6.20508 8.64062 6.43945 8.875 6.76758 8.875C7.07227 8.875 7.33008 8.64062 7.33008 8.3125V6.4375ZM9.95508 6.4375C9.95508 6.13281 9.69727 5.875 9.39258 5.875C9.06445 5.875 8.83008 6.13281 8.83008 6.4375V8.3125C8.83008 8.64062 9.06445 8.875 9.39258 8.875C9.69727 8.875 9.95508 8.64062 9.95508 8.3125V6.4375ZM4.70508 6.4375C4.70508 6.13281 4.44727 5.875 4.14258 5.875C3.81445 5.875 3.58008 6.13281 3.58008 6.4375V8.3125C3.58008 8.64062 3.81445 8.875 4.14258 8.875C4.44727 8.875 4.70508 8.64062 4.70508 8.3125V6.4375Z" fill="#8B8F9E" />
+                                </svg>
+                              </button>
+                              <button type="button" class="btn btn-secondary" data-bs-toggle="tooltip" data-bs-placement="top" title data-bs-original-title="Compare">
+                                <svg width="14" height="13" viewBox="0 0 14 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                  <path d="M6.8916 6.09375C6.8916 6.47656 7.16504 6.75 7.54785 6.75H10.1455C10.7197 6.75 11.0205 6.06641 10.583 5.65625L9.84473 4.89062L12.9072 1.82812C13.0439 1.69141 13.0439 1.47266 12.9072 1.36328L12.2783 0.734375C12.1689 0.597656 11.9502 0.597656 11.8135 0.734375L8.75098 3.79688L7.98535 3.05859C7.5752 2.62109 6.8916 2.92188 6.8916 3.49609V6.09375ZM1.94238 12.793L5.00488 9.73047L5.77051 10.4688C6.18066 10.9062 6.8916 10.6055 6.8916 10.0312V7.40625C6.8916 7.05078 6.59082 6.75 6.23535 6.75H3.61035C3.03613 6.75 2.73535 7.46094 3.17285 7.87109L3.91113 8.63672L0.848633 11.6992C0.711914 11.8359 0.711914 12.0547 0.848633 12.1641L1.47754 12.793C1.58691 12.9297 1.80566 12.9297 1.94238 12.793Z" fill="#8B8F9E" />
+                                </svg>
+                              </button>
+                              <button type="button" class="btn btn-secondary" data-bs-toggle="tooltip" data-bs-placement="top" title data-bs-original-title="Favourite">
+                                <svg width="15" height="13" viewBox="0 0 15 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                  <path d="M12.9907 1.52737C11.4048 0.187524 8.97121 0.378931 7.46731 1.93752C5.93606 0.378931 3.50246 0.187524 1.91652 1.52737C-0.134257 3.25002 0.166524 6.06643 1.64309 7.57034L6.42824 12.4649C6.70168 12.7383 7.05715 12.9024 7.46731 12.9024C7.85012 12.9024 8.20559 12.7383 8.47902 12.4649L13.2915 7.57034C14.7407 6.06643 15.0415 3.25002 12.9907 1.52737ZM12.3345 6.64065L7.54934 11.5352C7.49465 11.5899 7.43996 11.5899 7.35793 11.5352L2.57277 6.64065C1.56105 5.62893 1.36965 3.71487 2.76418 2.53909C3.83059 1.63674 5.47121 1.77346 6.51027 2.81252L7.46731 3.7969L8.42434 2.81252C9.43606 1.77346 11.0767 1.63674 12.1431 2.51174C13.5376 3.71487 13.3462 5.62893 12.3345 6.64065Z" fill="#8B8F9E" />
+                                </svg>
+                              </button>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-lg-3 mb-24">
+                      <div class="productBlock">
+                        <figure class="productBlock__thumb">
+                          <div class="productBlock__thumb__main">
+                            <a href="product-details.html">
+                              <img src="image/products/product-thumb10.png" alt="Gainioz Product">
+                            </a>
+                          </div>
+                          <div class="productBlock__thumb__hover">
+                            <a href="product-details.html">
+                              <img src="image/products/product-thumb10-10.png" alt="Gainioz Product">
+                            </a>
+                          </div>
+                        </figure>
+                        <div class="productBlock__content">
+                          <div class="productBlock__content__main">
+                            <h3 class="productBlock__name"><a href="product-details.html">Eta abr Ki pol</a></h3>
+                            <span class="productBlock__price">$46.00</span>
+                            <span class="productBlock__ratings">
+                            <i class="fa-solid fa-star active"></i>
+                            <i class="fa-solid fa-star active"></i>
+                            <i class="fa-solid fa-star active"></i>
+                            <i class="fa-solid fa-star active"></i>
+                            <i class="fa-solid fa-star"></i>
+                          </span>
+                          </div>
+                          <div class="productBlock__content__hover">
+                            <div class="productBlock__actions">
+                              <button type="button" class="btn btn-secondary" data-bs-toggle="tooltip" data-bs-placement="top" title data-bs-original-title="Add to cart">
+                                <svg width="14" height="11" viewBox="0 0 14 11" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                  <path d="M13.2363 4H11.5254L8.50195 0.460938C8.29102 0.226562 7.93945 0.203125 7.70508 0.390625C7.4707 0.601562 7.44727 0.953125 7.63477 1.1875L10.0488 4H3.46289L5.87695 1.1875C6.06445 0.953125 6.04102 0.601562 5.80664 0.390625C5.57227 0.203125 5.2207 0.226562 5.00977 0.460938L1.98633 4H0.298828C0.134766 4 0.0175781 4.14062 0.0175781 4.28125V4.84375C0.0175781 5.00781 0.134766 5.125 0.298828 5.125H0.720703L1.37695 9.78906C1.44727 10.3516 1.91602 10.75 2.47852 10.75H11.0332C11.5957 10.75 12.0645 10.3516 12.1348 9.78906L12.791 5.125H13.2363C13.377 5.125 13.5176 5.00781 13.5176 4.84375V4.28125C13.5176 4.14062 13.377 4 13.2363 4ZM11.0332 9.625H2.47852L1.86914 5.125H11.6426L11.0332 9.625ZM7.33008 6.4375C7.33008 6.13281 7.07227 5.875 6.76758 5.875C6.43945 5.875 6.20508 6.13281 6.20508 6.4375V8.3125C6.20508 8.64062 6.43945 8.875 6.76758 8.875C7.07227 8.875 7.33008 8.64062 7.33008 8.3125V6.4375ZM9.95508 6.4375C9.95508 6.13281 9.69727 5.875 9.39258 5.875C9.06445 5.875 8.83008 6.13281 8.83008 6.4375V8.3125C8.83008 8.64062 9.06445 8.875 9.39258 8.875C9.69727 8.875 9.95508 8.64062 9.95508 8.3125V6.4375ZM4.70508 6.4375C4.70508 6.13281 4.44727 5.875 4.14258 5.875C3.81445 5.875 3.58008 6.13281 3.58008 6.4375V8.3125C3.58008 8.64062 3.81445 8.875 4.14258 8.875C4.44727 8.875 4.70508 8.64062 4.70508 8.3125V6.4375Z" fill="#8B8F9E" />
+                                </svg>
+                              </button>
+                              <button type="button" class="btn btn-secondary" data-bs-toggle="tooltip" data-bs-placement="top" title data-bs-original-title="Compare">
+                                <svg width="14" height="13" viewBox="0 0 14 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                  <path d="M6.8916 6.09375C6.8916 6.47656 7.16504 6.75 7.54785 6.75H10.1455C10.7197 6.75 11.0205 6.06641 10.583 5.65625L9.84473 4.89062L12.9072 1.82812C13.0439 1.69141 13.0439 1.47266 12.9072 1.36328L12.2783 0.734375C12.1689 0.597656 11.9502 0.597656 11.8135 0.734375L8.75098 3.79688L7.98535 3.05859C7.5752 2.62109 6.8916 2.92188 6.8916 3.49609V6.09375ZM1.94238 12.793L5.00488 9.73047L5.77051 10.4688C6.18066 10.9062 6.8916 10.6055 6.8916 10.0312V7.40625C6.8916 7.05078 6.59082 6.75 6.23535 6.75H3.61035C3.03613 6.75 2.73535 7.46094 3.17285 7.87109L3.91113 8.63672L0.848633 11.6992C0.711914 11.8359 0.711914 12.0547 0.848633 12.1641L1.47754 12.793C1.58691 12.9297 1.80566 12.9297 1.94238 12.793Z" fill="#8B8F9E" />
+                                </svg>
+                              </button>
+                              <button type="button" class="btn btn-secondary" data-bs-toggle="tooltip" data-bs-placement="top" title data-bs-original-title="Favourite">
+                                <svg width="15" height="13" viewBox="0 0 15 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                  <path d="M12.9907 1.52737C11.4048 0.187524 8.97121 0.378931 7.46731 1.93752C5.93606 0.378931 3.50246 0.187524 1.91652 1.52737C-0.134257 3.25002 0.166524 6.06643 1.64309 7.57034L6.42824 12.4649C6.70168 12.7383 7.05715 12.9024 7.46731 12.9024C7.85012 12.9024 8.20559 12.7383 8.47902 12.4649L13.2915 7.57034C14.7407 6.06643 15.0415 3.25002 12.9907 1.52737ZM12.3345 6.64065L7.54934 11.5352C7.49465 11.5899 7.43996 11.5899 7.35793 11.5352L2.57277 6.64065C1.56105 5.62893 1.36965 3.71487 2.76418 2.53909C3.83059 1.63674 5.47121 1.77346 6.51027 2.81252L7.46731 3.7969L8.42434 2.81252C9.43606 1.77346 11.0767 1.63674 12.1431 2.51174C13.5376 3.71487 13.3462 5.62893 12.3345 6.64065Z" fill="#8B8F9E" />
+                                </svg>
+                              </button>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-lg-3 mb-24">
+                      <div class="productBlock">
+                        <span class="productBlock__tags">New</span>
+                        <figure class="productBlock__thumb">
+                          <div class="productBlock__thumb__main">
+                            <a href="product-details.html">
+                              <img src="image/products/product-thumb11.png" alt="Gainioz Product">
+                            </a>
+                          </div>
+                          <div class="productBlock__thumb__hover">
+                            <a href="product-details.html">
+                              <img src="image/products/product-thumb11-11.png" alt="Gainioz Product">
+                            </a>
+                          </div>
+                        </figure>
+                        <div class="productBlock__content">
+                          <div class="productBlock__content__main">
+                            <h3 class="productBlock__name"><a href="product-details.html">Eta abr Ki pol</a></h3>
+                            <span class="productBlock__price">$46.00</span>
+                            <span class="productBlock__ratings">
+                            <i class="fa-solid fa-star active"></i>
+                            <i class="fa-solid fa-star active"></i>
+                            <i class="fa-solid fa-star active"></i>
+                            <i class="fa-solid fa-star active"></i>
+                            <i class="fa-solid fa-star"></i>
+                          </span>
+                          </div>
+                          <div class="productBlock__content__hover">
+                            <div class="productBlock__actions">
+                              <button type="button" class="btn btn-secondary" data-bs-toggle="tooltip" data-bs-placement="top" title data-bs-original-title="Add to cart">
+                                <svg width="14" height="11" viewBox="0 0 14 11" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                  <path d="M13.2363 4H11.5254L8.50195 0.460938C8.29102 0.226562 7.93945 0.203125 7.70508 0.390625C7.4707 0.601562 7.44727 0.953125 7.63477 1.1875L10.0488 4H3.46289L5.87695 1.1875C6.06445 0.953125 6.04102 0.601562 5.80664 0.390625C5.57227 0.203125 5.2207 0.226562 5.00977 0.460938L1.98633 4H0.298828C0.134766 4 0.0175781 4.14062 0.0175781 4.28125V4.84375C0.0175781 5.00781 0.134766 5.125 0.298828 5.125H0.720703L1.37695 9.78906C1.44727 10.3516 1.91602 10.75 2.47852 10.75H11.0332C11.5957 10.75 12.0645 10.3516 12.1348 9.78906L12.791 5.125H13.2363C13.377 5.125 13.5176 5.00781 13.5176 4.84375V4.28125C13.5176 4.14062 13.377 4 13.2363 4ZM11.0332 9.625H2.47852L1.86914 5.125H11.6426L11.0332 9.625ZM7.33008 6.4375C7.33008 6.13281 7.07227 5.875 6.76758 5.875C6.43945 5.875 6.20508 6.13281 6.20508 6.4375V8.3125C6.20508 8.64062 6.43945 8.875 6.76758 8.875C7.07227 8.875 7.33008 8.64062 7.33008 8.3125V6.4375ZM9.95508 6.4375C9.95508 6.13281 9.69727 5.875 9.39258 5.875C9.06445 5.875 8.83008 6.13281 8.83008 6.4375V8.3125C8.83008 8.64062 9.06445 8.875 9.39258 8.875C9.69727 8.875 9.95508 8.64062 9.95508 8.3125V6.4375ZM4.70508 6.4375C4.70508 6.13281 4.44727 5.875 4.14258 5.875C3.81445 5.875 3.58008 6.13281 3.58008 6.4375V8.3125C3.58008 8.64062 3.81445 8.875 4.14258 8.875C4.44727 8.875 4.70508 8.64062 4.70508 8.3125V6.4375Z" fill="#8B8F9E" />
+                                </svg>
+                              </button>
+                              <button type="button" class="btn btn-secondary" data-bs-toggle="tooltip" data-bs-placement="top" title data-bs-original-title="Compare">
+                                <svg width="14" height="13" viewBox="0 0 14 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                  <path d="M6.8916 6.09375C6.8916 6.47656 7.16504 6.75 7.54785 6.75H10.1455C10.7197 6.75 11.0205 6.06641 10.583 5.65625L9.84473 4.89062L12.9072 1.82812C13.0439 1.69141 13.0439 1.47266 12.9072 1.36328L12.2783 0.734375C12.1689 0.597656 11.9502 0.597656 11.8135 0.734375L8.75098 3.79688L7.98535 3.05859C7.5752 2.62109 6.8916 2.92188 6.8916 3.49609V6.09375ZM1.94238 12.793L5.00488 9.73047L5.77051 10.4688C6.18066 10.9062 6.8916 10.6055 6.8916 10.0312V7.40625C6.8916 7.05078 6.59082 6.75 6.23535 6.75H3.61035C3.03613 6.75 2.73535 7.46094 3.17285 7.87109L3.91113 8.63672L0.848633 11.6992C0.711914 11.8359 0.711914 12.0547 0.848633 12.1641L1.47754 12.793C1.58691 12.9297 1.80566 12.9297 1.94238 12.793Z" fill="#8B8F9E" />
+                                </svg>
+                              </button>
+                              <button type="button" class="btn btn-secondary" data-bs-toggle="tooltip" data-bs-placement="top" title data-bs-original-title="Favourite">
+                                <svg width="15" height="13" viewBox="0 0 15 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                  <path d="M12.9907 1.52737C11.4048 0.187524 8.97121 0.378931 7.46731 1.93752C5.93606 0.378931 3.50246 0.187524 1.91652 1.52737C-0.134257 3.25002 0.166524 6.06643 1.64309 7.57034L6.42824 12.4649C6.70168 12.7383 7.05715 12.9024 7.46731 12.9024C7.85012 12.9024 8.20559 12.7383 8.47902 12.4649L13.2915 7.57034C14.7407 6.06643 15.0415 3.25002 12.9907 1.52737ZM12.3345 6.64065L7.54934 11.5352C7.49465 11.5899 7.43996 11.5899 7.35793 11.5352L2.57277 6.64065C1.56105 5.62893 1.36965 3.71487 2.76418 2.53909C3.83059 1.63674 5.47121 1.77346 6.51027 2.81252L7.46731 3.7969L8.42434 2.81252C9.43606 1.77346 11.0767 1.63674 12.1431 2.51174C13.5376 3.71487 13.3462 5.62893 12.3345 6.64065Z" fill="#8B8F9E" />
+                                </svg>
+                              </button>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-lg-3 mb-24">
+                      <div class="productBlock">
+                        <span class="productBlock__tags">HOT</span>
+                        <figure class="productBlock__thumb">
+                          <div class="productBlock__thumb__main">
+                            <a href="product-details.html">
+                              <img src="image/products/product-thumb12.png" alt="Gainioz Product">
+                            </a>
+                          </div>
+                          <div class="productBlock__thumb__hover">
+                            <a href="product-details.html">
+                              <img src="image/products/product-thumb12-12.png" alt="Gainioz Product">
+                            </a>
+                          </div>
+                        </figure>
+                        <div class="productBlock__content">
+                          <div class="productBlock__content__main">
+                            <h3 class="productBlock__name"><a href="product-details.html">Eta abr Ki pol</a></h3>
+                            <span class="productBlock__price">$46.00</span>
+                            <span class="productBlock__ratings">
+                            <i class="fa-solid fa-star active"></i>
+                            <i class="fa-solid fa-star active"></i>
+                            <i class="fa-solid fa-star active"></i>
+                            <i class="fa-solid fa-star active"></i>
+                            <i class="fa-solid fa-star"></i>
+                          </span>
+                          </div>
+                          <div class="productBlock__content__hover">
+                            <div class="productBlock__actions">
+                              <button type="button" class="btn btn-secondary" data-bs-toggle="tooltip" data-bs-placement="top" title data-bs-original-title="Add to cart">
+                                <svg width="14" height="11" viewBox="0 0 14 11" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                  <path d="M13.2363 4H11.5254L8.50195 0.460938C8.29102 0.226562 7.93945 0.203125 7.70508 0.390625C7.4707 0.601562 7.44727 0.953125 7.63477 1.1875L10.0488 4H3.46289L5.87695 1.1875C6.06445 0.953125 6.04102 0.601562 5.80664 0.390625C5.57227 0.203125 5.2207 0.226562 5.00977 0.460938L1.98633 4H0.298828C0.134766 4 0.0175781 4.14062 0.0175781 4.28125V4.84375C0.0175781 5.00781 0.134766 5.125 0.298828 5.125H0.720703L1.37695 9.78906C1.44727 10.3516 1.91602 10.75 2.47852 10.75H11.0332C11.5957 10.75 12.0645 10.3516 12.1348 9.78906L12.791 5.125H13.2363C13.377 5.125 13.5176 5.00781 13.5176 4.84375V4.28125C13.5176 4.14062 13.377 4 13.2363 4ZM11.0332 9.625H2.47852L1.86914 5.125H11.6426L11.0332 9.625ZM7.33008 6.4375C7.33008 6.13281 7.07227 5.875 6.76758 5.875C6.43945 5.875 6.20508 6.13281 6.20508 6.4375V8.3125C6.20508 8.64062 6.43945 8.875 6.76758 8.875C7.07227 8.875 7.33008 8.64062 7.33008 8.3125V6.4375ZM9.95508 6.4375C9.95508 6.13281 9.69727 5.875 9.39258 5.875C9.06445 5.875 8.83008 6.13281 8.83008 6.4375V8.3125C8.83008 8.64062 9.06445 8.875 9.39258 8.875C9.69727 8.875 9.95508 8.64062 9.95508 8.3125V6.4375ZM4.70508 6.4375C4.70508 6.13281 4.44727 5.875 4.14258 5.875C3.81445 5.875 3.58008 6.13281 3.58008 6.4375V8.3125C3.58008 8.64062 3.81445 8.875 4.14258 8.875C4.44727 8.875 4.70508 8.64062 4.70508 8.3125V6.4375Z" fill="#8B8F9E" />
+                                </svg>
+                              </button>
+                              <button type="button" class="btn btn-secondary" data-bs-toggle="tooltip" data-bs-placement="top" title data-bs-original-title="Compare">
+                                <svg width="14" height="13" viewBox="0 0 14 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                  <path d="M6.8916 6.09375C6.8916 6.47656 7.16504 6.75 7.54785 6.75H10.1455C10.7197 6.75 11.0205 6.06641 10.583 5.65625L9.84473 4.89062L12.9072 1.82812C13.0439 1.69141 13.0439 1.47266 12.9072 1.36328L12.2783 0.734375C12.1689 0.597656 11.9502 0.597656 11.8135 0.734375L8.75098 3.79688L7.98535 3.05859C7.5752 2.62109 6.8916 2.92188 6.8916 3.49609V6.09375ZM1.94238 12.793L5.00488 9.73047L5.77051 10.4688C6.18066 10.9062 6.8916 10.6055 6.8916 10.0312V7.40625C6.8916 7.05078 6.59082 6.75 6.23535 6.75H3.61035C3.03613 6.75 2.73535 7.46094 3.17285 7.87109L3.91113 8.63672L0.848633 11.6992C0.711914 11.8359 0.711914 12.0547 0.848633 12.1641L1.47754 12.793C1.58691 12.9297 1.80566 12.9297 1.94238 12.793Z" fill="#8B8F9E" />
+                                </svg>
+                              </button>
+                              <button type="button" class="btn btn-secondary" data-bs-toggle="tooltip" data-bs-placement="top" title data-bs-original-title="Favourite">
+                                <svg width="15" height="13" viewBox="0 0 15 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                  <path d="M12.9907 1.52737C11.4048 0.187524 8.97121 0.378931 7.46731 1.93752C5.93606 0.378931 3.50246 0.187524 1.91652 1.52737C-0.134257 3.25002 0.166524 6.06643 1.64309 7.57034L6.42824 12.4649C6.70168 12.7383 7.05715 12.9024 7.46731 12.9024C7.85012 12.9024 8.20559 12.7383 8.47902 12.4649L13.2915 7.57034C14.7407 6.06643 15.0415 3.25002 12.9907 1.52737ZM12.3345 6.64065L7.54934 11.5352C7.49465 11.5899 7.43996 11.5899 7.35793 11.5352L2.57277 6.64065C1.56105 5.62893 1.36965 3.71487 2.76418 2.53909C3.83059 1.63674 5.47121 1.77346 6.51027 2.81252L7.46731 3.7969L8.42434 2.81252C9.43606 1.77346 11.0767 1.63674 12.1431 2.51174C13.5376 3.71487 13.3462 5.62893 12.3345 6.64065Z" fill="#8B8F9E" />
+                                </svg>
+                              </button>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">
+                  <div class="row">
+                    <div class="col-lg-4 mb-24">
+                      <div class="productBlock productBlock--style2">
+                        <span class="productBlock__tags">New</span>
+                        <figure class="productBlock__thumb">
+                          <div class="productBlock__thumb__main">
+                            <a href="product-details.html">
+                              <img src="image/products/product-thumb1.png" alt="Gainioz Product">
+                            </a>
+                          </div>
+                          <div class="productBlock__thumb__hover">
+                            <a href="product-details.html">
+                              <img src="image/products/product-thumb1-1.png" alt="Gainioz Product">
+                            </a>
+                          </div>
+                        </figure>
+                        <div class="productBlock__content">
+                          <div class="productBlock__content__main">
+                            <h3 class="productBlock__name"><a href="product-details.html">Yellow Rocks Umbrealla</a></h3>
+                            <p class="productBlock__text">Rorem ipsum dolor sit amet, consecte.</p>
+                            <span class="productBlock__price">$46.00</span>
+                            <span class="productBlock__ratings">
+                            <i class="fa-solid fa-star active"></i>
+                            <i class="fa-solid fa-star active"></i>
+                            <i class="fa-solid fa-star active"></i>
+                            <i class="fa-solid fa-star active"></i>
+                            <i class="fa-solid fa-star"></i>
+                          </span>
+                          </div>
+                          <div class="productBlock__content__hover">
+                            <div class="productBlock__actions">
+                              <button type="button" class="btn btn-secondary" data-bs-toggle="tooltip" data-bs-placement="top" title data-bs-original-title="Add to cart">
+                                <svg width="14" height="11" viewBox="0 0 14 11" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                  <path d="M13.2363 4H11.5254L8.50195 0.460938C8.29102 0.226562 7.93945 0.203125 7.70508 0.390625C7.4707 0.601562 7.44727 0.953125 7.63477 1.1875L10.0488 4H3.46289L5.87695 1.1875C6.06445 0.953125 6.04102 0.601562 5.80664 0.390625C5.57227 0.203125 5.2207 0.226562 5.00977 0.460938L1.98633 4H0.298828C0.134766 4 0.0175781 4.14062 0.0175781 4.28125V4.84375C0.0175781 5.00781 0.134766 5.125 0.298828 5.125H0.720703L1.37695 9.78906C1.44727 10.3516 1.91602 10.75 2.47852 10.75H11.0332C11.5957 10.75 12.0645 10.3516 12.1348 9.78906L12.791 5.125H13.2363C13.377 5.125 13.5176 5.00781 13.5176 4.84375V4.28125C13.5176 4.14062 13.377 4 13.2363 4ZM11.0332 9.625H2.47852L1.86914 5.125H11.6426L11.0332 9.625ZM7.33008 6.4375C7.33008 6.13281 7.07227 5.875 6.76758 5.875C6.43945 5.875 6.20508 6.13281 6.20508 6.4375V8.3125C6.20508 8.64062 6.43945 8.875 6.76758 8.875C7.07227 8.875 7.33008 8.64062 7.33008 8.3125V6.4375ZM9.95508 6.4375C9.95508 6.13281 9.69727 5.875 9.39258 5.875C9.06445 5.875 8.83008 6.13281 8.83008 6.4375V8.3125C8.83008 8.64062 9.06445 8.875 9.39258 8.875C9.69727 8.875 9.95508 8.64062 9.95508 8.3125V6.4375ZM4.70508 6.4375C4.70508 6.13281 4.44727 5.875 4.14258 5.875C3.81445 5.875 3.58008 6.13281 3.58008 6.4375V8.3125C3.58008 8.64062 3.81445 8.875 4.14258 8.875C4.44727 8.875 4.70508 8.64062 4.70508 8.3125V6.4375Z" fill="#8B8F9E" />
+                                </svg>
+                              </button>
+                              <button type="button" class="btn btn-secondary" data-bs-toggle="tooltip" data-bs-placement="top" title data-bs-original-title="Compare">
+                                <svg width="14" height="13" viewBox="0 0 14 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                  <path d="M6.8916 6.09375C6.8916 6.47656 7.16504 6.75 7.54785 6.75H10.1455C10.7197 6.75 11.0205 6.06641 10.583 5.65625L9.84473 4.89062L12.9072 1.82812C13.0439 1.69141 13.0439 1.47266 12.9072 1.36328L12.2783 0.734375C12.1689 0.597656 11.9502 0.597656 11.8135 0.734375L8.75098 3.79688L7.98535 3.05859C7.5752 2.62109 6.8916 2.92188 6.8916 3.49609V6.09375ZM1.94238 12.793L5.00488 9.73047L5.77051 10.4688C6.18066 10.9062 6.8916 10.6055 6.8916 10.0312V7.40625C6.8916 7.05078 6.59082 6.75 6.23535 6.75H3.61035C3.03613 6.75 2.73535 7.46094 3.17285 7.87109L3.91113 8.63672L0.848633 11.6992C0.711914 11.8359 0.711914 12.0547 0.848633 12.1641L1.47754 12.793C1.58691 12.9297 1.80566 12.9297 1.94238 12.793Z" fill="#8B8F9E" />
+                                </svg>
+                              </button>
+                              <button type="button" class="btn btn-secondary" data-bs-toggle="tooltip" data-bs-placement="top" title data-bs-original-title="Favourite">
+                                <svg width="15" height="13" viewBox="0 0 15 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                  <path d="M12.9907 1.52737C11.4048 0.187524 8.97121 0.378931 7.46731 1.93752C5.93606 0.378931 3.50246 0.187524 1.91652 1.52737C-0.134257 3.25002 0.166524 6.06643 1.64309 7.57034L6.42824 12.4649C6.70168 12.7383 7.05715 12.9024 7.46731 12.9024C7.85012 12.9024 8.20559 12.7383 8.47902 12.4649L13.2915 7.57034C14.7407 6.06643 15.0415 3.25002 12.9907 1.52737ZM12.3345 6.64065L7.54934 11.5352C7.49465 11.5899 7.43996 11.5899 7.35793 11.5352L2.57277 6.64065C1.56105 5.62893 1.36965 3.71487 2.76418 2.53909C3.83059 1.63674 5.47121 1.77346 6.51027 2.81252L7.46731 3.7969L8.42434 2.81252C9.43606 1.77346 11.0767 1.63674 12.1431 2.51174C13.5376 3.71487 13.3462 5.62893 12.3345 6.64065Z" fill="#8B8F9E" />
+                                </svg>
+                              </button>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-lg-4 mb-24">
+                      <div class="productBlock productBlock--style2">
+                        <span class="productBlock__tags">New</span>
+                        <figure class="productBlock__thumb">
+                          <div class="productBlock__thumb__main">
+                            <a href="product-details.html">
+                              <img src="image/products/product-thumb2.png" alt="Gainioz Product">
+                            </a>
+                          </div>
+                          <div class="productBlock__thumb__hover">
+                            <a href="product-details.html">
+                              <img src="image/products/product-thumb2-2.png" alt="Gainioz Product">
+                            </a>
+                          </div>
+                        </figure>
+                        <div class="productBlock__content">
+                          <div class="productBlock__content__main">
+                            <h3 class="productBlock__name"><a href="product-details.html">malatina 2x Fish</a></h3>
+                            <p class="productBlock__text">Rorem ipsum dolor sit amet, consecte.</p>
+                            <span class="productBlock__price">$46.00</span>
+                            <span class="productBlock__ratings">
+                            <i class="fa-solid fa-star active"></i>
+                            <i class="fa-solid fa-star active"></i>
+                            <i class="fa-solid fa-star active"></i>
+                            <i class="fa-solid fa-star active"></i>
+                            <i class="fa-solid fa-star"></i>
+                          </span>
+                          </div>
+                          <div class="productBlock__content__hover">
+                            <div class="productBlock__actions">
+                              <button type="button" class="btn btn-secondary" data-bs-toggle="tooltip" data-bs-placement="top" title data-bs-original-title="Add to cart">
+                                <svg width="14" height="11" viewBox="0 0 14 11" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                  <path d="M13.2363 4H11.5254L8.50195 0.460938C8.29102 0.226562 7.93945 0.203125 7.70508 0.390625C7.4707 0.601562 7.44727 0.953125 7.63477 1.1875L10.0488 4H3.46289L5.87695 1.1875C6.06445 0.953125 6.04102 0.601562 5.80664 0.390625C5.57227 0.203125 5.2207 0.226562 5.00977 0.460938L1.98633 4H0.298828C0.134766 4 0.0175781 4.14062 0.0175781 4.28125V4.84375C0.0175781 5.00781 0.134766 5.125 0.298828 5.125H0.720703L1.37695 9.78906C1.44727 10.3516 1.91602 10.75 2.47852 10.75H11.0332C11.5957 10.75 12.0645 10.3516 12.1348 9.78906L12.791 5.125H13.2363C13.377 5.125 13.5176 5.00781 13.5176 4.84375V4.28125C13.5176 4.14062 13.377 4 13.2363 4ZM11.0332 9.625H2.47852L1.86914 5.125H11.6426L11.0332 9.625ZM7.33008 6.4375C7.33008 6.13281 7.07227 5.875 6.76758 5.875C6.43945 5.875 6.20508 6.13281 6.20508 6.4375V8.3125C6.20508 8.64062 6.43945 8.875 6.76758 8.875C7.07227 8.875 7.33008 8.64062 7.33008 8.3125V6.4375ZM9.95508 6.4375C9.95508 6.13281 9.69727 5.875 9.39258 5.875C9.06445 5.875 8.83008 6.13281 8.83008 6.4375V8.3125C8.83008 8.64062 9.06445 8.875 9.39258 8.875C9.69727 8.875 9.95508 8.64062 9.95508 8.3125V6.4375ZM4.70508 6.4375C4.70508 6.13281 4.44727 5.875 4.14258 5.875C3.81445 5.875 3.58008 6.13281 3.58008 6.4375V8.3125C3.58008 8.64062 3.81445 8.875 4.14258 8.875C4.44727 8.875 4.70508 8.64062 4.70508 8.3125V6.4375Z" fill="#8B8F9E" />
+                                </svg>
+                              </button>
+                              <button type="button" class="btn btn-secondary" data-bs-toggle="tooltip" data-bs-placement="top" title data-bs-original-title="Compare">
+                                <svg width="14" height="13" viewBox="0 0 14 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                  <path d="M6.8916 6.09375C6.8916 6.47656 7.16504 6.75 7.54785 6.75H10.1455C10.7197 6.75 11.0205 6.06641 10.583 5.65625L9.84473 4.89062L12.9072 1.82812C13.0439 1.69141 13.0439 1.47266 12.9072 1.36328L12.2783 0.734375C12.1689 0.597656 11.9502 0.597656 11.8135 0.734375L8.75098 3.79688L7.98535 3.05859C7.5752 2.62109 6.8916 2.92188 6.8916 3.49609V6.09375ZM1.94238 12.793L5.00488 9.73047L5.77051 10.4688C6.18066 10.9062 6.8916 10.6055 6.8916 10.0312V7.40625C6.8916 7.05078 6.59082 6.75 6.23535 6.75H3.61035C3.03613 6.75 2.73535 7.46094 3.17285 7.87109L3.91113 8.63672L0.848633 11.6992C0.711914 11.8359 0.711914 12.0547 0.848633 12.1641L1.47754 12.793C1.58691 12.9297 1.80566 12.9297 1.94238 12.793Z" fill="#8B8F9E" />
+                                </svg>
+                              </button>
+                              <button type="button" class="btn btn-secondary" data-bs-toggle="tooltip" data-bs-placement="top" title data-bs-original-title="Favourite">
+                                <svg width="15" height="13" viewBox="0 0 15 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                  <path d="M12.9907 1.52737C11.4048 0.187524 8.97121 0.378931 7.46731 1.93752C5.93606 0.378931 3.50246 0.187524 1.91652 1.52737C-0.134257 3.25002 0.166524 6.06643 1.64309 7.57034L6.42824 12.4649C6.70168 12.7383 7.05715 12.9024 7.46731 12.9024C7.85012 12.9024 8.20559 12.7383 8.47902 12.4649L13.2915 7.57034C14.7407 6.06643 15.0415 3.25002 12.9907 1.52737ZM12.3345 6.64065L7.54934 11.5352C7.49465 11.5899 7.43996 11.5899 7.35793 11.5352L2.57277 6.64065C1.56105 5.62893 1.36965 3.71487 2.76418 2.53909C3.83059 1.63674 5.47121 1.77346 6.51027 2.81252L7.46731 3.7969L8.42434 2.81252C9.43606 1.77346 11.0767 1.63674 12.1431 2.51174C13.5376 3.71487 13.3462 5.62893 12.3345 6.64065Z" fill="#8B8F9E" />
+                                </svg>
+                              </button>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-lg-4 mb-24">
+                      <div class="productBlock productBlock--style2">
+                        <span class="productBlock__tags">New</span>
+                        <figure class="productBlock__thumb">
+                          <div class="productBlock__thumb__main">
+                            <a href="product-details.html">
+                              <img src="image/products/product-thumb3.png" alt="Gainioz Product">
+                            </a>
+                          </div>
+                          <div class="productBlock__thumb__hover">
+                            <a href="product-details.html">
+                              <img src="image/products/product-thumb3-3.png" alt="Gainioz Product">
+                            </a>
+                          </div>
+                        </figure>
+                        <div class="productBlock__content">
+                          <div class="productBlock__content__main">
+                            <h3 class="productBlock__name"><a href="product-details.html">Bangla Jal Moric</a></h3>
+                            <p class="productBlock__text">Rorem ipsum dolor sit amet, consecte.</p>
+                            <span class="productBlock__price">$46.00</span>
+                            <span class="productBlock__ratings">
+                            <i class="fa-solid fa-star active"></i>
+                            <i class="fa-solid fa-star active"></i>
+                            <i class="fa-solid fa-star active"></i>
+                            <i class="fa-solid fa-star active"></i>
+                            <i class="fa-solid fa-star"></i>
+                          </span>
+                          </div>
+                          <div class="productBlock__content__hover">
+                            <div class="productBlock__actions">
+                              <button type="button" class="btn btn-secondary" data-bs-toggle="tooltip" data-bs-placement="top" title data-bs-original-title="Add to cart">
+                                <svg width="14" height="11" viewBox="0 0 14 11" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                  <path d="M13.2363 4H11.5254L8.50195 0.460938C8.29102 0.226562 7.93945 0.203125 7.70508 0.390625C7.4707 0.601562 7.44727 0.953125 7.63477 1.1875L10.0488 4H3.46289L5.87695 1.1875C6.06445 0.953125 6.04102 0.601562 5.80664 0.390625C5.57227 0.203125 5.2207 0.226562 5.00977 0.460938L1.98633 4H0.298828C0.134766 4 0.0175781 4.14062 0.0175781 4.28125V4.84375C0.0175781 5.00781 0.134766 5.125 0.298828 5.125H0.720703L1.37695 9.78906C1.44727 10.3516 1.91602 10.75 2.47852 10.75H11.0332C11.5957 10.75 12.0645 10.3516 12.1348 9.78906L12.791 5.125H13.2363C13.377 5.125 13.5176 5.00781 13.5176 4.84375V4.28125C13.5176 4.14062 13.377 4 13.2363 4ZM11.0332 9.625H2.47852L1.86914 5.125H11.6426L11.0332 9.625ZM7.33008 6.4375C7.33008 6.13281 7.07227 5.875 6.76758 5.875C6.43945 5.875 6.20508 6.13281 6.20508 6.4375V8.3125C6.20508 8.64062 6.43945 8.875 6.76758 8.875C7.07227 8.875 7.33008 8.64062 7.33008 8.3125V6.4375ZM9.95508 6.4375C9.95508 6.13281 9.69727 5.875 9.39258 5.875C9.06445 5.875 8.83008 6.13281 8.83008 6.4375V8.3125C8.83008 8.64062 9.06445 8.875 9.39258 8.875C9.69727 8.875 9.95508 8.64062 9.95508 8.3125V6.4375ZM4.70508 6.4375C4.70508 6.13281 4.44727 5.875 4.14258 5.875C3.81445 5.875 3.58008 6.13281 3.58008 6.4375V8.3125C3.58008 8.64062 3.81445 8.875 4.14258 8.875C4.44727 8.875 4.70508 8.64062 4.70508 8.3125V6.4375Z" fill="#8B8F9E" />
+                                </svg>
+                              </button>
+                              <button type="button" class="btn btn-secondary" data-bs-toggle="tooltip" data-bs-placement="top" title data-bs-original-title="Compare">
+                                <svg width="14" height="13" viewBox="0 0 14 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                  <path d="M6.8916 6.09375C6.8916 6.47656 7.16504 6.75 7.54785 6.75H10.1455C10.7197 6.75 11.0205 6.06641 10.583 5.65625L9.84473 4.89062L12.9072 1.82812C13.0439 1.69141 13.0439 1.47266 12.9072 1.36328L12.2783 0.734375C12.1689 0.597656 11.9502 0.597656 11.8135 0.734375L8.75098 3.79688L7.98535 3.05859C7.5752 2.62109 6.8916 2.92188 6.8916 3.49609V6.09375ZM1.94238 12.793L5.00488 9.73047L5.77051 10.4688C6.18066 10.9062 6.8916 10.6055 6.8916 10.0312V7.40625C6.8916 7.05078 6.59082 6.75 6.23535 6.75H3.61035C3.03613 6.75 2.73535 7.46094 3.17285 7.87109L3.91113 8.63672L0.848633 11.6992C0.711914 11.8359 0.711914 12.0547 0.848633 12.1641L1.47754 12.793C1.58691 12.9297 1.80566 12.9297 1.94238 12.793Z" fill="#8B8F9E" />
+                                </svg>
+                              </button>
+                              <button type="button" class="btn btn-secondary" data-bs-toggle="tooltip" data-bs-placement="top" title data-bs-original-title="Favourite">
+                                <svg width="15" height="13" viewBox="0 0 15 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                  <path d="M12.9907 1.52737C11.4048 0.187524 8.97121 0.378931 7.46731 1.93752C5.93606 0.378931 3.50246 0.187524 1.91652 1.52737C-0.134257 3.25002 0.166524 6.06643 1.64309 7.57034L6.42824 12.4649C6.70168 12.7383 7.05715 12.9024 7.46731 12.9024C7.85012 12.9024 8.20559 12.7383 8.47902 12.4649L13.2915 7.57034C14.7407 6.06643 15.0415 3.25002 12.9907 1.52737ZM12.3345 6.64065L7.54934 11.5352C7.49465 11.5899 7.43996 11.5899 7.35793 11.5352L2.57277 6.64065C1.56105 5.62893 1.36965 3.71487 2.76418 2.53909C3.83059 1.63674 5.47121 1.77346 6.51027 2.81252L7.46731 3.7969L8.42434 2.81252C9.43606 1.77346 11.0767 1.63674 12.1431 2.51174C13.5376 3.71487 13.3462 5.62893 12.3345 6.64065Z" fill="#8B8F9E" />
+                                </svg>
+                              </button>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-lg-4 mb-24">
+                      <div class="productBlock productBlock--style2">
+                        <span class="productBlock__tags">New</span>
+                        <figure class="productBlock__thumb">
+                          <div class="productBlock__thumb__main">
+                            <a href="product-details.html">
+                              <img src="image/products/product-thumb4.png" alt="Gainioz Product">
+                            </a>
+                          </div>
+                          <div class="productBlock__thumb__hover">
+                            <a href="product-details.html">
+                              <img src="image/products/product-thumb4-4.png" alt="Gainioz Product">
+                            </a>
+                          </div>
+                        </figure>
+                        <div class="productBlock__content">
+                          <div class="productBlock__content__main">
+                            <h3 class="productBlock__name"><a href="product-details.html">Eta abr Ki pol</a></h3>
+                            <p class="productBlock__text">Rorem ipsum dolor sit amet, consecte.</p>
+                            <span class="productBlock__price">$46.00</span>
+                            <span class="productBlock__ratings">
+                            <i class="fa-solid fa-star active"></i>
+                            <i class="fa-solid fa-star active"></i>
+                            <i class="fa-solid fa-star active"></i>
+                            <i class="fa-solid fa-star active"></i>
+                            <i class="fa-solid fa-star"></i>
+                          </span>
+                          </div>
+                          <div class="productBlock__content__hover">
+                            <div class="productBlock__actions">
+                              <button type="button" class="btn btn-secondary" data-bs-toggle="tooltip" data-bs-placement="top" title data-bs-original-title="Add to cart">
+                                <svg width="14" height="11" viewBox="0 0 14 11" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                  <path d="M13.2363 4H11.5254L8.50195 0.460938C8.29102 0.226562 7.93945 0.203125 7.70508 0.390625C7.4707 0.601562 7.44727 0.953125 7.63477 1.1875L10.0488 4H3.46289L5.87695 1.1875C6.06445 0.953125 6.04102 0.601562 5.80664 0.390625C5.57227 0.203125 5.2207 0.226562 5.00977 0.460938L1.98633 4H0.298828C0.134766 4 0.0175781 4.14062 0.0175781 4.28125V4.84375C0.0175781 5.00781 0.134766 5.125 0.298828 5.125H0.720703L1.37695 9.78906C1.44727 10.3516 1.91602 10.75 2.47852 10.75H11.0332C11.5957 10.75 12.0645 10.3516 12.1348 9.78906L12.791 5.125H13.2363C13.377 5.125 13.5176 5.00781 13.5176 4.84375V4.28125C13.5176 4.14062 13.377 4 13.2363 4ZM11.0332 9.625H2.47852L1.86914 5.125H11.6426L11.0332 9.625ZM7.33008 6.4375C7.33008 6.13281 7.07227 5.875 6.76758 5.875C6.43945 5.875 6.20508 6.13281 6.20508 6.4375V8.3125C6.20508 8.64062 6.43945 8.875 6.76758 8.875C7.07227 8.875 7.33008 8.64062 7.33008 8.3125V6.4375ZM9.95508 6.4375C9.95508 6.13281 9.69727 5.875 9.39258 5.875C9.06445 5.875 8.83008 6.13281 8.83008 6.4375V8.3125C8.83008 8.64062 9.06445 8.875 9.39258 8.875C9.69727 8.875 9.95508 8.64062 9.95508 8.3125V6.4375ZM4.70508 6.4375C4.70508 6.13281 4.44727 5.875 4.14258 5.875C3.81445 5.875 3.58008 6.13281 3.58008 6.4375V8.3125C3.58008 8.64062 3.81445 8.875 4.14258 8.875C4.44727 8.875 4.70508 8.64062 4.70508 8.3125V6.4375Z" fill="#8B8F9E" />
+                                </svg>
+                              </button>
+                              <button type="button" class="btn btn-secondary" data-bs-toggle="tooltip" data-bs-placement="top" title data-bs-original-title="Compare">
+                                <svg width="14" height="13" viewBox="0 0 14 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                  <path d="M6.8916 6.09375C6.8916 6.47656 7.16504 6.75 7.54785 6.75H10.1455C10.7197 6.75 11.0205 6.06641 10.583 5.65625L9.84473 4.89062L12.9072 1.82812C13.0439 1.69141 13.0439 1.47266 12.9072 1.36328L12.2783 0.734375C12.1689 0.597656 11.9502 0.597656 11.8135 0.734375L8.75098 3.79688L7.98535 3.05859C7.5752 2.62109 6.8916 2.92188 6.8916 3.49609V6.09375ZM1.94238 12.793L5.00488 9.73047L5.77051 10.4688C6.18066 10.9062 6.8916 10.6055 6.8916 10.0312V7.40625C6.8916 7.05078 6.59082 6.75 6.23535 6.75H3.61035C3.03613 6.75 2.73535 7.46094 3.17285 7.87109L3.91113 8.63672L0.848633 11.6992C0.711914 11.8359 0.711914 12.0547 0.848633 12.1641L1.47754 12.793C1.58691 12.9297 1.80566 12.9297 1.94238 12.793Z" fill="#8B8F9E" />
+                                </svg>
+                              </button>
+                              <button type="button" class="btn btn-secondary" data-bs-toggle="tooltip" data-bs-placement="top" title data-bs-original-title="Favourite">
+                                <svg width="15" height="13" viewBox="0 0 15 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                  <path d="M12.9907 1.52737C11.4048 0.187524 8.97121 0.378931 7.46731 1.93752C5.93606 0.378931 3.50246 0.187524 1.91652 1.52737C-0.134257 3.25002 0.166524 6.06643 1.64309 7.57034L6.42824 12.4649C6.70168 12.7383 7.05715 12.9024 7.46731 12.9024C7.85012 12.9024 8.20559 12.7383 8.47902 12.4649L13.2915 7.57034C14.7407 6.06643 15.0415 3.25002 12.9907 1.52737ZM12.3345 6.64065L7.54934 11.5352C7.49465 11.5899 7.43996 11.5899 7.35793 11.5352L2.57277 6.64065C1.56105 5.62893 1.36965 3.71487 2.76418 2.53909C3.83059 1.63674 5.47121 1.77346 6.51027 2.81252L7.46731 3.7969L8.42434 2.81252C9.43606 1.77346 11.0767 1.63674 12.1431 2.51174C13.5376 3.71487 13.3462 5.62893 12.3345 6.64065Z" fill="#8B8F9E" />
+                                </svg>
+                              </button>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-lg-4 mb-24">
+                      <div class="productBlock productBlock--style2">
+                        <span class="productBlock__tags">New</span>
+                        <figure class="productBlock__thumb">
+                          <div class="productBlock__thumb__main">
+                            <a href="product-details.html">
+                              <img src="image/products/product-thumb5.png" alt="Gainioz Product">
+                            </a>
+                          </div>
+                          <div class="productBlock__thumb__hover">
+                            <a href="product-details.html">
+                              <img src="image/products/product-thumb5-5.png" alt="Gainioz Product">
+                            </a>
+                          </div>
+                        </figure>
+                        <div class="productBlock__content">
+                          <div class="productBlock__content__main">
+                            <h3 class="productBlock__name"><a href="product-details.html">Eta abr Ki pol</a></h3>
+                            <p class="productBlock__text">Rorem ipsum dolor sit amet, consecte.</p>
+                            <span class="productBlock__price">$46.00</span>
+                            <span class="productBlock__ratings">
+                            <i class="fa-solid fa-star active"></i>
+                            <i class="fa-solid fa-star active"></i>
+                            <i class="fa-solid fa-star active"></i>
+                            <i class="fa-solid fa-star active"></i>
+                            <i class="fa-solid fa-star"></i>
+                          </span>
+                          </div>
+                          <div class="productBlock__content__hover">
+                            <div class="productBlock__actions">
+                              <button type="button" class="btn btn-secondary" data-bs-toggle="tooltip" data-bs-placement="top" title data-bs-original-title="Add to cart">
+                                <svg width="14" height="11" viewBox="0 0 14 11" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                  <path d="M13.2363 4H11.5254L8.50195 0.460938C8.29102 0.226562 7.93945 0.203125 7.70508 0.390625C7.4707 0.601562 7.44727 0.953125 7.63477 1.1875L10.0488 4H3.46289L5.87695 1.1875C6.06445 0.953125 6.04102 0.601562 5.80664 0.390625C5.57227 0.203125 5.2207 0.226562 5.00977 0.460938L1.98633 4H0.298828C0.134766 4 0.0175781 4.14062 0.0175781 4.28125V4.84375C0.0175781 5.00781 0.134766 5.125 0.298828 5.125H0.720703L1.37695 9.78906C1.44727 10.3516 1.91602 10.75 2.47852 10.75H11.0332C11.5957 10.75 12.0645 10.3516 12.1348 9.78906L12.791 5.125H13.2363C13.377 5.125 13.5176 5.00781 13.5176 4.84375V4.28125C13.5176 4.14062 13.377 4 13.2363 4ZM11.0332 9.625H2.47852L1.86914 5.125H11.6426L11.0332 9.625ZM7.33008 6.4375C7.33008 6.13281 7.07227 5.875 6.76758 5.875C6.43945 5.875 6.20508 6.13281 6.20508 6.4375V8.3125C6.20508 8.64062 6.43945 8.875 6.76758 8.875C7.07227 8.875 7.33008 8.64062 7.33008 8.3125V6.4375ZM9.95508 6.4375C9.95508 6.13281 9.69727 5.875 9.39258 5.875C9.06445 5.875 8.83008 6.13281 8.83008 6.4375V8.3125C8.83008 8.64062 9.06445 8.875 9.39258 8.875C9.69727 8.875 9.95508 8.64062 9.95508 8.3125V6.4375ZM4.70508 6.4375C4.70508 6.13281 4.44727 5.875 4.14258 5.875C3.81445 5.875 3.58008 6.13281 3.58008 6.4375V8.3125C3.58008 8.64062 3.81445 8.875 4.14258 8.875C4.44727 8.875 4.70508 8.64062 4.70508 8.3125V6.4375Z" fill="#8B8F9E" />
+                                </svg>
+                              </button>
+                              <button type="button" class="btn btn-secondary" data-bs-toggle="tooltip" data-bs-placement="top" title data-bs-original-title="Compare">
+                                <svg width="14" height="13" viewBox="0 0 14 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                  <path d="M6.8916 6.09375C6.8916 6.47656 7.16504 6.75 7.54785 6.75H10.1455C10.7197 6.75 11.0205 6.06641 10.583 5.65625L9.84473 4.89062L12.9072 1.82812C13.0439 1.69141 13.0439 1.47266 12.9072 1.36328L12.2783 0.734375C12.1689 0.597656 11.9502 0.597656 11.8135 0.734375L8.75098 3.79688L7.98535 3.05859C7.5752 2.62109 6.8916 2.92188 6.8916 3.49609V6.09375ZM1.94238 12.793L5.00488 9.73047L5.77051 10.4688C6.18066 10.9062 6.8916 10.6055 6.8916 10.0312V7.40625C6.8916 7.05078 6.59082 6.75 6.23535 6.75H3.61035C3.03613 6.75 2.73535 7.46094 3.17285 7.87109L3.91113 8.63672L0.848633 11.6992C0.711914 11.8359 0.711914 12.0547 0.848633 12.1641L1.47754 12.793C1.58691 12.9297 1.80566 12.9297 1.94238 12.793Z" fill="#8B8F9E" />
+                                </svg>
+                              </button>
+                              <button type="button" class="btn btn-secondary" data-bs-toggle="tooltip" data-bs-placement="top" title data-bs-original-title="Favourite">
+                                <svg width="15" height="13" viewBox="0 0 15 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                  <path d="M12.9907 1.52737C11.4048 0.187524 8.97121 0.378931 7.46731 1.93752C5.93606 0.378931 3.50246 0.187524 1.91652 1.52737C-0.134257 3.25002 0.166524 6.06643 1.64309 7.57034L6.42824 12.4649C6.70168 12.7383 7.05715 12.9024 7.46731 12.9024C7.85012 12.9024 8.20559 12.7383 8.47902 12.4649L13.2915 7.57034C14.7407 6.06643 15.0415 3.25002 12.9907 1.52737ZM12.3345 6.64065L7.54934 11.5352C7.49465 11.5899 7.43996 11.5899 7.35793 11.5352L2.57277 6.64065C1.56105 5.62893 1.36965 3.71487 2.76418 2.53909C3.83059 1.63674 5.47121 1.77346 6.51027 2.81252L7.46731 3.7969L8.42434 2.81252C9.43606 1.77346 11.0767 1.63674 12.1431 2.51174C13.5376 3.71487 13.3462 5.62893 12.3345 6.64065Z" fill="#8B8F9E" />
+                                </svg>
+                              </button>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-lg-4 mb-24">
+                      <div class="productBlock productBlock--style2">
+                        <span class="productBlock__tags">New</span>
+                        <figure class="productBlock__thumb">
+                          <div class="productBlock__thumb__main">
+                            <a href="product-details.html">
+                              <img src="image/products/product-thumb6.png" alt="Gainioz Product">
+                            </a>
+                          </div>
+                          <div class="productBlock__thumb__hover">
+                            <a href="product-details.html">
+                              <img src="image/products/product-thumb6-6.png" alt="Gainioz Product">
+                            </a>
+                          </div>
+                        </figure>
+                        <div class="productBlock__content">
+                          <div class="productBlock__content__main">
+                            <h3 class="productBlock__name"><a href="product-details.html">Eta abr Ki pol</a></h3>
+                            <p class="productBlock__text">Rorem ipsum dolor sit amet, consecte.</p>
+                            <span class="productBlock__price">$46.00</span>
+                            <span class="productBlock__ratings">
+                            <i class="fa-solid fa-star active"></i>
+                            <i class="fa-solid fa-star active"></i>
+                            <i class="fa-solid fa-star active"></i>
+                            <i class="fa-solid fa-star active"></i>
+                            <i class="fa-solid fa-star"></i>
+                          </span>
+                          </div>
+                          <div class="productBlock__content__hover">
+                            <div class="productBlock__actions">
+                              <button type="button" class="btn btn-secondary" data-bs-toggle="tooltip" data-bs-placement="top" title data-bs-original-title="Add to cart">
+                                <svg width="14" height="11" viewBox="0 0 14 11" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                  <path d="M13.2363 4H11.5254L8.50195 0.460938C8.29102 0.226562 7.93945 0.203125 7.70508 0.390625C7.4707 0.601562 7.44727 0.953125 7.63477 1.1875L10.0488 4H3.46289L5.87695 1.1875C6.06445 0.953125 6.04102 0.601562 5.80664 0.390625C5.57227 0.203125 5.2207 0.226562 5.00977 0.460938L1.98633 4H0.298828C0.134766 4 0.0175781 4.14062 0.0175781 4.28125V4.84375C0.0175781 5.00781 0.134766 5.125 0.298828 5.125H0.720703L1.37695 9.78906C1.44727 10.3516 1.91602 10.75 2.47852 10.75H11.0332C11.5957 10.75 12.0645 10.3516 12.1348 9.78906L12.791 5.125H13.2363C13.377 5.125 13.5176 5.00781 13.5176 4.84375V4.28125C13.5176 4.14062 13.377 4 13.2363 4ZM11.0332 9.625H2.47852L1.86914 5.125H11.6426L11.0332 9.625ZM7.33008 6.4375C7.33008 6.13281 7.07227 5.875 6.76758 5.875C6.43945 5.875 6.20508 6.13281 6.20508 6.4375V8.3125C6.20508 8.64062 6.43945 8.875 6.76758 8.875C7.07227 8.875 7.33008 8.64062 7.33008 8.3125V6.4375ZM9.95508 6.4375C9.95508 6.13281 9.69727 5.875 9.39258 5.875C9.06445 5.875 8.83008 6.13281 8.83008 6.4375V8.3125C8.83008 8.64062 9.06445 8.875 9.39258 8.875C9.69727 8.875 9.95508 8.64062 9.95508 8.3125V6.4375ZM4.70508 6.4375C4.70508 6.13281 4.44727 5.875 4.14258 5.875C3.81445 5.875 3.58008 6.13281 3.58008 6.4375V8.3125C3.58008 8.64062 3.81445 8.875 4.14258 8.875C4.44727 8.875 4.70508 8.64062 4.70508 8.3125V6.4375Z" fill="#8B8F9E" />
+                                </svg>
+                              </button>
+                              <button type="button" class="btn btn-secondary" data-bs-toggle="tooltip" data-bs-placement="top" title data-bs-original-title="Compare">
+                                <svg width="14" height="13" viewBox="0 0 14 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                  <path d="M6.8916 6.09375C6.8916 6.47656 7.16504 6.75 7.54785 6.75H10.1455C10.7197 6.75 11.0205 6.06641 10.583 5.65625L9.84473 4.89062L12.9072 1.82812C13.0439 1.69141 13.0439 1.47266 12.9072 1.36328L12.2783 0.734375C12.1689 0.597656 11.9502 0.597656 11.8135 0.734375L8.75098 3.79688L7.98535 3.05859C7.5752 2.62109 6.8916 2.92188 6.8916 3.49609V6.09375ZM1.94238 12.793L5.00488 9.73047L5.77051 10.4688C6.18066 10.9062 6.8916 10.6055 6.8916 10.0312V7.40625C6.8916 7.05078 6.59082 6.75 6.23535 6.75H3.61035C3.03613 6.75 2.73535 7.46094 3.17285 7.87109L3.91113 8.63672L0.848633 11.6992C0.711914 11.8359 0.711914 12.0547 0.848633 12.1641L1.47754 12.793C1.58691 12.9297 1.80566 12.9297 1.94238 12.793Z" fill="#8B8F9E" />
+                                </svg>
+                              </button>
+                              <button type="button" class="btn btn-secondary" data-bs-toggle="tooltip" data-bs-placement="top" title data-bs-original-title="Favourite">
+                                <svg width="15" height="13" viewBox="0 0 15 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                  <path d="M12.9907 1.52737C11.4048 0.187524 8.97121 0.378931 7.46731 1.93752C5.93606 0.378931 3.50246 0.187524 1.91652 1.52737C-0.134257 3.25002 0.166524 6.06643 1.64309 7.57034L6.42824 12.4649C6.70168 12.7383 7.05715 12.9024 7.46731 12.9024C7.85012 12.9024 8.20559 12.7383 8.47902 12.4649L13.2915 7.57034C14.7407 6.06643 15.0415 3.25002 12.9907 1.52737ZM12.3345 6.64065L7.54934 11.5352C7.49465 11.5899 7.43996 11.5899 7.35793 11.5352L2.57277 6.64065C1.56105 5.62893 1.36965 3.71487 2.76418 2.53909C3.83059 1.63674 5.47121 1.77346 6.51027 2.81252L7.46731 3.7969L8.42434 2.81252C9.43606 1.77346 11.0767 1.63674 12.1431 2.51174C13.5376 3.71487 13.3462 5.62893 12.3345 6.64065Z" fill="#8B8F9E" />
+                                </svg>
+                              </button>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-lg-4 mb-24">
+                      <div class="productBlock productBlock--style2">
+                        <span class="productBlock__tags">New</span>
+                        <figure class="productBlock__thumb">
+                          <div class="productBlock__thumb__main">
+                            <a href="product-details.html">
+                              <img src="image/products/product-thumb7.png" alt="Gainioz Product">
+                            </a>
+                          </div>
+                          <div class="productBlock__thumb__hover">
+                            <a href="product-details.html">
+                              <img src="image/products/product-thumb7-7.png" alt="Gainioz Product">
+                            </a>
+                          </div>
+                        </figure>
+                        <div class="productBlock__content">
+                          <div class="productBlock__content__main">
+                            <h3 class="productBlock__name"><a href="product-details.html">Eta abr Ki pol</a></h3>
+                            <p class="productBlock__text">Rorem ipsum dolor sit amet, consecte.</p>
+                            <span class="productBlock__price">$46.00</span>
+                            <span class="productBlock__ratings">
+                            <i class="fa-solid fa-star active"></i>
+                            <i class="fa-solid fa-star active"></i>
+                            <i class="fa-solid fa-star active"></i>
+                            <i class="fa-solid fa-star active"></i>
+                            <i class="fa-solid fa-star"></i>
+                          </span>
+                          </div>
+                          <div class="productBlock__content__hover">
+                            <div class="productBlock__actions">
+                              <button type="button" class="btn btn-secondary" data-bs-toggle="tooltip" data-bs-placement="top" title data-bs-original-title="Add to cart">
+                                <svg width="14" height="11" viewBox="0 0 14 11" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                  <path d="M13.2363 4H11.5254L8.50195 0.460938C8.29102 0.226562 7.93945 0.203125 7.70508 0.390625C7.4707 0.601562 7.44727 0.953125 7.63477 1.1875L10.0488 4H3.46289L5.87695 1.1875C6.06445 0.953125 6.04102 0.601562 5.80664 0.390625C5.57227 0.203125 5.2207 0.226562 5.00977 0.460938L1.98633 4H0.298828C0.134766 4 0.0175781 4.14062 0.0175781 4.28125V4.84375C0.0175781 5.00781 0.134766 5.125 0.298828 5.125H0.720703L1.37695 9.78906C1.44727 10.3516 1.91602 10.75 2.47852 10.75H11.0332C11.5957 10.75 12.0645 10.3516 12.1348 9.78906L12.791 5.125H13.2363C13.377 5.125 13.5176 5.00781 13.5176 4.84375V4.28125C13.5176 4.14062 13.377 4 13.2363 4ZM11.0332 9.625H2.47852L1.86914 5.125H11.6426L11.0332 9.625ZM7.33008 6.4375C7.33008 6.13281 7.07227 5.875 6.76758 5.875C6.43945 5.875 6.20508 6.13281 6.20508 6.4375V8.3125C6.20508 8.64062 6.43945 8.875 6.76758 8.875C7.07227 8.875 7.33008 8.64062 7.33008 8.3125V6.4375ZM9.95508 6.4375C9.95508 6.13281 9.69727 5.875 9.39258 5.875C9.06445 5.875 8.83008 6.13281 8.83008 6.4375V8.3125C8.83008 8.64062 9.06445 8.875 9.39258 8.875C9.69727 8.875 9.95508 8.64062 9.95508 8.3125V6.4375ZM4.70508 6.4375C4.70508 6.13281 4.44727 5.875 4.14258 5.875C3.81445 5.875 3.58008 6.13281 3.58008 6.4375V8.3125C3.58008 8.64062 3.81445 8.875 4.14258 8.875C4.44727 8.875 4.70508 8.64062 4.70508 8.3125V6.4375Z" fill="#8B8F9E" />
+                                </svg>
+                              </button>
+                              <button type="button" class="btn btn-secondary" data-bs-toggle="tooltip" data-bs-placement="top" title data-bs-original-title="Compare">
+                                <svg width="14" height="13" viewBox="0 0 14 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                  <path d="M6.8916 6.09375C6.8916 6.47656 7.16504 6.75 7.54785 6.75H10.1455C10.7197 6.75 11.0205 6.06641 10.583 5.65625L9.84473 4.89062L12.9072 1.82812C13.0439 1.69141 13.0439 1.47266 12.9072 1.36328L12.2783 0.734375C12.1689 0.597656 11.9502 0.597656 11.8135 0.734375L8.75098 3.79688L7.98535 3.05859C7.5752 2.62109 6.8916 2.92188 6.8916 3.49609V6.09375ZM1.94238 12.793L5.00488 9.73047L5.77051 10.4688C6.18066 10.9062 6.8916 10.6055 6.8916 10.0312V7.40625C6.8916 7.05078 6.59082 6.75 6.23535 6.75H3.61035C3.03613 6.75 2.73535 7.46094 3.17285 7.87109L3.91113 8.63672L0.848633 11.6992C0.711914 11.8359 0.711914 12.0547 0.848633 12.1641L1.47754 12.793C1.58691 12.9297 1.80566 12.9297 1.94238 12.793Z" fill="#8B8F9E" />
+                                </svg>
+                              </button>
+                              <button type="button" class="btn btn-secondary" data-bs-toggle="tooltip" data-bs-placement="top" title data-bs-original-title="Favourite">
+                                <svg width="15" height="13" viewBox="0 0 15 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                  <path d="M12.9907 1.52737C11.4048 0.187524 8.97121 0.378931 7.46731 1.93752C5.93606 0.378931 3.50246 0.187524 1.91652 1.52737C-0.134257 3.25002 0.166524 6.06643 1.64309 7.57034L6.42824 12.4649C6.70168 12.7383 7.05715 12.9024 7.46731 12.9024C7.85012 12.9024 8.20559 12.7383 8.47902 12.4649L13.2915 7.57034C14.7407 6.06643 15.0415 3.25002 12.9907 1.52737ZM12.3345 6.64065L7.54934 11.5352C7.49465 11.5899 7.43996 11.5899 7.35793 11.5352L2.57277 6.64065C1.56105 5.62893 1.36965 3.71487 2.76418 2.53909C3.83059 1.63674 5.47121 1.77346 6.51027 2.81252L7.46731 3.7969L8.42434 2.81252C9.43606 1.77346 11.0767 1.63674 12.1431 2.51174C13.5376 3.71487 13.3462 5.62893 12.3345 6.64065Z" fill="#8B8F9E" />
+                                </svg>
+                              </button>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-lg-4 mb-24">
+                      <div class="productBlock productBlock--style2">
+                        <span class="productBlock__tags">New</span>
+                        <figure class="productBlock__thumb">
+                          <div class="productBlock__thumb__main">
+                            <a href="product-details.html">
+                              <img src="image/products/product-thumb8.png" alt="Gainioz Product">
+                            </a>
+                          </div>
+                          <div class="productBlock__thumb__hover">
+                            <a href="product-details.html">
+                              <img src="image/products/product-thumb8-8.png" alt="Gainioz Product">
+                            </a>
+                          </div>
+                        </figure>
+                        <div class="productBlock__content">
+                          <div class="productBlock__content__main">
+                            <h3 class="productBlock__name"><a href="product-details.html">Eta abr Ki pol</a></h3>
+                            <p class="productBlock__text">Rorem ipsum dolor sit amet, consecte.</p>
+                            <span class="productBlock__price">$46.00</span>
+                            <span class="productBlock__ratings">
+                            <i class="fa-solid fa-star active"></i>
+                            <i class="fa-solid fa-star active"></i>
+                            <i class="fa-solid fa-star active"></i>
+                            <i class="fa-solid fa-star active"></i>
+                            <i class="fa-solid fa-star"></i>
+                          </span>
+                          </div>
+                          <div class="productBlock__content__hover">
+                            <div class="productBlock__actions">
+                              <button type="button" class="btn btn-secondary" data-bs-toggle="tooltip" data-bs-placement="top" title data-bs-original-title="Add to cart">
+                                <svg width="14" height="11" viewBox="0 0 14 11" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                  <path d="M13.2363 4H11.5254L8.50195 0.460938C8.29102 0.226562 7.93945 0.203125 7.70508 0.390625C7.4707 0.601562 7.44727 0.953125 7.63477 1.1875L10.0488 4H3.46289L5.87695 1.1875C6.06445 0.953125 6.04102 0.601562 5.80664 0.390625C5.57227 0.203125 5.2207 0.226562 5.00977 0.460938L1.98633 4H0.298828C0.134766 4 0.0175781 4.14062 0.0175781 4.28125V4.84375C0.0175781 5.00781 0.134766 5.125 0.298828 5.125H0.720703L1.37695 9.78906C1.44727 10.3516 1.91602 10.75 2.47852 10.75H11.0332C11.5957 10.75 12.0645 10.3516 12.1348 9.78906L12.791 5.125H13.2363C13.377 5.125 13.5176 5.00781 13.5176 4.84375V4.28125C13.5176 4.14062 13.377 4 13.2363 4ZM11.0332 9.625H2.47852L1.86914 5.125H11.6426L11.0332 9.625ZM7.33008 6.4375C7.33008 6.13281 7.07227 5.875 6.76758 5.875C6.43945 5.875 6.20508 6.13281 6.20508 6.4375V8.3125C6.20508 8.64062 6.43945 8.875 6.76758 8.875C7.07227 8.875 7.33008 8.64062 7.33008 8.3125V6.4375ZM9.95508 6.4375C9.95508 6.13281 9.69727 5.875 9.39258 5.875C9.06445 5.875 8.83008 6.13281 8.83008 6.4375V8.3125C8.83008 8.64062 9.06445 8.875 9.39258 8.875C9.69727 8.875 9.95508 8.64062 9.95508 8.3125V6.4375ZM4.70508 6.4375C4.70508 6.13281 4.44727 5.875 4.14258 5.875C3.81445 5.875 3.58008 6.13281 3.58008 6.4375V8.3125C3.58008 8.64062 3.81445 8.875 4.14258 8.875C4.44727 8.875 4.70508 8.64062 4.70508 8.3125V6.4375Z" fill="#8B8F9E" />
+                                </svg>
+                              </button>
+                              <button type="button" class="btn btn-secondary" data-bs-toggle="tooltip" data-bs-placement="top" title data-bs-original-title="Compare">
+                                <svg width="14" height="13" viewBox="0 0 14 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                  <path d="M6.8916 6.09375C6.8916 6.47656 7.16504 6.75 7.54785 6.75H10.1455C10.7197 6.75 11.0205 6.06641 10.583 5.65625L9.84473 4.89062L12.9072 1.82812C13.0439 1.69141 13.0439 1.47266 12.9072 1.36328L12.2783 0.734375C12.1689 0.597656 11.9502 0.597656 11.8135 0.734375L8.75098 3.79688L7.98535 3.05859C7.5752 2.62109 6.8916 2.92188 6.8916 3.49609V6.09375ZM1.94238 12.793L5.00488 9.73047L5.77051 10.4688C6.18066 10.9062 6.8916 10.6055 6.8916 10.0312V7.40625C6.8916 7.05078 6.59082 6.75 6.23535 6.75H3.61035C3.03613 6.75 2.73535 7.46094 3.17285 7.87109L3.91113 8.63672L0.848633 11.6992C0.711914 11.8359 0.711914 12.0547 0.848633 12.1641L1.47754 12.793C1.58691 12.9297 1.80566 12.9297 1.94238 12.793Z" fill="#8B8F9E" />
+                                </svg>
+                              </button>
+                              <button type="button" class="btn btn-secondary" data-bs-toggle="tooltip" data-bs-placement="top" title data-bs-original-title="Favourite">
+                                <svg width="15" height="13" viewBox="0 0 15 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                  <path d="M12.9907 1.52737C11.4048 0.187524 8.97121 0.378931 7.46731 1.93752C5.93606 0.378931 3.50246 0.187524 1.91652 1.52737C-0.134257 3.25002 0.166524 6.06643 1.64309 7.57034L6.42824 12.4649C6.70168 12.7383 7.05715 12.9024 7.46731 12.9024C7.85012 12.9024 8.20559 12.7383 8.47902 12.4649L13.2915 7.57034C14.7407 6.06643 15.0415 3.25002 12.9907 1.52737ZM12.3345 6.64065L7.54934 11.5352C7.49465 11.5899 7.43996 11.5899 7.35793 11.5352L2.57277 6.64065C1.56105 5.62893 1.36965 3.71487 2.76418 2.53909C3.83059 1.63674 5.47121 1.77346 6.51027 2.81252L7.46731 3.7969L8.42434 2.81252C9.43606 1.77346 11.0767 1.63674 12.1431 2.51174C13.5376 3.71487 13.3462 5.62893 12.3345 6.64065Z" fill="#8B8F9E" />
+                                </svg>
+                              </button>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-lg-4 mb-24">
+                      <div class="productBlock productBlock--style2">
+                        <span class="productBlock__tags">New</span>
+                        <figure class="productBlock__thumb">
+                          <div class="productBlock__thumb__main">
+                            <a href="product-details.html">
+                              <img src="image/products/product-thumb9.png" alt="Gainioz Product">
+                            </a>
+                          </div>
+                          <div class="productBlock__thumb__hover">
+                            <a href="product-details.html">
+                              <img src="image/products/product-thumb9-9.png" alt="Gainioz Product">
+                            </a>
+                          </div>
+                        </figure>
+                        <div class="productBlock__content">
+                          <div class="productBlock__content__main">
+                            <h3 class="productBlock__name"><a href="product-details.html">Eta abr Ki pol</a></h3>
+                            <p class="productBlock__text">Rorem ipsum dolor sit amet, consecte.</p>
+                            <span class="productBlock__price">$46.00</span>
+                            <span class="productBlock__ratings">
+                            <i class="fa-solid fa-star active"></i>
+                            <i class="fa-solid fa-star active"></i>
+                            <i class="fa-solid fa-star active"></i>
+                            <i class="fa-solid fa-star active"></i>
+                            <i class="fa-solid fa-star"></i>
+                          </span>
+                          </div>
+                          <div class="productBlock__content__hover">
+                            <div class="productBlock__actions">
+                              <button type="button" class="btn btn-secondary" data-bs-toggle="tooltip" data-bs-placement="top" title data-bs-original-title="Add to cart">
+                                <svg width="14" height="11" viewBox="0 0 14 11" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                  <path d="M13.2363 4H11.5254L8.50195 0.460938C8.29102 0.226562 7.93945 0.203125 7.70508 0.390625C7.4707 0.601562 7.44727 0.953125 7.63477 1.1875L10.0488 4H3.46289L5.87695 1.1875C6.06445 0.953125 6.04102 0.601562 5.80664 0.390625C5.57227 0.203125 5.2207 0.226562 5.00977 0.460938L1.98633 4H0.298828C0.134766 4 0.0175781 4.14062 0.0175781 4.28125V4.84375C0.0175781 5.00781 0.134766 5.125 0.298828 5.125H0.720703L1.37695 9.78906C1.44727 10.3516 1.91602 10.75 2.47852 10.75H11.0332C11.5957 10.75 12.0645 10.3516 12.1348 9.78906L12.791 5.125H13.2363C13.377 5.125 13.5176 5.00781 13.5176 4.84375V4.28125C13.5176 4.14062 13.377 4 13.2363 4ZM11.0332 9.625H2.47852L1.86914 5.125H11.6426L11.0332 9.625ZM7.33008 6.4375C7.33008 6.13281 7.07227 5.875 6.76758 5.875C6.43945 5.875 6.20508 6.13281 6.20508 6.4375V8.3125C6.20508 8.64062 6.43945 8.875 6.76758 8.875C7.07227 8.875 7.33008 8.64062 7.33008 8.3125V6.4375ZM9.95508 6.4375C9.95508 6.13281 9.69727 5.875 9.39258 5.875C9.06445 5.875 8.83008 6.13281 8.83008 6.4375V8.3125C8.83008 8.64062 9.06445 8.875 9.39258 8.875C9.69727 8.875 9.95508 8.64062 9.95508 8.3125V6.4375ZM4.70508 6.4375C4.70508 6.13281 4.44727 5.875 4.14258 5.875C3.81445 5.875 3.58008 6.13281 3.58008 6.4375V8.3125C3.58008 8.64062 3.81445 8.875 4.14258 8.875C4.44727 8.875 4.70508 8.64062 4.70508 8.3125V6.4375Z" fill="#8B8F9E" />
+                                </svg>
+                              </button>
+                              <button type="button" class="btn btn-secondary" data-bs-toggle="tooltip" data-bs-placement="top" title data-bs-original-title="Compare">
+                                <svg width="14" height="13" viewBox="0 0 14 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                  <path d="M6.8916 6.09375C6.8916 6.47656 7.16504 6.75 7.54785 6.75H10.1455C10.7197 6.75 11.0205 6.06641 10.583 5.65625L9.84473 4.89062L12.9072 1.82812C13.0439 1.69141 13.0439 1.47266 12.9072 1.36328L12.2783 0.734375C12.1689 0.597656 11.9502 0.597656 11.8135 0.734375L8.75098 3.79688L7.98535 3.05859C7.5752 2.62109 6.8916 2.92188 6.8916 3.49609V6.09375ZM1.94238 12.793L5.00488 9.73047L5.77051 10.4688C6.18066 10.9062 6.8916 10.6055 6.8916 10.0312V7.40625C6.8916 7.05078 6.59082 6.75 6.23535 6.75H3.61035C3.03613 6.75 2.73535 7.46094 3.17285 7.87109L3.91113 8.63672L0.848633 11.6992C0.711914 11.8359 0.711914 12.0547 0.848633 12.1641L1.47754 12.793C1.58691 12.9297 1.80566 12.9297 1.94238 12.793Z" fill="#8B8F9E" />
+                                </svg>
+                              </button>
+                              <button type="button" class="btn btn-secondary" data-bs-toggle="tooltip" data-bs-placement="top" title data-bs-original-title="Favourite">
+                                <svg width="15" height="13" viewBox="0 0 15 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                  <path d="M12.9907 1.52737C11.4048 0.187524 8.97121 0.378931 7.46731 1.93752C5.93606 0.378931 3.50246 0.187524 1.91652 1.52737C-0.134257 3.25002 0.166524 6.06643 1.64309 7.57034L6.42824 12.4649C6.70168 12.7383 7.05715 12.9024 7.46731 12.9024C7.85012 12.9024 8.20559 12.7383 8.47902 12.4649L13.2915 7.57034C14.7407 6.06643 15.0415 3.25002 12.9907 1.52737ZM12.3345 6.64065L7.54934 11.5352C7.49465 11.5899 7.43996 11.5899 7.35793 11.5352L2.57277 6.64065C1.56105 5.62893 1.36965 3.71487 2.76418 2.53909C3.83059 1.63674 5.47121 1.77346 6.51027 2.81252L7.46731 3.7969L8.42434 2.81252C9.43606 1.77346 11.0767 1.63674 12.1431 2.51174C13.5376 3.71487 13.3462 5.62893 12.3345 6.64065Z" fill="#8B8F9E" />
+                                </svg>
+                              </button>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-12">
+                <div class="paginationBlock">
+                  <nav aria-label="Page navigation example">
+                    <ul class="pagination justify-content-center">
+                      <li class="page-item page-item--prev disabled">
+                        <a class="page-link" href="#" tabindex="-1" aria-disabled="true">
+                          <i class="fa-solid fa-angle-left"></i>
+                        </a>
+                      </li>
+                      <div class="paginationBlock__number">
+                        <ul>
+                          <li class="page-item"><a class="page-link" href="#">1</a></li>
+                          <li class="page-item"><a class="page-link" href="#">2</a></li>
+                          <li class="page-item"><a class="page-link" href="#">3</a></li>
+                          <li class="page-item"><a class="page-link" href="#">...</a></li>
+                        </ul>
+                      </div>
+                      <li class="page-item page-item--next">
+                        <a class="page-link" href="#">
+                          <i class="fa-solid fa-angle-right"></i>
+                        </a>
+                      </li>
+                    </ul>
+                  </nav>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Product List End -->
+  </main>
+  <!-- Main End -->
+  {% endblock body %}
+</body>
+
+</html>
