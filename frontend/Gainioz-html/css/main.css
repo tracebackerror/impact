@@ -2347,7 +2347,21 @@ html {
 }
 
 .mean-bar__logo {
-  max-width: 140px;
+  max-width: 100px;
+  
+}
+/* my code */
+.cc--slideNav .logo_name{
+  /* padding: 0 0; */
+  margin: 15px 0;
+  color: #000;
+  float: right;
+  font-size: 1.3rem;
+  font-weight: 800;
+  text-align: center;
+} 
+.cc--slideNav .logo_name span{
+  color: rgb(238, 163, 23);
 }
 
 .header {
@@ -2550,6 +2564,8 @@ html {
 .header--styleFive.sticky-on.sticky .header__logo__image {
   mix-blend-mode: difference;
 }
+
+
 
 .hero {
   position: relative;
