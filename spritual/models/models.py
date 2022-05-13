@@ -21,11 +21,11 @@ class MetaInformation(models.Model):
 
 
 class ContactForm(models.Model):
-    first_name = models.CharField(max_length=50, help_text="First Name", null=False, blank=False)
-    last_name = models.CharField(max_length=50, help_text="Last Name", null=False, blank=False)
+    your_name = models.CharField(max_length=50, help_text="Your Name", null=False, blank=False)
     email =models.EmailField(max_length=70, help_text="Email", null=True, blank=True)
     phone = models.CharField(max_length=10, help_text="Phone Number", null=False, blank=False)
-    comments = models.CharField(max_length=200, help_text="Phone Number", null=True, blank=True)
+    subject = models.CharField(max_length=80, help_text="Subject", null=False, blank=False)
+    comment = models.CharField(max_length=200, help_text="Your Message", null=True, blank=True)
     created_date = models.DateTimeField(auto_now_add=True,blank=True)
     modified_date = models.DateTimeField(auto_now=True,blank=True)
 

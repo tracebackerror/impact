@@ -6,10 +6,10 @@ from .models import *
 class ContactAdmin(admin.ModelAdmin):
     date_hierarchy = 'created_date'
     empty_value_display = '-empty-'
-    search_fields = ['first_name', 'last_name', 'email', 'phone']
+    search_fields = ['your_name', 'email', 'phone']
     
     list_display = ('id',
-    'first_name', 'last_name', 'email','phone','comments','created_date','modified_date')
+    'your_name', 'email','phone','subject','comment','created_date','modified_date')
 
 
 @admin.register(ProjectsModel)
