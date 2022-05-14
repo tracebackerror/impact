@@ -1,10 +1,16 @@
+import imp
 from django.shortcuts import render
 from .forms import ContactForm
 from django.http import HttpResponseRedirect, HttpResponse
 from django.http import JsonResponse
 import json
+import base64
 
-from .models import ContactModel
+
+
+from .models import (ContactModel, 
+                     EventModel
+                     )
 
 # Create your views here.
 def index(request):
@@ -41,15 +47,18 @@ def donation_listing(request):
     return render(request, 'models/donation_listing.html')
 
 def event_details(request):
-    return render(request, 'models/event_details.html')
+    
+    return render(request, 'models/event_details.html', )
 
 def events(request):
-    return render(request, 'models/events.html')
+    events_objects = EventModel.objects.all().order_by('-event_date')
+    return render(request, 'models/events.html', {'all_events': events_objects})
 
 def faq(request):
     return render(request, 'models/faq.html')
 
 def product_details(request):
+    
     return render(request, 'models/product_details.html')
 
 def products(request):

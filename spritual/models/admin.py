@@ -1,7 +1,22 @@
 from django.contrib import admin
 from .models import *
+import base64
+from django.utils.html import format_html
 
-# Register your models here.
+
+@admin.register(EventModel)
+class EventAdmin(admin.ModelAdmin):
+    date_hierarchy = 'created_date'
+    empty_value_display = '-empty-'
+    search_fields = ['title_name', ]
+    
+    list_display = ('id', 'title_name', 'event_date', 'created_date','modified_date')
+    
+    readonly_fields = ["thumbnail_497_x_499",]
+    def thumbnail_497_x_499(self, obj):
+        #base64Encoded = base64.b64encode( bytes(obj.photo, 'utf-8'))
+        return format_html('<img src="{}">', obj.photo)
+    
 @admin.register(ContactModel)
 class ContactAdmin(admin.ModelAdmin):
     date_hierarchy = 'created_date'

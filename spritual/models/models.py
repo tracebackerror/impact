@@ -3,6 +3,7 @@ from django.utils.translation import gettext_lazy as _
 from django.utils import timezone
 from ckeditor.fields import RichTextField
 
+from .image_constant import image_497_x_499
 
 from .choices import (
     StateInIndiaChoices, 
@@ -19,7 +20,13 @@ class MetaInformation(models.Model):
     class Meta:
         abstract = True
 
-
+class EventModel(MetaInformation):
+    title_name =  models.CharField(max_length=250, help_text="Title", null=False, blank=False)
+    event_date =  models.DateTimeField(null=True, blank=True)
+    location = models.CharField(max_length=50, help_text="Location", null=False, blank=False)
+    description = models.TextField(help_text="Description", null=True, blank=True)
+    photo = models.TextField(null=False, help_text="Photo(base64 encoded)",default=image_497_x_499) #base64 store of images
+    
 class ContactModel(models.Model):
     your_name = models.CharField(max_length=50, help_text="Your Name", null=False, blank=False)
     email =models.EmailField(max_length=70, help_text="Email", null=True, blank=True)
