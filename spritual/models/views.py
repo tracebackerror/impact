@@ -1,4 +1,10 @@
 from django.shortcuts import render
+from .forms import ContactForm
+from django.http import HttpResponseRedirect, HttpResponse
+from django.http import JsonResponse
+import json
+
+from .models import ContactModel
 
 # Create your views here.
 def index(request):
@@ -14,6 +20,18 @@ def blog(request):
     return render(request, 'models/blog.html')
 
 def contact(request):
+    
+    if request.method == 'POST':
+        contact_form = ContactForm(request.POST)
+        if contact_form.is_valid():
+            contact_form.save()
+            return JsonResponse({'message': "Message Sent", 
+                                 "success": "success"
+            })
+        else:
+            return JsonResponse({
+                'message': dict(contact_form.errors.items()),
+            })
     return render(request, 'models/contact.html')
 
 def donation_details(request):

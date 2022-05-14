@@ -20,12 +20,12 @@ class MetaInformation(models.Model):
         abstract = True
 
 
-class ContactForm(models.Model):
+class ContactModel(models.Model):
     your_name = models.CharField(max_length=50, help_text="Your Name", null=False, blank=False)
     email =models.EmailField(max_length=70, help_text="Email", null=True, blank=True)
     phone = models.CharField(max_length=10, help_text="Phone Number", null=False, blank=False)
     subject = models.CharField(max_length=80, help_text="Subject", null=False, blank=False)
-    comment = models.CharField(max_length=200, help_text="Your Message", null=True, blank=True)
+    comment = models.TextField(help_text="Your Message", null=True, blank=True)
     created_date = models.DateTimeField(auto_now_add=True,blank=True)
     modified_date = models.DateTimeField(auto_now=True,blank=True)
 

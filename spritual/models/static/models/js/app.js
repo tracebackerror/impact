@@ -374,7 +374,7 @@
                     );
                 } else {
                     $.ajax({
-                        url: "php/mailer.php",
+                        url: "/contact/",
                         type: "POST",
                         data: innerContactForm.serialize(),
                         beforeSend: function() {
@@ -383,21 +383,23 @@
                             );
                         },
                         success: function(response) {
-                            if (response === "success") {
+                            if (response.success === "success") {
+                                console.log("im here");
                                 $this[0].reset();
                                 $target.html(
                                     "<div class='alert alert-success'><p>Message has been sent successfully.</p></div>"
                                 );
                             } else {
-                                res = JSON.parse(response);
-                                if (res.message.length) {
-                                    const messages = null;
-                                    res.message.forEach(function(message) {
-                                        messages += "<p>" + message + "</p>";
-                                    });
+                                
+                                if (response) {
+                                    console.log("im here 1");
+                                    // const messages = res.message;
+                                    // res.message.forEach(function(message) {
+                                    //     messages += "<p>" + message + "</p>";
+                                    // });
                                     $target.html(
                                         "<div class='alert alert-success'><p>" +
-                                        messages +
+                                        JSON.stringify(response) +
                                         "</p></div>"
                                     );
                                 }
