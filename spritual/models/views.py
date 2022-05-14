@@ -46,9 +46,9 @@ def donation_details(request):
 def donation_listing(request):
     return render(request, 'models/donation_listing.html')
 
-def event_details(request):
-    
-    return render(request, 'models/event_details.html', )
+def event_details(request, event_id):
+    event_object = EventModel.objects.get(id=event_id)
+    return render(request, 'models/event_details.html', {'event_details': event_object})
 
 def events(request):
     events_objects = EventModel.objects.all().order_by('-event_date')

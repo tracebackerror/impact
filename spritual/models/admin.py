@@ -12,10 +12,18 @@ class EventAdmin(admin.ModelAdmin):
     
     list_display = ('id', 'title_name', 'event_date', 'created_date','modified_date')
     
-    readonly_fields = ["thumbnail_497_x_499",]
+    readonly_fields = ["thumbnail_497_x_499",
+                       "view_event_detailed_pagephoto",
+                       "view_event_banner_pagephoto"
+                       ]
     def thumbnail_497_x_499(self, obj):
-        #base64Encoded = base64.b64encode( bytes(obj.photo, 'utf-8'))
         return format_html('<img src="{}">', obj.photo)
+    def view_event_detailed_pagephoto(self, obj):
+        return format_html('<img src="{}">', obj.event_detailed_pagephoto)
+    
+    def view_event_banner_pagephoto(self, obj):
+        return format_html('<img src="{}">', obj.event_banner_pagephoto)
+    
     
 @admin.register(ContactModel)
 class ContactAdmin(admin.ModelAdmin):
