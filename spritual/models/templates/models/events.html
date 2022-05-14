@@ -355,13 +355,13 @@
               <div class="col-12 mb-30">
                 <div class="eventsBlock">
                   <figure class="eventsBlock__thumb">
-                    <a href="event-details.html" class="eventsBlock__thumb__link">
+                    <a href="{% url 'event_details' event_id=each_events.id %}" class="eventsBlock__thumb__link">
                       <img src="{{ each_events.photo }}" alt="Gainioz Events" class="eventsBlock__thumb__image">
                     </a>
                   </figure>
                   <div class="eventsBlock__content">
                     <h3 class="eventsBlock__heading text-uppercase">
-                      <a href="event-details.html"> {{each_events.title_name}}</a>
+                      <a href="{% url 'event_details' event_id=each_events.id %}"> {{each_events.title_name}}</a>
                     </h3>
                     <div class="eventsBlock__meta">
                       <ul>
@@ -378,7 +378,7 @@
                       </ul>
                     </div>
                     <p class="eventsBlock__text">{{each_events.description|truncatechars:255}}</p>
-                    <a href="#" class="eventsBlock__detailsLink">
+                    <a href="{% url 'event_details' event_id=each_events.id %}" class="eventsBlock__detailsLink">
                       Read more
                       <svg width="61" height="12" viewBox="0 0 61 12" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path d="M60.5303 6.53033C60.8232 6.23744 60.8232 5.76256 60.5303 5.46967L55.7574 0.696699C55.4645 0.403806 54.9896 0.403806 54.6967 0.696699C54.4038 0.989593 54.4038 1.46447 54.6967 1.75736L58.9393 6L54.6967 10.2426C54.4038 10.5355 54.4038 11.0104 54.6967 11.3033C54.9896 11.5962 55.4645 11.5962 55.7574 11.3033L60.5303 6.53033ZM0 6.75H60V5.25H0V6.75Z" fill="#0D0D0D" />

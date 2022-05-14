@@ -350,66 +350,55 @@
               <div class="donationDetails storiesDetails">
                 <div class="donationDetails__header mb-45">
                   <figure class="thumb mb-45">
-                    <img src="image/utilites/event-details1.jpg" alt="Gainioz">
+                    <img src="{{ event_details.event_banner_pagephoto }}" alt="Spritual Root NGO">
                   </figure>
                 </div>
                 <h3 class="eventsBlock__heading text-uppercase">
-                  Temple and Family History Leadership
+                  {{ event_details.title_name }}
                 </h3>
                 <div class="eventsBlock__meta">
                   <ul>
                     <li>
-                      <span class="eventsBlock__meta__title">Featured :</span>
-                      <span class="eventsBlock__meta__text">Feb 10, 2022 @ 8:00 am - Feb 11, 2022 @ 5:00 pm</span>
+                      <span class="eventsBlock__meta__title">Created On :</span>
+                      <span class="eventsBlock__meta__text"> {{ event_details.created_date }}</span>
                     </li>
                     <li>
-                      <span class="eventsBlock__meta__title">Newyork :</span>
-                      <span class="eventsBlock__meta__text">233 Main St, New York</span>
+                      <span class="eventsBlock__meta__title">Location:</span>
+                      <span class="eventsBlock__meta__text">{{ event_details.location }}</span>
                     </li>
                   </ul>
                 </div>
-                <p class="donationDetails__text storiesDetails__text storiesDetails__text--first mb-30">We have covered
-                  many special events such as fireworks, fairs,
-                  parades, races, walks, awards ceremonies, fashion shows, sporting events, and even a memorial service.
+                <p class="donationDetails__text storiesDetails__text storiesDetails__text--first mb-30">
+                  {{event_details.description}}
                 </p>
+               
+                <h4 class="donationDetails__heading mb-25">
+                  {{event_details.subtitle_name|default_if_none:"--" }}
+                </h4>
                 <p class="donationDetails__text mb-30">
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur vulputate vestibulum rhoncus, dolor
-                  eget viverra pretium, dolor tellus aliquet nunc, vitae ultricies erat elit eu lacus. Vestibulum non
-                  justo consectetur, cursus ante, tincidunt sapien. Nulla quis diam sit amet turpis interd enim. Vivamus
-                  faucibus ex sed nibh egestas elementum. Mauris et bibendum dui. Aenean consequat pulvinar luctus.
-                  Suspendisse consectetur tristique tortor
+                  {{event_details.subtitle_description|default_if_none:"" }}
                 </p>
-                <h4 class="donationDetails__heading mb-25">Family History Event Details</h4>
-                <p class="donationDetails__text mb-30">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur
-                  vulputate vestibulum Phasellus rhoncus, dolor eget viverra pretium, dolor tellus aliquet nunc, vitae
-                  ultricies erat elit eu lacus. Vestibulum non justo consectetur, cursus ante, tincidunt sapien. Nulla
-                  quis diam sit amet turpis interdum accumsan quis nec enim. Vivamus faucibus ex sed nibh egestas
-                  elementum. Mauris et bibendum dui. Aenean consequat pulvinar luctus</p>
-                <p class="donationDetails__text mb-30">We have covered many special events such as fireworks, fairs,
-                  parades, races, walks, awards ceremonies, fashion shows, sporting events, and even a memorial service.
-                </p>
+                
                 <div class="row g-4">
                   <div class="col-lg-6">
                     <div class="eventAddress">
                       <ul>
                         <li>
                           <h3 class="eventAddress__heading">Event Date</h3>
-                          <span>Feb 10, 2022 @ 8:00</span>
-                          <span>am - Feb 11, 2022 @</span>
-                          <span>5:00 pm</span>
+                          <span>{{event_details.event_date|date:"M d, Y" }}</span>
+                          <span>{{event_details.event_date|date:"g:i A" }}</span>
+                         
                         </li>
                         <li>
                           <h3 class="eventAddress__heading">Event Location</h3>
-                          <span>Feb 10, 2022 @ 8:00</span>
-                          <span>am - Feb 11, 2022 @</span>
-                          <span>5:00 pm</span>
+                          <span>{{event_details.location }}</span>
                         </li>
                       </ul>
                     </div>
                   </div>
                   <div class="col-lg-6">
                     <figure class="thumb mb-35">
-                      <img src="image/utilites/event-details2.jpg" alt="Gainioz">
+                      <img src="{{ event_details.event_detailed_pagephoto }}" alt="Gainioz">
                     </figure>
                   </div>
                 </div>
