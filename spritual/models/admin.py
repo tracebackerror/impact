@@ -4,6 +4,45 @@ import base64
 from django.utils.html import format_html
 
 
+class CommentsInline(admin.StackedInline):
+    exclude = ['photo', ]
+    model = CommentModel
+    
+@admin.register(CommentModel)
+class CommentAdmin(admin.ModelAdmin):
+    date_hierarchy = 'created_date'
+    empty_value_display = '-empty-'
+    search_fields = ['message', 'subject' ]
+    
+    list_display = ('id', 'email', 'phone', 'subject', 'message', 'created_date','modified_date')
+    
+    
+    
+    
+    
+@admin.register(BlogModel)
+class BlogAdmin(admin.ModelAdmin):
+    date_hierarchy = 'created_date'
+    empty_value_display = '-empty-'
+    search_fields = ['blog_title', ]
+    
+    list_display = ('id', 'blog_title', 'posted_by', 'created_date','modified_date')
+    
+    readonly_fields = ["view_banner",
+                       "view_thumbnail"
+                       ]
+    
+    
+    def view_banner(self, obj):
+        return format_html('<img src="{}">', obj.banner)
+    
+    def view_thumbnail(self, obj):
+        return format_html('<img src="{}">', obj.photo)
+    
+    inlines = [
+        CommentsInline,
+    ]
+    
 @admin.register(EventModel)
 class EventAdmin(admin.ModelAdmin):
     date_hierarchy = 'created_date'

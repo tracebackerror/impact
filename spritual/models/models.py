@@ -2,8 +2,11 @@ from django.db import models
 from django.utils.translation import gettext_lazy as _
 from django.utils import timezone
 from ckeditor.fields import RichTextField
+from django.conf import settings
+from django.contrib.auth.models import User
 
-from .image_constant import image_497_x_499, image_382_by234, image_850_by_430
+
+from .image_constant import image_497_x_499, image_382_by234, image_850_by_430, avatar
 
 from .choices import (
     StateInIndiaChoices, 
@@ -16,9 +19,67 @@ from .choices import (
 class MetaInformation(models.Model):  
     created_date = models.DateTimeField(auto_now_add=True,blank=True)
     modified_date = models.DateTimeField(auto_now=True,blank=True)
-  
+    
     class Meta:
         abstract = True
+
+
+class BlogModel(MetaInformation):
+    blog_title = models.CharField(max_length=250, help_text="Title",
+                                  null=False, 
+                                  blank=False)
+    description = models.TextField(help_text="Description", 
+                                   null=True, 
+                                   blank=True)
+    posted_by = models.ForeignKey(
+        User,
+        on_delete=models.CASCADE,
+    )
+    photo = models.TextField(null=False, help_text="Photo(base64 encoded)",
+                             default=avatar)
+    banner =  models.TextField(null=False, help_text="Banner(base64 encoded)", 
+                               default=image_850_by_430) 
+    tags = models.CharField(help_text="Comma Separated Tag", 
+                            max_length=200,
+                               null=True, 
+                               blank=True) 
+    
+    
+    
+    
+    
+    
+class CommentModel(MetaInformation):
+    name = models.CharField(max_length=10, 
+                             help_text="Phone Number", 
+                             null=False, 
+                             blank=False)
+    photo = models.TextField(null=False, 
+                             help_text="Photo(base64 encoded)",
+                             default=avatar)  
+    
+    email =models.EmailField(max_length=70, 
+                             help_text="Email", 
+                             null=True, 
+                             blank=True)
+    phone = models.CharField(max_length=10, 
+                             help_text="Phone Number", 
+                             null=False, 
+                             blank=False)
+    subject = models.CharField(max_length=80, 
+                               help_text="Subject",
+                               null=False, 
+                               blank=False)
+    message = models.TextField(help_text="Your Message", 
+                               null=True, 
+                               blank=True) 
+    
+    blog = models.ForeignKey(BlogModel,
+                                 on_delete=models.CASCADE,
+                                 null=True,
+                                 blank=True)
+    
+
 
 class EventModel(MetaInformation):
     title_name =  models.CharField(max_length=250, help_text="Title", null=False, blank=False)

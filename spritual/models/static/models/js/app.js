@@ -417,6 +417,62 @@
         });
     }
 
+    const commentForm = $(".it-comment-form");
+    if (commentForm.length) {
+        commentForm.each(function() {
+            const innerContactForm = $(this);
+            innerContactForm.validator().on("submit", function(e) {
+                const $this = $(this),
+                    $target = innerContactForm.find(".form-response");
+                if (e.isDefaultPrevented()) {
+                    $target.html(
+                        "<div class='alert alert-danger'><p>Please select all required field.</p></div>"
+                    );
+                } else {
+                    $.ajax({
+                        url: "/contact/",
+                        type: "POST",
+                        data: innerContactForm.serialize(),
+                        beforeSend: function() {
+                            $target.html(
+                                "<div class='alert alert-info'><p>Loading ...</p></div>"
+                            );
+                        },
+                        success: function(response) {
+                            if (response.success === "success") {
+                                console.log("im here");
+                                $this[0].reset();
+                                $target.html(
+                                    "<div class='alert alert-success'><p>Message has been sent successfully.</p></div>"
+                                );
+                            } else {
+                                
+                                if (response) {
+                                    console.log("im here 1");
+                                    // const messages = res.message;
+                                    // res.message.forEach(function(message) {
+                                    //     messages += "<p>" + message + "</p>";
+                                    // });
+                                    $target.html(
+                                        "<div class='alert alert-success'><p>" +
+                                        JSON.stringify(response) +
+                                        "</p></div>"
+                                    );
+                                }
+                            }
+                        },
+                        error: function() {
+                            $target.html(
+                                "<div class='alert alert-success'><p>Error !!!</p></div>"
+                            );
+                        },
+                    });
+                    return false;
+                }
+            });
+        });
+    }
+
     // 19. Sponsor/Brand Slider Activation
     $(".sponsor-slider-active").each(function(i) {
         let ccSliderStyle1 = $(this).get(0);

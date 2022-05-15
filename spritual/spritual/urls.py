@@ -21,7 +21,7 @@ urlpatterns = [
     # path('',include('models.urls')),
     path('',views.index, ),
     path('about/',views.about,name='about'),
-    path('blog_details/',views.blog_details,name='blog_details'),
+    path('blog_details/<int:blog_id>/', views.blog_details, name='blog_details'),
     path('blog/',views.blog,name='blog'),
     path('contact/',views.contact,name='contact'),
     path('donation_details/',views.donation_details,name='donation_details'),
