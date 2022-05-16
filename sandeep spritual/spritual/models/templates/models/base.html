@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="" />
+    <meta name="author" content="" />
+    <title>Education Trust </title>
+    <link rel="icon" href="{% static 'models/image/favicon.png' %}" type="image/png">
+    <link rel="stylesheet" href="{% static 'models/assets/animation/animate.min.css' %}">
+    <link rel="stylesheet" href="{% static 'models/assets/animation/custom-animation.css' %}">
+    <link rel="stylesheet" href="{% static 'models/assets/bootstrap/css/bootstrap.min.css' %}">
+    <link rel="stylesheet" href="{% static 'models/assets/swiper/swiper.min.css' %}">
+    <link rel="stylesheet" href="{% static 'models/assets/fontawesome/css/all.min.css' %}">
+    <link rel="stylesheet" href="{% static 'models/assets/nice-select/nice-select.css' %}">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;500;600;700&family=Oswald:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{% static 'models/css/main.css' %}">
+</head>
+<body>
+    
+   <!-- Preloader -->
+  <div id="preloader">
+    <div class="ctn-preloader" id="ctn-preloader">
+      <div class="round_spinner">
+        <div class="spinner"></div>
+        <div class="text">
+          <img src="{% static 'models/image2/logo.png' %}" alt="Spiritual">
+        </div>
+      </div>
+      <h2 class="head">DO GOOD FOR OTHERS</h2>
+      <p></p>
+    </div>
+  </div>
+  <!-- Preloader End -->
+  
+
+  <!-- Main -->
+ 
+
+  {% block body %} {% endblock body %}
+
+  <!-- footer -->
+  <footer class="footer footer--bg footer--styleOne pt-70 pb-40">
+    <img src="{% static 'models/image/shapes/footerShape2.png' %}" alt="Gainioz Shape" class="footer__shape">
+    <div class="container">
+      <div class="row align-items-center">
+        <div class="col">
+          <div class="footer__logo">
+            <img src="{% static 'models/image/logos/logo_2.svg' %}" alt="Gainioz Logo" class="footer__logo__image">
+          </div>
+        </div>
+        <div class="col">
+          <div class="footer__social itSocial">
+            <ul>
+              <li>
+                <a class="facebook" href="https://codercredit.com/" rel="nofollow">
+                  <i class="fab fa-facebook-f"></i>
+                </a>
+              </li>
+              <li>
+                <a class="twitter" href="https://codercredit.com/" rel="nofollow">
+                  <i class="fab fa-twitter"></i>
+                </a>
+              </li>
+              <li>
+                <a class="instagram" href="https://codercredit.com/" rel="nofollow">
+                  <i class="fab fa-instagram"></i>
+                </a>
+              </li>
+              <li>
+                <a class="linkedin" href="https://codercredit.com/" rel="nofollow">
+                  <i class="fab fa-linkedin-in"></i>
+                </a>
+              </li>
+              <li>
+                <a class="pinterest" href="https://codercredit.com/" rel="nofollow">
+                  <i class="fab fa-pinterest-p"></i>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="col-12">
+          <hr class="footer__line" />
+        </div>
+      </div>
+      <div class="row">
+        <div class="footer__middle pt-65 pb-35">
+          <div class="row justify-content-between">
+            <div class="col-lg-2 col-md-4 mb-30">
+              <div class="footer__widget">
+                <div class="footer__title">
+                  <h2 class="footer__heading text-uppercase text-white">About us</h2>
+                </div>
+                <div class="footer__menu">
+                  <ul>
+                    <li><a href="index.html">Policy Priorities</a></li>
+                    <li><a href="index.html">Careers</a></li>
+                    <li><a href="index.html">Internships</a></li>
+                    <li><a href="index.html">Financial Reports</a></li>
+                    <li><a href="index.html">Contact Us</a></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-2 col-md-4 mb-30">
+              <div class="footer__widget">
+                <div class="footer__title">
+                  <h2 class="footer__heading text-uppercase text-white">Support us</h2>
+                </div>
+                <div class="footer__menu">
+                  <ul>
+                    <li><a href="donation-listing.html">Donate Now</a></li>
+                    <li><a href="products.html">Store</a></li>
+                    <li><a href="index.html">Reports</a></li>
+                    <li><a href="index.html">Press Releases</a></li>
+                    <li><a href="index.html">Privacy & Policy</a></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-2 col-md-4 mb-30">
+              <div class="footer__widget">
+                <div class="footer__title">
+                  <h2 class="footer__heading text-uppercase text-white">Quick LInks</h2>
+                </div>
+                <div class="footer__menu">
+                  <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About us</a></li>
+                    <li><a href="contact.html">Contact us</a></li>
+                    <li><a href="donation-listing.html">Donation</a></li>
+                    <li><a href="stories.html">Join Volentter</a></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-5 mb-30">
+              <form action="#" method="post" class="footer__newsletter">
+                <div class="footer__title">
+                  <h2 class="footer__heading text-uppercase text-white">News Latter</h2>
+                </div>
+                <div class="footer__newsletter__formGroup mb-20">
+                  <input type="text" class="footer__newsletter__input" placeholder="Enter mail">
+                  <input class="footer__newsletter__button" type="button" value="Subscribe">
+                </div>
+                <div class="footer__newsletter__formGroup">
+                  <input id="agree" type="checkbox" class="footer__newsletter__check form-check-input">
+                  <label class="footer__newsletter__label" for="agree">I agree that my submitted data is
+                    being
+                    collected and stored.</label>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="footer__bottom">
+          <div class="row">
+            <div class="col-12">
+              <hr class="footer__line">
+            </div>
+            <div class="col mb-20">
+              <div class="footer__copyright pt-20">
+                <p class="footer__copyright__text mb-0">Copyright@example 2022 all right receved</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <!-- CURSOR -->
+  <div class="mouseCursor cursor-outer"></div>
+  <div class="mouseCursor cursor-inner"></div>
+  <!-- /CURSOR -->
+  <div class="progress-wrap">
+    <svg class="progress-circle svg-content" width="100%" height="100%" viewBox="-1 -1 102 102">
+      <path d="M50,1 a49,49 0 0,1 0,98 a49,49 0 0,1 0,-98" />
+    </svg>
+  </div>
+  <!-- Template Search -->
+  <div id="template-search" class="template-search">
+    <button type="button" class="close">
+      <i class="fa-solid fa-xmark"></i>
+    </button>
+    <form class="search-form">
+      <input type="search" value="" placeholder="Type your search" />
+      <button type="submit" class="search-btn">
+        <i class="fas fa-search"></i>
+      </button>
+    </form>
+  </div>
+  
+
+
+  
+  <script src="{% static 'models/assets/jquery/jquery.min.js' %}"></script>
+  <script src="{% static 'models/assets/bootstrap/js/bootstrap.bundle.js' %}"></script>
+  <script src="{% static 'models/assets/swiper/swiper.min.js' %}"></script>
+  <script src="{% static 'models/assets/nice-select/jquery.nice-select.min.js' %}"></script>
+  <script src="{% static 'models/assets/validator.min.js' %}"></script>
+  <script src="{% static 'models/assets/animation/wow.min.js' %}"></script>
+  <script src="{% static 'models/js/app.js' %}"></script>
+</body>
+</html>
