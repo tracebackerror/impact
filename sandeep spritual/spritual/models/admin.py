@@ -16,7 +16,7 @@ class ContactAdmin(admin.ModelAdmin):
 class ProjectsAdmin(admin.ModelAdmin):
     list_display = (
         'id',
-        'title',
+        'title','description','short_url','image','publish',
         'created_date',
         'modified_date'
         )
@@ -82,3 +82,16 @@ class SiteInfoModelAdmin(admin.ModelAdmin):
     empty_value_display = '-empty-'
     search_fields = ['site_name', 'email', 'address', ]
 
+
+@admin.register(FeaturedCampaign)
+class FeaturedCampaignAdmin(admin.ModelAdmin):
+    list_display = (
+        'id',
+        'feature_hashlink',
+        'feature_heading',
+        'feature_donation_goal',
+        'feature_donation_raised',
+        'feature_donation_to_go',
+        'image','created_date',
+        'modified_date',
+        )

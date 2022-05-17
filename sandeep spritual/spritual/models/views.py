@@ -1,50 +1,93 @@
 from django.shortcuts import render
+from django.views import View
+from .models import MetaInformation,ContactForm,VolunteerMoodel,GetHelpModel,ProjectsModel,StoriesModel,SiteInfoModel,FeaturedCampaign
 
 # Create your views here.
-def index(request):
-    return render(request, 'models/index.html')
+# def index(request):
+#     return render(request, 'models/index.html')
 
-def about(request):
-    return render(request, 'models/about.html')
+class indexview(View):
+    def get(self, request):
+        project = ProjectsModel.objects.all()
+        feature = FeaturedCampaign.objects.all()
 
-def blog_details(request):
-    return render(request, 'models/blog_details.html')
+        return render(request, 'models/index.html',{'project':project,'feature':feature})
 
-def blog(request):
-    return render(request, 'models/blog.html')
+# def about(request):
+#     return render(request, 'models/about.html')
 
-def contact(request):
-    return render(request, 'models/contact.html')
+class aboutview(View):
+    def get(self, request):
+        project = ProjectsModel.objects.all()
+        return render(request, 'models/about.html',{'project':project})
 
-def donation_details(request):
-    return render(request, 'models/donation_details.html')
 
-def donation_listing(request):
-    return render(request, 'models/donation_listing.html')
+class blog_details_view(View):
+    def get(self, request):
+        project = ProjectsModel.objects.all()
+        return render(request, 'models/blog_details.html',{'project':project})
 
-def event_details(request):
-    return render(request, 'models/event_details.html')
+class blogview(View):
+    def get(self, request):
+        project = ProjectsModel.objects.all()
+        return render(request, 'models/blog.html',{'project':project})
 
-def events(request):
-    return render(request, 'models/events.html')
+class contactview(View):
+    def get(self, request):
+        project = ProjectsModel.objects.all()
+        return render(request, 'models/contact.html',{'project':project})
 
-def faq(request):
-    return render(request, 'models/faq.html')
+class donation_details_view(View):
+    def get(self, request):
+        project = ProjectsModel.objects.all()
+        return render(request, 'models/donation_details.html',{'project':project})
 
-def product_details(request):
-    return render(request, 'models/product_details.html')
+class donation_listing_view(View):
+    def get(self, request):
+        project = ProjectsModel.objects.all()
+        return render(request, 'models/donation_listing.html',{'project':project})
 
-def products(request):
-    return render(request, 'models/products.html')
+class event_details_view(View):
+    def get(self, request):
+        project = ProjectsModel.objects.all()
+        return render(request, 'models/event_details.html',{'project':project})
 
-def service(request):
-    return render(request, 'models/service.html')
+class eventsview(View):
+    def get(self, request):
+        project = ProjectsModel.objects.all()
+        return render(request, 'models/events.html',{'project':project})
 
-def stories_details(request):
-    return render(request, 'models/stories_details.html')
+class faqview(View):
+    def get(self, request):
+        project = ProjectsModel.objects.all()
+        return render(request, 'models/faq.html',{'project':project})
 
-def stories(request):
-    return render(request, 'models/stories.html')
+class product_details_view(View):
+    def get(self, request):
+        project = ProjectsModel.objects.all()
+        return render(request, 'models/product_details.html',{'project':project})
 
-def volunteers(request):
-    return render(request, 'models/volunteers.html')
+class productsview(View):
+    def get(self, request):
+        project = ProjectsModel.objects.all()
+        return render(request, 'models/products.html',{'project':project})
+
+class serviceview(View):
+    def get(self, request):
+        project = ProjectsModel.objects.all()
+        return render(request, 'models/service.html',{'project':project})
+
+class stories_details_view(View):
+    def get(self, request):
+        project = ProjectsModel.objects.all()
+        return render(request, 'models/stories_details.html',{'project':project})
+
+class storiesview(View):
+    def get(self, request):
+        project = ProjectsModel.objects.all()
+        return render(request, 'models/stories.html',{'project':project})
+
+class volunteersview(View):
+    def get(self, request):
+        project = ProjectsModel.objects.all()
+        return render(request, 'models/volunteers.html',{'project':project})
