@@ -284,8 +284,8 @@
     <!-- Page Breadcumb -->
     <section class="pageBreadcumb pageBreadcumb--style1 position-relative"
       data-bg-image="image2/donation/donation-list_bg.jpg">
-      <div class="pageBreadcumbTopDown">
-        <a class="btn btn--styleOne btn--icon btn--icon2 it-btn" href="donation-listing.html">
+     <div class="pageBreadcumbTopDown">
+        <a class="btn btn--styleOne btn--icon btn--icon2 it-btn" href="#viju">
           <svg class="btn__icon" width="10" height="14" viewBox="0 0 10 14" fill="none"
           >
             <path
@@ -313,10 +313,10 @@
         </a>
       </div>
       <div class="sectionShape sectionShape--top">
-        <img src="image/shapes/pagebreadcumbShapeTop.svg" alt="spiritualRoot">
+        <img src="{% static 'models/image/shapes/pagebreadcumbShapeTop.svg'%}" alt="spiritualRoot">
       </div>
       <div class="sectionShape sectionShape--bottom">
-        <img src="image/shapes/pagebreadcumbShapeBottom.svg" alt="spiritualRoot">
+        <img src="{% static 'models/image/shapes/pagebreadcumbShapeBottom.svg'%}" alt="spiritualRoot">
       </div>
       <div class="container">
         <div class="row">
@@ -337,7 +337,7 @@
     <!-- Page Breadcumb End -->
 
     <!-- About Feature -->
-    <div class="about position-relative pt-125 pb-130">
+    <div class="about position-relative pt-125 pb-130" id="viju">
       <div class="container">
         <div class="row">
           <div class="col-12">
@@ -369,7 +369,7 @@
                     role="tab" aria-controls="contact" aria-selected="false">health</button>
                 </li>
                 <li class="nav-item" role="presentation">
-                  <button class="nav-link" id="contact-tab" data-bs-toggle="tab" data-bs-target="#contact" type="button"
+                  <button class="nav-link" id="contact-tab" data-bs-toggle="tab" data-bs-target="#profile" type="button"
                     role="tab" aria-controls="contact" aria-selected="false">Rehabilitation center</button>
                 </li>
                 <li class="nav-item" role="presentation">
@@ -377,7 +377,7 @@
                     role="tab" aria-controls="contact" aria-selected="false">Old Age home</button>
                 </li>
                 <li class="nav-item" role="presentation">
-                  <button class="nav-link" id="contact-tab" data-bs-toggle="tab" data-bs-target="#contact" type="button"
+                  <button class="nav-link" id="contact-tab" data-bs-toggle="tab" data-bs-target="#profile" type="button"
                     role="tab" aria-controls="contact" aria-selected="false">Counselling</button>
                 </li>
                

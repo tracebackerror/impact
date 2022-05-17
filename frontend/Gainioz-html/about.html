@@ -42,6 +42,7 @@
   <main class="main">
     <!-- Header Style One -->
     <!-- header -->
+    
     <header class="header header--styleFour sticky-on">
       <div>
         <div class="container container--custom">
@@ -269,7 +270,7 @@
     <!-- Header Style One End -->
 
     <!-- Page Breadcumb -->
-    <section class="pageBreadcumb pageBreadcumb--style1 position-relative" data-bg-image="image/bg/pageBreadcumbBg1.jpg">
+    <section class="pageBreadcumb pageBreadcumb--style1 position-relative" data-bg-image="{% static 'models/image/bg/pageBreadcumbBg1.jpg' %}">
       <div class="pageBreadcumbTopDown">
         <a class="btn btn--styleOne btn--icon btn--icon2 it-btn" href="donation-listing.html">
           <svg class="btn__icon" width="10" height="14" viewBox="0 0 10 14" fill="none"
@@ -297,12 +298,12 @@
             </defs>
           </svg>
         </a>
-      </div>
+      </div> 
       <div class="sectionShape sectionShape--top">
-        <img src="image/shapes/pagebreadcumbShapeTop.svg" alt="spiritualRoot">
+        <img src="{% static 'models/image/shapes/pagebreadcumbShapeTop.svg' %}" alt="spiritualRoot">
       </div>
       <div class="sectionShape sectionShape--bottom">
-        <img src="image/shapes/pagebreadcumbShapeBottom.svg" alt="spiritualRoot">
+        <img src="{% static 'models/image/shapes/pagebreadcumbShapeBottom.svg' %}" alt="spiritualRoot">
       </div>
       <div class="container">
         <div class="row">
