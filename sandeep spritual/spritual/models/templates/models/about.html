@@ -378,34 +378,35 @@
           </div>
         </div>
         <div class="row">
+          {% for vol in volunteer %}
           <div class="col-lg-3 col-md-6 mb-45">
             <div class="volunteerBlock text-center">
               <figure class="volunteerBlock__figure">
-                <img class="volunteerBlock__figure__thumb" src="{% static 'models/image/volunteers/volunteer1.jpg' %}" alt="Gainioz Volunteers">
+                <img class="volunteerBlock__figure__thumb" src="{{vol.image.url}}" alt="Gainioz Volunteers">
               </figure>
               <div class="volunteerBlock__content">
                 <h3 class="volunteerBlock__name text-uppercase text-center">
-                  <a href="{% url 'stories_details' %}">Cameron Williamson</a>
+                  <a href="{% url 'stories_details' %}">{{vol.full_name}} </a>
                 </h3>
                 <div class="itSocial itSocial--volunteer">
                   <ul>
                     <li>
-                      <a class="facebook" href="https://codercredit.com/" rel="nofollow">
+                      <a class="facebook" href="{{vol.fb_url}}" rel="nofollow">
                         <i class="fab fa-facebook-f"></i>
                       </a>
                     </li>
                     <li>
-                      <a class="twitter" href="https://codercredit.com/" rel="nofollow">
+                      <a class="twitter" href="{{vol.tw_url}}" rel="nofollow">
                         <i class="fab fa-twitter"></i>
                       </a>
                     </li>
                     <li>
-                      <a class="instagram" href="https://codercredit.com/" rel="nofollow">
+                      <a class="instagram" href="{{vol.ig_url}}" rel="nofollow">
                         <i class="fab fa-instagram"></i>
                       </a>
                     </li>
                     <li>
-                      <a class="linkedin" href="https://codercredit.com/" rel="nofollow">
+                      <a class="linkedin" href="{{vol.li_url}}" rel="nofollow">
                         <i class="fab fa-linkedin-in"></i>
                       </a>
                     </li>
@@ -414,261 +415,10 @@
               </div>
             </div>
           </div>
-          <div class="col-lg-3 col-md-6 mb-45">
-            <div class="volunteerBlock text-center">
-              <figure class="volunteerBlock__figure">
-                <img class="volunteerBlock__figure__thumb" src="{% static 'models/image/volunteers/volunteer2.jpg' %}" alt="Gainioz Volunteers">
-              </figure>
-              <div class="volunteerBlock__content">
-                <h3 class="volunteerBlock__name text-uppercase text-center">
-                  <a href="{% url 'stories_details' %}">Esther Howard</a>
-                </h3>
-                <div class="itSocial itSocial--volunteer">
-                  <ul>
-                    <li>
-                      <a class="facebook" href="https://codercredit.com/" rel="nofollow">
-                        <i class="fab fa-facebook-f"></i>
-                      </a>
-                    </li>
-                    <li>
-                      <a class="twitter" href="https://codercredit.com/" rel="nofollow">
-                        <i class="fab fa-twitter"></i>
-                      </a>
-                    </li>
-                    <li>
-                      <a class="instagram" href="https://codercredit.com/" rel="nofollow">
-                        <i class="fab fa-instagram"></i>
-                      </a>
-                    </li>
-                    <li>
-                      <a class="linkedin" href="https://codercredit.com/" rel="nofollow">
-                        <i class="fab fa-linkedin-in"></i>
-                      </a>
-                    </li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="col-lg-3 col-md-6 mb-45">
-            <div class="volunteerBlock text-center">
-              <figure class="volunteerBlock__figure">
-                <img class="volunteerBlock__figure__thumb" src="{% static 'models/image/volunteers/volunteer3.jpg' %}" alt="Gainioz Volunteers">
-              </figure>
-              <div class="volunteerBlock__content">
-                <h3 class="volunteerBlock__name text-uppercase text-center">
-                  <a href="{% url 'stories_details' %}">Guy Hawkins</a>
-                </h3>
-                <div class="itSocial itSocial--volunteer">
-                  <ul>
-                    <li>
-                      <a class="facebook" href="https://codercredit.com/" rel="nofollow">
-                        <i class="fab fa-facebook-f"></i>
-                      </a>
-                    </li>
-                    <li>
-                      <a class="twitter" href="https://codercredit.com/" rel="nofollow">
-                        <i class="fab fa-twitter"></i>
-                      </a>
-                    </li>
-                    <li>
-                      <a class="instagram" href="https://codercredit.com/" rel="nofollow">
-                        <i class="fab fa-instagram"></i>
-                      </a>
-                    </li>
-                    <li>
-                      <a class="linkedin" href="https://codercredit.com/" rel="nofollow">
-                        <i class="fab fa-linkedin-in"></i>
-                      </a>
-                    </li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="col-lg-3 col-md-6 mb-45">
-            <div class="volunteerBlock text-center">
-              <figure class="volunteerBlock__figure">
-                <img class="volunteerBlock__figure__thumb" src="{% static 'models/image/volunteers/volunteer4.jpg' %}" alt="Gainioz Volunteers">
-              </figure>
-              <div class="volunteerBlock__content">
-                <h3 class="volunteerBlock__name text-uppercase text-center">
-                  <a href="{% url 'stories_details' %}">Savannah Nguyen</a>
-                </h3>
-                <div class="itSocial itSocial--volunteer">
-                  <ul>
-                    <li>
-                      <a class="facebook" href="https://codercredit.com/" rel="nofollow">
-                        <i class="fab fa-facebook-f"></i>
-                      </a>
-                    </li>
-                    <li>
-                      <a class="twitter" href="https://codercredit.com/" rel="nofollow">
-                        <i class="fab fa-twitter"></i>
-                      </a>
-                    </li>
-                    <li>
-                      <a class="instagram" href="https://codercredit.com/" rel="nofollow">
-                        <i class="fab fa-instagram"></i>
-                      </a>
-                    </li>
-                    <li>
-                      <a class="linkedin" href="https://codercredit.com/" rel="nofollow">
-                        <i class="fab fa-linkedin-in"></i>
-                      </a>
-                    </li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="col-lg-3 col-md-6 mb-45">
-            <div class="volunteerBlock text-center">
-              <figure class="volunteerBlock__figure">
-                <img class="volunteerBlock__figure__thumb" src="{% static 'models/image/volunteers/volunteer5.jpg' %}" alt="Gainioz Volunteers">
-              </figure>
-              <div class="volunteerBlock__content">
-                <h3 class="volunteerBlock__name text-uppercase text-center">
-                  <a href="{% url 'stories_details' %}">Jane Cooper</a>
-                </h3>
-                <div class="itSocial itSocial--volunteer">
-                  <ul>
-                    <li>
-                      <a class="facebook" href="https://codercredit.com/" rel="nofollow">
-                        <i class="fab fa-facebook-f"></i>
-                      </a>
-                    </li>
-                    <li>
-                      <a class="twitter" href="https://codercredit.com/" rel="nofollow">
-                        <i class="fab fa-twitter"></i>
-                      </a>
-                    </li>
-                    <li>
-                      <a class="instagram" href="https://codercredit.com/" rel="nofollow">
-                        <i class="fab fa-instagram"></i>
-                      </a>
-                    </li>
-                    <li>
-                      <a class="linkedin" href="https://codercredit.com/" rel="nofollow">
-                        <i class="fab fa-linkedin-in"></i>
-                      </a>
-                    </li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="col-lg-3 col-md-6 mb-45">
-            <div class="volunteerBlock text-center">
-              <figure class="volunteerBlock__figure">
-                <img class="volunteerBlock__figure__thumb" src="{% static 'models/image/volunteers/volunteer6.jpg' %}" alt="Gainioz Volunteers">
-              </figure>
-              <div class="volunteerBlock__content">
-                <h3 class="volunteerBlock__name text-uppercase text-center">
-                  <a href="{% url 'stories_details' %}">Robert Fox</a>
-                </h3>
-                <div class="itSocial itSocial--volunteer">
-                  <ul>
-                    <li>
-                      <a class="facebook" href="https://codercredit.com/" rel="nofollow">
-                        <i class="fab fa-facebook-f"></i>
-                      </a>
-                    </li>
-                    <li>
-                      <a class="twitter" href="https://codercredit.com/" rel="nofollow">
-                        <i class="fab fa-twitter"></i>
-                      </a>
-                    </li>
-                    <li>
-                      <a class="instagram" href="https://codercredit.com/" rel="nofollow">
-                        <i class="fab fa-instagram"></i>
-                      </a>
-                    </li>
-                    <li>
-                      <a class="linkedin" href="https://codercredit.com/" rel="nofollow">
-                        <i class="fab fa-linkedin-in"></i>
-                      </a>
-                    </li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="col-lg-3 col-md-6 mb-45">
-            <div class="volunteerBlock text-center">
-              <figure class="volunteerBlock__figure">
-                <img class="volunteerBlock__figure__thumb" src="{% static 'models/image/volunteers/volunteer7.jpg' %}" alt="Gainioz Volunteers">
-              </figure>
-              <div class="volunteerBlock__content">
-                <h3 class="volunteerBlock__name text-uppercase text-center">
-                  <a href="{% url 'stories_details' %}">Wade Warren</a>
-                </h3>
-                <div class="itSocial itSocial--volunteer">
-                  <ul>
-                    <li>
-                      <a class="facebook" href="https://codercredit.com/" rel="nofollow">
-                        <i class="fab fa-facebook-f"></i>
-                      </a>
-                    </li>
-                    <li>
-                      <a class="twitter" href="https://codercredit.com/" rel="nofollow">
-                        <i class="fab fa-twitter"></i>
-                      </a>
-                    </li>
-                    <li>
-                      <a class="instagram" href="https://codercredit.com/" rel="nofollow">
-                        <i class="fab fa-instagram"></i>
-                      </a>
-                    </li>
-                    <li>
-                      <a class="linkedin" href="https://codercredit.com/" rel="nofollow">
-                        <i class="fab fa-linkedin-in"></i>
-                      </a>
-                    </li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="col-lg-3 col-md-6 mb-45">
-            <div class="volunteerBlock text-center">
-              <figure class="volunteerBlock__figure">
-                <img class="volunteerBlock__figure__thumb" src="{% static 'models/image/volunteers/volunteer8.jpg' %}" alt="Gainioz Volunteers">
-              </figure>
-              <div class="volunteerBlock__content">
-                <h3 class="volunteerBlock__name text-uppercase text-center">
-                  <a href="{% url 'stories_details' %}">Jenny Wilson</a>
-                </h3>
-                <div class="itSocial itSocial--volunteer">
-                  <ul>
-                    <li>
-                      <a class="facebook" href="https://codercredit.com/" rel="nofollow">
-                        <i class="fab fa-facebook-f"></i>
-                      </a>
-                    </li>
-                    <li>
-                      <a class="twitter" href="https://codercredit.com/" rel="nofollow">
-                        <i class="fab fa-twitter"></i>
-                      </a>
-                    </li>
-                    <li>
-                      <a class="instagram" href="https://codercredit.com/" rel="nofollow">
-                        <i class="fab fa-instagram"></i>
-                      </a>
-                    </li>
-                    <li>
-                      <a class="linkedin" href="https://codercredit.com/" rel="nofollow">
-                        <i class="fab fa-linkedin-in"></i>
-                      </a>
-                    </li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-          </div>
+          {% endfor %}
           <div class="col-12">
             <div class="sectionButton text-center pt-35">
-              <a class="btn btn--styleOne btn--primary it-btn" href="volunteers.html">
+              <a class="btn btn--styleOne btn--primary it-btn" href="{% url 'volunteers' %}">
                 <span class="btn__text">see all Volunteers</span>
                 <i class="fa-solid fa-heart btn__icon"></i>
                 <span class="it-btn__inner">

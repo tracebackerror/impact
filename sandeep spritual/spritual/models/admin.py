@@ -12,6 +12,44 @@ class ContactAdmin(admin.ModelAdmin):
     'your_name', 'email','phone','subject','comment','created_date','modified_date')
 
 
+@admin.register(Campaign)
+class CampaignAdmin(admin.ModelAdmin):
+    list_display = (
+        'id',
+        'campaign_hashlink',
+        'campaign_heading',
+        'campaign_donation_goal',
+        'campaign_donation_raised',
+        'campaign_donation_to_go',
+        'image','created_date',
+        'modified_date',
+        )
+
+@admin.register(FeaturedCampaign)
+class FeaturedCampaignAdmin(admin.ModelAdmin):
+    list_display = (
+        'id',
+        'feature_hashlink',
+        'feature_heading',
+        'feature_donation_goal',
+        'feature_donation_raised',
+        'feature_donation_to_go',
+        'image','created_date',
+        'modified_date',
+        )
+
+@admin.register(GetHelpModel)
+class GetHelpModelAdmin(admin.ModelAdmin):
+    list_display = (
+        'id',
+        'first_name',
+        'last_name',
+        'email',
+        'phone',
+        
+        )
+
+
 @admin.register(ProjectsModel)
 class ProjectsAdmin(admin.ModelAdmin):
     list_display = (
@@ -38,32 +76,6 @@ class StoriesModelAdmin(admin.ModelAdmin):
     date_hierarchy = 'publish'
     empty_value_display = '-empty-'
     search_fields = ['title', 'description', 'meta_keywords', ]
-
-
-@admin.register(GetHelpModel)
-class GetHelpModelAdmin(admin.ModelAdmin):
-    list_display = (
-        'id',
-        'first_name',
-        'last_name',
-        'email',
-        'phone'
-        )
-    
-    date_hierarchy = 'created_date'
-    empty_value_display = '-empty-'
-    search_fields = ['first_name', 'last_name', 'email', 'phone']
-
-
-@admin.register(VolunteerMoodel)
-class VolunteerMoodelAdmin(admin.ModelAdmin):
-    list_display = (
-        'id',
-        'first_name',
-        'last_name',
-        'email',
-        'phone'
-        )
     
     date_hierarchy = 'created_date'
     empty_value_display = '-empty-'
@@ -83,15 +95,21 @@ class SiteInfoModelAdmin(admin.ModelAdmin):
     search_fields = ['site_name', 'email', 'address', ]
 
 
-@admin.register(FeaturedCampaign)
-class FeaturedCampaignAdmin(admin.ModelAdmin):
+@admin.register(VolunteerModel)
+class VolunteerModelAdmin(admin.ModelAdmin):
     list_display = (
         'id',
-        'feature_hashlink',
-        'feature_heading',
-        'feature_donation_goal',
-        'feature_donation_raised',
-        'feature_donation_to_go',
+        'full_name',
+        'email',
+        'phone',
         'image','created_date',
         'modified_date',
         )
+    
+    date_hierarchy = 'created_date'
+    empty_value_display = '-empty-'
+    search_fields = ['first_name', 'last_name', 'email', 'phone']
+
+
+
+

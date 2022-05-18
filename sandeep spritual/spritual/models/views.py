@@ -1,6 +1,6 @@
 from django.shortcuts import render
 from django.views import View
-from .models import MetaInformation,ContactForm,VolunteerMoodel,GetHelpModel,ProjectsModel,StoriesModel,SiteInfoModel,FeaturedCampaign
+from .models import MetaInformation,Campaign,ContactForm,VolunteerModel,GetHelpModel,ProjectsModel,StoriesModel,SiteInfoModel,FeaturedCampaign
 
 # Create your views here.
 # def index(request):
@@ -19,7 +19,8 @@ class indexview(View):
 class aboutview(View):
     def get(self, request):
         project = ProjectsModel.objects.all()
-        return render(request, 'models/about.html',{'project':project})
+        volunteer = VolunteerModel.objects.all()
+        return render(request, 'models/about.html',{'project':project,'volunteer':volunteer})
 
 
 class blog_details_view(View):
@@ -40,12 +41,14 @@ class contactview(View):
 class donation_details_view(View):
     def get(self, request):
         project = ProjectsModel.objects.all()
-        return render(request, 'models/donation_details.html',{'project':project})
+        campaign = CampaignModel.objects.all()
+        return render(request, 'models/donation_details.html',{'project':project,})
 
 class donation_listing_view(View):
     def get(self, request):
         project = ProjectsModel.objects.all()
-        return render(request, 'models/donation_listing.html',{'project':project})
+        campaign = Campaign.objects.all()
+        return render(request, 'models/donation_listing.html',{'project':project, 'campaign':campaign})
 
 class event_details_view(View):
     def get(self, request):
@@ -90,4 +93,5 @@ class storiesview(View):
 class volunteersview(View):
     def get(self, request):
         project = ProjectsModel.objects.all()
-        return render(request, 'models/volunteers.html',{'project':project})
+        volunteer = VolunteerModel.objects.all()
+        return render(request, 'models/volunteers.html',{'project':project,'volunteer':volunteer})

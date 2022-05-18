@@ -29,28 +29,27 @@ class ContactForm(models.Model):
     created_date = models.DateTimeField(auto_now_add=True,blank=True)
     modified_date = models.DateTimeField(auto_now=True,blank=True)
 
-class VolunteerMoodel(MetaInformation):
-    first_name = models.CharField(max_length=50, help_text="First Name", null=False, blank=False)
-    last_name = models.CharField(max_length=50, help_text="Last Name", null=False, blank=False)
-    email =models.EmailField(max_length=70, help_text="Email", null=True, blank=True)
-    phone = models.CharField(max_length=10, help_text="Phone Number", null=False, blank=False)
-    volunteering_for =  models.CharField(
-        max_length=100,
-        choices=VolunteeringForChoices.choices,
-        default=VolunteeringForChoices.ALL,
-    )
-    address = models.TextField(help_text="Address", null=True, blank=True)
-    country = models.CharField(
-        max_length=50,
-        choices=CountryInWorldChoices.choices,
-        default=CountryInWorldChoices.IN,
-    )
-    state = models.CharField(
-        max_length=50,
-        choices=StateInIndiaChoices.choices,
-        default=StateInIndiaChoices.MH,
-    )
-    
+
+
+class Campaign(MetaInformation):
+    campaign_hashlink = models.CharField(max_length=50, help_text="Hashlink of featured campaign e.g. Life, Food, Education etc.",)
+    campaign_heading = models.CharField(max_length=100, help_text="Heading of featured campaign",)
+    campaign_description = models.CharField(max_length=100, help_text="Description of featured campaign",)
+    campaign_donation_goal = models.PositiveIntegerField(default=1)
+    campaign_donation_raised = models.PositiveIntegerField(default=1)
+    campaign_donation_to_go = models.PositiveIntegerField(default=1)
+    campaign_bar_data = models.PositiveIntegerField(default=1,help_text="Maximum bar size 100")
+    image = models.ImageField(upload_to ='campaign_image',help_text="resolution of 552x310",)
+
+class FeaturedCampaign(MetaInformation):
+    feature_hashlink = models.CharField(max_length=50, help_text="Hashlink of featured campaign e.g. Life, Food, Education etc.",)
+    feature_heading = models.CharField(max_length=100, help_text="Heading of featured campaign",)
+    feature_description = models.CharField(max_length=100, help_text="Description of featured campaign",)
+    feature_donation_goal = models.PositiveIntegerField(default=1)
+    feature_donation_raised = models.PositiveIntegerField(default=1)
+    feature_donation_to_go = models.PositiveIntegerField(default=1)
+    feature_bar_data = models.PositiveIntegerField(default=1,help_text="Maximum bar size 100")
+    image = models.ImageField(upload_to ='featured_campaign_image',help_text="resolution of 400x225",)
 
 class GetHelpModel(MetaInformation):
     first_name = models.CharField(max_length=50, help_text="First Name", null=False, blank=False)
@@ -73,7 +72,6 @@ class GetHelpModel(MetaInformation):
         choices=StateInIndiaChoices.choices,
         default=StateInIndiaChoices.MH,
     )
-
 
 
 class ProjectsModel(MetaInformation):
@@ -119,13 +117,30 @@ class SiteInfoModel(MetaInformation):
     twitter_page =  models.CharField(max_length=300, help_text="Twitter Page", null=True, blank=True)
     linkedin_page =  models.CharField(max_length=300, help_text="LinkedIn Page", null=True, blank=True)
 
+class VolunteerModel(MetaInformation):
+    full_name = models.CharField(max_length=70, help_text="Full Name", null=False, blank=False)
+    email =models.EmailField(max_length=70, help_text="Email",)
+    phone = models.CharField(max_length=10, help_text="Phone Number", null=False, blank=False)
+    volunteering_for =  models.CharField(
+        max_length=100,
+        choices=VolunteeringForChoices.choices,
+        default=VolunteeringForChoices.ALL,
+    )
+    address = models.TextField(help_text="Address", null=True, blank=True)
+    country = models.CharField(
+        max_length=50,
+        choices=CountryInWorldChoices.choices,
+        default=CountryInWorldChoices.IN,
+    )
+    state = models.CharField(
+        max_length=50,
+        choices=StateInIndiaChoices.choices,
+        default=StateInIndiaChoices.MH,
+    )
+    fb_url = models.CharField(max_length=300, help_text="Facebook Link Page", null=True, blank=True)
+    tw_url = models.CharField(max_length=300, help_text="Twitter Link Page", null=True, blank=True)
+    ig_url = models.CharField(max_length=300, help_text="Instagram Link Page", null=True, blank=True)
+    li_url = models.CharField(max_length=300, help_text="Linkedin Link Page", null=True, blank=True)
+    image = models.ImageField(upload_to ='volunteers_image', help_text="resolution of 256x258", null=True, blank=True)
+    
 
-class FeaturedCampaign(MetaInformation):
-    feature_hashlink = models.CharField(max_length=50, help_text="Hashlink of featured campaign e.g. Life, Food, Education etc.",)
-    feature_heading = models.CharField(max_length=100, help_text="Heading of featured campaign",)
-    feature_description = models.CharField(max_length=100, help_text="Description of featured campaign",)
-    feature_donation_goal = models.PositiveIntegerField(default=1)
-    feature_donation_raised = models.PositiveIntegerField(default=1)
-    feature_donation_to_go = models.PositiveIntegerField(default=1)
-    feature_bar_data = models.PositiveIntegerField(default=1,help_text="Maximum bar size 100")
-    image = models.ImageField(upload_to ='featured_campaign_image',help_text="400x225 resolution",)
