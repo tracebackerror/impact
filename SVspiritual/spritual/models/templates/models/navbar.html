@@ -11,7 +11,7 @@
                 <!-- logo start -->
                 <div class="header__logo">
                   <a href="/" class="header__logo__link">
-                    <img src="{% static 'models/image2/logo.png' %}"  alt="spiritualRoot" class="header__logo__image" style="height: 100px; width: 150px;">
+                    <img src="{{pro.image.url}}"  alt="spiritualRoot" class="header__logo__image" style="height: 100px; width: 150px;">
                   </a>
                 </div>
                 <!-- logo end -->
@@ -20,12 +20,7 @@
                   <nav class="mainMenu">
                     <ul>
                       <li class="dropdown"><a href="/">Home</a>
-                        <ul class="dropdown_menu dropdown_menu-2">
-                          <li class="dropdown_item-1"><a href="index.html">Home 1</a></li>
-                          <li class="dropdown_item-2"><a href="index-2.html">Home 2</a></li>
-                          <li class="dropdown_item-3"><a href="index-3.html">Home 3</a></li>
-                          <li class="dropdown_item-4"><a href="index-4.html">Home 4</a></li>
-                        </ul>
+                       
                       </li>
                       <li><a href="{% url 'about' %}">About</a></li>
                       <li><a href="{% url 'donation_listing' %}">Donations</a></li>
@@ -103,7 +98,7 @@
     <div class="header header--mobile cc-header-menu mean-container position-relative" id="meanmenu">
       <div class="mean-bar headerBurgerMenu">
         <a href="/">
-          <img class="mean-bar__logo" alt="Techkit" src="{% static 'models/image2/logo.png' %}" style="height: 80px; width: 100px;" />
+          <img class="mean-bar__logo" alt="Techkit" src="{{pro.image.url}}" style="height: 80px; width: 100px;" />
         </a>
         <!-- Header Right Buttons Search Cart -->
         <div class="header__right">
@@ -143,7 +138,7 @@
     <div class="cc cc--slideNav">
       <div class="cc__logo mb-40">
         <a href="/">
-          <img class="mean-bar__logo" alt="Techkit" src="{% static 'models/image2/logo.png' %}"  style="height: 60px; width: 80px; "/>
+          <img class="mean-bar__logo" alt="Techkit" src="{{pro.image.url}}"  style="height: 60px; width: 80px; "/>
         </a>
       </div>
       <div class="offscreen-navigation mb-40">

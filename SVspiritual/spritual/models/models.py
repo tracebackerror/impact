@@ -79,7 +79,7 @@ class GetHelpModel(MetaInformation):
 class ProjectsModel(MetaInformation):
     title = models.CharField(max_length=250, help_text="Project Title", null=False, blank=False)
     description = RichTextField()
-    image = models.ImageField(upload_to ='uploads/% Y/% m/% d/', null=True, blank=True)
+    image = models.ImageField(upload_to ='main_project_image', null=True, blank=True)
     short_url = models.SlugField(max_length=250, unique_for_date='publish')
     publish = models.DateTimeField(default=timezone.now)
     meta_keywords = models.CharField(max_length=250, help_text="Meta Keywords", null=True, blank=True)	
@@ -118,3 +118,14 @@ class SiteInfoModel(MetaInformation):
     instagram_page =  models.CharField(max_length=300, help_text="Instagram Page", null=True, blank=True)
     twitter_page =  models.CharField(max_length=300, help_text="Twitter Page", null=True, blank=True)
     linkedin_page =  models.CharField(max_length=300, help_text="LinkedIn Page", null=True, blank=True)
+
+
+class FeaturedCampaign(MetaInformation):
+    feature_hashlink = models.CharField(max_length=50, help_text="Hashlink of featured campaign e.g. Life, Food, Education etc.",)
+    feature_heading = models.CharField(max_length=100, help_text="Heading of featured campaign",)
+    feature_description = models.CharField(max_length=100, help_text="Description of featured campaign",)
+    feature_donation_goal = models.PositiveIntegerField(default=1)
+    feature_donation_raised = models.PositiveIntegerField(default=1)
+    feature_donation_to_go = models.PositiveIntegerField(default=1)
+    feature_bar_data = models.PositiveIntegerField(default=1,help_text="Maximum bar size 100")
+    image = models.ImageField(upload_to ='featured_campaign_image',help_text="400x225 resolution",)
