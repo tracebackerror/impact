@@ -92,9 +92,9 @@ class StoriesModel(MetaInformation):
     description = RichTextField()
     image = models.ImageField(upload_to ='uploads/%Y/%m/%d/', null=True, blank=True)
     short_url = models.SlugField(max_length=250, unique_for_date='publish')
-    yt_url = models.CharField(max_length=300, help_text="Youtube Video Link", null=True, blank=True)
-    fb_url = models.CharField(max_length=300, help_text="Facebook Link Page", null=True, blank=True)
-    ig_url = models.CharField(max_length=300, help_text="Instagram Link Page", null=True, blank=True)
+    you tube_url = models.CharField(max_length=300, help_text="Youtube Video Link", null=True, blank=True)
+    facebook_url = models.CharField(max_length=300, help_text="Facebook Link Page", null=True, blank=True)
+    instagram_url = models.CharField(max_length=300, help_text="Instagram Link Page", null=True, blank=True)
     publish = models.DateTimeField(default=timezone.now)
     meta_keywords = models.CharField(max_length=250, help_text="Meta Keywords", null=True, blank=True)	
     
